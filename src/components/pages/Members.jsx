@@ -6,44 +6,6 @@ import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
-const exportAllToPDF = () => {
-  const doc = new jsPDF('landscape');
-  doc.setFontSize(12);
-  doc.text('Liste complète des membres de la PONAH', 14, 15);
-
-  const headers = [[
-    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
-    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-    'Fonction', 'Téléphone', 'Email'
-  ]];
-
-  const body = membersData.map(m => [
-    m['Nom complet de l’ONG'] || '',
-    m['Acronyme'] || '',
-    m['Date de création'] || '',
-    m['Numéro d’accord cadre'] || '',
-    m['Adresse physique'] || '',
-    m['Zones d’intervention'] || '',
-    m['Nom du responsable'] || '',
-    m['Prénom du responsable'] || '',
-    m['Fonction du responsable'] || '',
-    m['Téléphone du responsable'] || '',
-    m['Email du responsable'] || ''
-  ]);
-
-  doc.autoTable({
-    head: headers,
-    body: body,
-    startY: 20,
-    styles: { fontSize: 8 },
-    headStyles: { fillColor: [100, 149, 237] }, // bleu clair
-    margin: { top: 20 }
-  });
-
-  doc.save('Membres_PONAH_Global.pdf');
-};
-
-
 const teamData = [
   { name: "Elmehdi AG WAKINA", role: "Président", description: "Responsable de la direction stratégique et de la représentation de la PONAH" },
   { name: "Moussa A. DIALLO", role: "Vice-Président", description: "Appui à la direction et coordination des activités" },
@@ -78,6 +40,41 @@ const Members = () => {
       const data = XLSX.utils.sheet_to_json(worksheet);
       setMembersData(data);
       setCurrentPage(1);
+      const exportAllToPDF = () => {
+  const doc = new jsPDF('landscape');
+  doc.setFontSize(12);
+  doc.text('Liste complète des membres de la PONAH', 14, 15);
+
+  const headers = [[
+    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
+    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
+    'Fonction', 'Téléphone', 'Email'
+  ]];
+
+  const body = membersData.map(m => [
+    m['Nom complet de l’ONG'] || '',
+    m['Acronyme'] || '',
+    m['Date de création'] || '',
+    m['Numéro d’accord cadre'] || '',
+    m['Adresse physique'] || '',
+    m['Zones d’intervention'] || '',
+    m['Nom du responsable'] || '',
+    m['Prénom du responsable'] || '',
+    m['Fonction du responsable'] || '',
+    m['Téléphone du responsable'] || '',
+    m['Email du responsable'] || ''
+  ]);
+
+  doc.autoTable({
+    head: headers,
+    body: body,
+    startY: 20,
+    styles: { fontSize: 8 },
+    headStyles: { fillColor: [100, 149, 237] }, // bleu clair
+    margin: { top: 20 }
+  });
+
+  doc.save('Membres_PONAH_Global.pdf');
     };
     reader.readAsBinaryString(file);
   };
