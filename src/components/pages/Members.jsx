@@ -3,6 +3,46 @@ import * as XLSX from 'xlsx';
 import { Search, Users, X, FileText, CheckCircle, FileCheck2, UserCheck } from 'lucide-react';
 import defaultMembers from '../../data/membersData_detailed_full';
 import { useAuth } from '../../contexts/AuthContext';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
+
+const exportAllToPDF = () => {
+  const doc = new jsPDF('landscape');
+  doc.setFontSize(12);
+  doc.text('Liste complète des membres de la PONAH', 14, 15);
+
+  const headers = [[
+    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
+    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
+    'Fonction', 'Téléphone', 'Email'
+  ]];
+
+  const body = membersData.map(m => [
+    m['Nom complet de l’ONG'] || '',
+    m['Acronyme'] || '',
+    m['Date de création'] || '',
+    m['Numéro d’accord cadre'] || '',
+    m['Adresse physique'] || '',
+    m['Zones d’intervention'] || '',
+    m['Nom du responsable'] || '',
+    m['Prénom du responsable'] || '',
+    m['Fonction du responsable'] || '',
+    m['Téléphone du responsable'] || '',
+    m['Email du responsable'] || ''
+  ]);
+
+  doc.autoTable({
+    head: headers,
+    body: body,
+    startY: 20,
+    styles: { fontSize: 8 },
+    headStyles: { fillColor: [100, 149, 237] }, // bleu clair
+    margin: { top: 20 }
+  });
+
+  doc.save('Membres_PONAH_Global.pdf');
+};
+
 
 const teamData = [
   { name: "Elmehdi AG WAKINA", role: "Président", description: "Responsable de la direction stratégique et de la représentation de la PONAH" },
@@ -59,6 +99,14 @@ const Members = () => {
           Plus de {membersData.length} ONG nationales et locales unies pour l'action humanitaire au Mali
         </p>
       </section>
+<div className="text-center mt-4">
+  <button
+    onClick={exportAllToPDF}
+    className="bg-primary text-white px-6 py-2 rounded shadow"
+  >
+    Exporter tous les membres en PDF
+  </button>
+</div>
 
       {/* BARRE DE RECHERCHE & IMPORT */}
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between">
