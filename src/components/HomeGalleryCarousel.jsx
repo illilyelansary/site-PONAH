@@ -23,7 +23,7 @@ const HomeGalleryCarousel = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 2O00,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
