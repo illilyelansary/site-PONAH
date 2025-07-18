@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Target, Globe, Heart, Shield, Handshake } from 'lucide-react';
+import {
+  ArrowRight, Users, Target, Globe, Heart, Shield, Handshake
+} from 'lucide-react';
+
 import heroImage from '../../assets/hero-image.jpg';
 import communityImage1 from '../../assets/community-1.jpg';
-import { actualites } from '../../data/actualites'; // <-- à créer
+import { galerieHome } from '../../data/galerieHome';
 
 const Home = () => {
   const stats = [
@@ -154,25 +157,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Galerie d’Actualités */}
+      {/* Galerie Mises à jour */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Galerie d’Actualités</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Mises à jour PONAH</h2>
             <Link
               to="/actualites"
               className="text-primary hover:text-primary/80 font-semibold flex items-center group"
             >
-              Voir toutes les actualités
+              Voir tout
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
           </div>
           <div className="overflow-x-auto">
             <div className="flex space-x-6">
-              {actualites.map((item, index) => (
+              {galerieHome.map((item, index) => (
                 <Link
                   key={index}
-                  to={`/actualites/${item.slug}`}
+                  to={item.link}
                   className="min-w-[280px] md:min-w-[340px] bg-gray-50 rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden"
                 >
                   <img
@@ -183,6 +186,7 @@ const Home = () => {
                   <div className="p-4">
                     <div className="text-sm text-primary font-medium mb-1">{item.date}</div>
                     <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">{item.title}</h3>
+                    <p className="text-xs text-gray-500">{item.type}</p>
                   </div>
                 </Link>
               ))}
