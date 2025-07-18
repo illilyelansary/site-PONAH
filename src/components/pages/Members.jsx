@@ -48,12 +48,11 @@ const Members = () => {
     const doc = new jsPDF('landscape');
     doc.setFontSize(12);
     doc.text('Liste complète des membres de la PONAH', 14, 15);
-
     const headers = [[
       'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
       'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-      'Fonction', 'Téléphone', 'Email']];
-
+      'Fonction', 'Téléphone', 'Email'
+    ]];
     const body = membersData.map(m => [
       m['Nom complet de l’ONG'] || '',
       m['Acronyme'] || '',
@@ -67,17 +66,14 @@ const Members = () => {
       m['Téléphone du responsable'] || '',
       m['Email du responsable'] || ''
     ]);
-
     doc.autoTable({
       head: headers,
       body: body,
       startY: 20,
       styles: { fontSize: 7, cellPadding: 1 },
       headStyles: { fillColor: [41, 128, 185], textColor: [255, 255, 255] },
-      theme: 'grid',
-      pageBreak: 'auto'
+      theme: 'grid'
     });
-
     doc.save('Membres_PONAH_Global.pdf');
   };
 
@@ -98,6 +94,7 @@ const Members = () => {
 
   return (
     <div className="min-h-screen">
+      {/* HÉRO */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Membres</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -105,20 +102,24 @@ const Members = () => {
         </p>
       </section>
 
+      {/* Export PDF */}
       <div className="text-center mt-4">
         <button onClick={exportAllToPDF} className="bg-primary text-white px-6 py-2 rounded shadow">
           Exporter tous les membres en PDF
         </button>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between">
-        {isAdmin && <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />}
+      {/* Recherche & Filtres */}
+      <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between md:flex-wrap">
+        {isAdmin && (
+          <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
+        )}
         <div className="relative w-full">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
           <input
             type="text"
             placeholder="Rechercher par nom ou acronyme..."
-            className="pl-8 border px-4 py-2 rounded w-full"
+            className="border py-2 pr-4 pl-8 rounded w-full"
             value={searchTerm}
             onChange={handleSearchChange}
           />
@@ -126,7 +127,7 @@ const Members = () => {
         <select
           value={selectedZone}
           onChange={(e) => setSelectedZone(e.target.value)}
-          className="border px-3 py-2 rounded"
+          className="border py-2 px-3 rounded w-full md:w-60"
         >
           <option value="">Toutes les zones</option>
           {[...new Set(membersData.map(m => m['Zones d’intervention']).filter(Boolean))].sort().map((zone, i) => (
@@ -135,8 +136,16 @@ const Members = () => {
         </select>
       </div>
 
-      {/* reste du composant inchangé */}
+      {/* Statistiques */}
+      <section className="py-6 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div><div className="text-3xl font-bold text-primary">{membersData.length}</div><div>ONG Membres</div></div>
+          <div><div className="text-3xl font-bold text-secondary">{[...new Set(membersData.map(m => m['Zones d’intervention']).filter(Boolean))].length}</div><div>Zones</div></div>
+          <div><div className="text-3xl font-bold text-accent">{membersData.filter(m => m.recent).length}</div><div>Nouveaux Membres</div></div>
+        </div>
+      </section>
 
+      {/* Liste Membres */}
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {paginatedMembers.map((m, i) => (
           <div key={i} onClick={() => setSelectedMember(m)} className="bg-white border p-4 rounded shadow cursor-pointer">
@@ -149,18 +158,14 @@ const Members = () => {
         ))}
       </div>
 
+      {/* Pagination */}
       <div className="text-center my-6">
         {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentPage(i + 1)}
-            className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}
-          >
-            {i + 1}
-          </button>
+          <button key={i} onClick={() => setCurrentPage(i + 1)} className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}>{i + 1}</button>
         ))}
       </div>
 
+      {/* Modale membre */}
       {selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
@@ -179,6 +184,7 @@ const Members = () => {
         </div>
       )}
 
+      {/* Adhésion */}
       <section className="py-16 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
@@ -193,6 +199,7 @@ const Members = () => {
         </div>
       </section>
 
+      {/* Équipe dirigeante */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10">Notre Équipe Dirigeante</h2>
@@ -209,6 +216,7 @@ const Members = () => {
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Questions Fréquentes</h2>
