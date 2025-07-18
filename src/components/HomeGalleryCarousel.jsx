@@ -51,10 +51,10 @@ const HomeGalleryCarousel = () => {
               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                 {item.image && (
                   <img
-                    src={item.image}
-                    alt={item.title || item.name}
-                    className="h-48 w-full object-cover"
-                  />
+  src={item.image}
+  alt={item.title || item.name}
+  className="w-full h-[200px] object-cover object-center"
+/>
                 )}
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <div>
