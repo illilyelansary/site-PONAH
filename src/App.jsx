@@ -13,7 +13,6 @@ import Activities from './components/pages/Activities';
 import Publications from './components/pages/Publications';
 import News from './components/pages/News';
 import Contact from './components/pages/Contact';
-import Admin from './components/pages/Admin';
 
 function App() {
   // Exemple de fonction d'inscription (à adapter selon votre backend)
