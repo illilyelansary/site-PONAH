@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Target, Globe, Heart, Shield, Handshake } from 'lucide-react';
 import heroImage from '../../assets/hero-image.jpg';
 import communityImage1 from '../../assets/community-1.jpg';
-import communityImage2 from '../../assets/community-2.jpg';
+import { actualites } from '../../data/actualites'; // <-- à créer
 
 const Home = () => {
   const stats = [
@@ -31,26 +31,9 @@ const Home = () => {
     }
   ];
 
-  const recentNews = [
-    {
-      title: 'Atelier de restitution du Baromètre de la Localisation',
-      date: '29-30 octobre 2024',
-      description: 'Validation des 9 axes stratégiques pour l\'élaboration de la Stratégie Nationale de Localisation.'
-    },
-    {
-      title: 'Formation de 360 acteurs sur la gestion des risques de sécurité',
-      date: 'Novembre-Décembre 2024',
-      description: 'Renforcement des capacités de 72 OSC dans les régions de Mopti, Ségou et Gao.'
-    },
-    {
-      title: 'Mission de plaidoyer au Qatar',
-      date: '16-20 septembre 2024',
-      description: 'Mission conjointe FONGIM-PONAH pour mobiliser des financements humanitaires.'
-    }
-  ];
-
   return (
     <div className="min-h-screen">
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -61,13 +44,13 @@ const Home = () => {
         </div>
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Unissons nos forces pour sauver des vies au Mali
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fade-in-delay">
+          <p className="text-xl md:text-2xl mb-8">
             Notre sens de l'humanité nous interpelle, agissons maintenant pour un impact durable !
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/apropos" 
               className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group"
@@ -85,7 +68,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -102,7 +85,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -148,7 +131,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Valeurs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -171,34 +154,44 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Recent News Section */}
-      <section className="py-16">
+      {/* Galerie d’Actualités */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Actualités Récentes</h2>
-            <Link 
-              to="/actualites" 
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Galerie d’Actualités</h2>
+            <Link
+              to="/actualites"
               className="text-primary hover:text-primary/80 font-semibold flex items-center group"
             >
               Voir toutes les actualités
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {recentNews.map((news, index) => (
-              <article key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="text-sm text-primary font-medium mb-2">{news.date}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{news.title}</h3>
-                  <p className="text-gray-600 line-clamp-3">{news.description}</p>
-                </div>
-              </article>
-            ))}
+          <div className="overflow-x-auto">
+            <div className="flex space-x-6">
+              {actualites.map((item, index) => (
+                <Link
+                  key={index}
+                  to={`/actualites/${item.slug}`}
+                  className="min-w-[280px] md:min-w-[340px] bg-gray-50 rounded-lg shadow hover:shadow-lg transition-shadow overflow-hidden"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <div className="text-sm text-primary font-medium mb-1">{item.date}</div>
+                    <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">{item.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Appel à l’action */}
       <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -223,6 +216,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };
