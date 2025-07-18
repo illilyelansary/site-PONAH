@@ -52,7 +52,6 @@ function App() {
             <Route path="/actualites" element={<News />} />
             <Route path="/contact" element={<Contact />} />
             {/* Page d'administration accessible uniquement via URL directe */}
-            <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>
         <Footer />
