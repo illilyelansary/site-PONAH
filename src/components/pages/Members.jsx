@@ -30,42 +30,53 @@ const Members = () => {
 
   const itemsPerPage = 12;
 
-  const exportAllToPDF = () => {
-    const doc = new jsPDF('landscape');
-    doc.setFontSize(12);
-    doc.text('Liste complète des membres de la PONAH', 14, 15);
+const exportAllToPDF = () => {
+  const doc = new jsPDF('landscape');
+  doc.setFontSize(12);
+  doc.text('Liste complète des membres de la PONAH', 14, 15);
 
-    const headers = [[
-      'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
-      'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-      'Fonction', 'Téléphone', 'Email'
-    ]];
+  const headers = [[
+    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
+    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
+    'Fonction', 'Téléphone', 'Email'
+  ]];
 
-    const body = membersData.map(m => [
-      m['Nom complet de l’ONG'] || '',
-      m['Acronyme'] || '',
-      m['Date de création'] || '',
-      m['Numéro d’accord cadre'] || '',
-      m['Adresse physique'] || '',
-      m['Zones d’intervention'] || '',
-      m['Nom du responsable'] || '',
-      m['Prénom du responsable'] || '',
-      m['Fonction du responsable'] || '',
-      m['Téléphone du responsable'] || '',
-      m['Email du responsable'] || ''
-    ]);
+  const body = membersData.map(m => [
+    m['Nom complet de l’ONG'] || '',
+    m['Acronyme'] || '',
+    m['Date de création'] || '',
+    m['Numéro d’accord cadre'] || '',
+    m['Adresse physique'] || '',
+    m['Zones d’intervention'] || '',
+    m['Nom du responsable'] || '',
+    m['Prénom du responsable'] || '',
+    m['Fonction du responsable'] || '',
+    m['Téléphone du responsable'] || '',
+    m['Email du responsable'] || ''
+  ]);
 
-    doc.autoTable({
-      head: headers,
-      body: body,
-      startY: 20,
-      styles: { fontSize: 8 },
-      headStyles: { fillColor: [100, 149, 237] },
-      margin: { top: 20 }
-    });
+  doc.autoTable({
+    head: headers,
+    body: body,
+    startY: 20,
+    styles: {
+      fontSize: 7,
+      cellPadding: 1,
+      halign: 'left',
+      valign: 'middle',
+    },
+    headStyles: {
+      fillColor: [41, 128, 185], // Bleu pro
+      textColor: [255, 255, 255],
+      fontStyle: 'bold',
+    },
+    theme: 'grid',
+    margin: { top: 20 },
+    pageBreak: 'auto'
+  });
 
-    doc.save('Membres_PONAH_Global.pdf');
-  };
+  doc.save('Membres_PONAH_Global.pdf');
+};
 
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
