@@ -7,7 +7,7 @@ import {
 import heroImage from '../../assets/hero-image.jpg';
 import communityImage1 from '../../assets/community-1.jpg';
 import { galerieHome } from '../../data/galerieHome';
-import HomeGalleryCarousel from '../components/HomeGalleryCarousel';
+import HomeGalleryCarousel from '../../components/HomeGalleryCarousel';
 
 const Home = () => {
   const stats = [
