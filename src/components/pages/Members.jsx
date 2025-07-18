@@ -30,6 +30,43 @@ const Members = () => {
 
   const itemsPerPage = 12;
 
+  const exportAllToPDF = () => {
+    const doc = new jsPDF('landscape');
+    doc.setFontSize(12);
+    doc.text('Liste complète des membres de la PONAH', 14, 15);
+
+    const headers = [[
+      'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
+      'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
+      'Fonction', 'Téléphone', 'Email'
+    ]];
+
+    const body = membersData.map(m => [
+      m['Nom complet de l’ONG'] || '',
+      m['Acronyme'] || '',
+      m['Date de création'] || '',
+      m['Numéro d’accord cadre'] || '',
+      m['Adresse physique'] || '',
+      m['Zones d’intervention'] || '',
+      m['Nom du responsable'] || '',
+      m['Prénom du responsable'] || '',
+      m['Fonction du responsable'] || '',
+      m['Téléphone du responsable'] || '',
+      m['Email du responsable'] || ''
+    ]);
+
+    doc.autoTable({
+      head: headers,
+      body: body,
+      startY: 20,
+      styles: { fontSize: 8 },
+      headStyles: { fillColor: [100, 149, 237] },
+      margin: { top: 20 }
+    });
+
+    doc.save('Membres_PONAH_Global.pdf');
+  };
+
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -40,41 +77,6 @@ const Members = () => {
       const data = XLSX.utils.sheet_to_json(worksheet);
       setMembersData(data);
       setCurrentPage(1);
-      const exportAllToPDF = () => {
-  const doc = new jsPDF('landscape');
-  doc.setFontSize(12);
-  doc.text('Liste complète des membres de la PONAH', 14, 15);
-
-  const headers = [[
-    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
-    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-    'Fonction', 'Téléphone', 'Email'
-  ]];
-
-  const body = membersData.map(m => [
-    m['Nom complet de l’ONG'] || '',
-    m['Acronyme'] || '',
-    m['Date de création'] || '',
-    m['Numéro d’accord cadre'] || '',
-    m['Adresse physique'] || '',
-    m['Zones d’intervention'] || '',
-    m['Nom du responsable'] || '',
-    m['Prénom du responsable'] || '',
-    m['Fonction du responsable'] || '',
-    m['Téléphone du responsable'] || '',
-    m['Email du responsable'] || ''
-  ]);
-
-  doc.autoTable({
-    head: headers,
-    body: body,
-    startY: 20,
-    styles: { fontSize: 8 },
-    headStyles: { fillColor: [100, 149, 237] }, // bleu clair
-    margin: { top: 20 }
-  });
-
-  doc.save('Membres_PONAH_Global.pdf');
     };
     reader.readAsBinaryString(file);
   };
@@ -89,23 +91,25 @@ const Members = () => {
 
   return (
     <div className="min-h-screen">
-      {/* HÉRO */}
+      {/* HERO */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Membres</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto">
           Plus de {membersData.length} ONG nationales et locales unies pour l'action humanitaire au Mali
         </p>
       </section>
-<div className="text-center mt-4">
-  <button
-    onClick={exportAllToPDF}
-    className="bg-primary text-white px-6 py-2 rounded shadow"
-  >
-    Exporter tous les membres en PDF
-  </button>
-</div>
 
-      {/* BARRE DE RECHERCHE & IMPORT */}
+      {/* BOUTON PDF */}
+      <div className="text-center mt-4">
+        <button
+          onClick={exportAllToPDF}
+          className="bg-primary text-white px-6 py-2 rounded shadow"
+        >
+          Exporter tous les membres en PDF
+        </button>
+      </div>
+
+      {/* IMPORT + FILTRES */}
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between">
         {isAdmin && (
           <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
@@ -176,7 +180,7 @@ const Members = () => {
         </div>
       </section>
 
-      {/* ÉQUIPE DIRIGEANTE */}
+      {/* ÉQUIPE */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10">Notre Équipe Dirigeante</h2>
