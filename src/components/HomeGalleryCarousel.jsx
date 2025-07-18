@@ -26,6 +26,7 @@ const HomeGalleryCarousel = () => {
     autoplaySpeed: 2O00,
     slidesToShow: 3,
     slidesToScroll: 1,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
