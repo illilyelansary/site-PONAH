@@ -1,17 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import evenements from "../../data/activitiesData/evenements";
+import activitiesData from "../../data/activitiesData";
+const evenements = activitiesData.events;
 
 const EvenementDetail = () => {
   const { slug } = useParams();
-  const event = evenements.find((item) => item.slug === slug);
+  const evenement = evenements.find(e =>
+    e.slug === slug
+  );
 
-  if (!event) return <div className="p-6">Événement non trouvé.</div>;
+  if (!evenement) return <div>Événement non trouvé.</div>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">{event.title}</h1>
-      <p>Détails à venir...</p>
+    <div className="max-w-3xl mx-auto py-10 px-4">
+      <h1 className="text-3xl font-bold mb-4">{evenement.title}</h1>
+      <p className="text-gray-600 mb-2"><strong>Date :</strong> {evenement.date}</p>
+      <p className="text-gray-600 mb-4"><strong>Lieu :</strong> {evenement.location}</p>
+      <p className="text-lg text-gray-800">{evenement.description}</p>
     </div>
   );
 };
