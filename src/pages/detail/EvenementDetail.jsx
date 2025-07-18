@@ -1,19 +1,23 @@
-// src/pages/detail/EvenementDetail.jsx
-import React from "react";
-import { useParams } from "react-router-dom";
-import activities from "../../data/activitiesData";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import activities from '../../data/activitiesData';
 
 const EvenementDetail = () => {
   const { slug } = useParams();
-  const item = activities.events.find((e, i) => e.slug === slug || i.toString() === slug);
+  const event = activities.events.find(ev => ev.slug === slug);
 
-  if (!item) return <div className="p-8 text-center">Événement introuvable</div>;
+  if (!event) return <div className="text-center py-10 text-gray-600">Événement introuvable.</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4 text-primary">{item.title}</h1>
-      {item.image && <img src={item.image} alt={item.title} className="w-full rounded mb-6" />}
-      <p className="text-gray-700 text-lg leading-relaxed">{item.description}</p>
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">{event.name}</h1>
+      {event.image && (
+        <img src={event.image} alt={event.name} className="rounded-lg shadow mb-6 w-full" />
+      )}
+      <div className="text-gray-700 space-y-4">
+        <p><strong>Période :</strong> {event.period}</p>
+        <p>{event.description}</p>
+      </div>
     </div>
   );
 };
