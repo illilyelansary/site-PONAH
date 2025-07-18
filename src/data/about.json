@@ -1,11 +1,24 @@
-{
-  "heroTitle": "À Propos de la PONAH",
-  "heroSubtitle": "Une plateforme unie pour une réponse humanitaire efficace et coordonnée au Mali",
-  "timeline": [
-    {
-      "date": "18 janvier 2024",
-      "title": "Assemblée Générale Constitutive",
-      "description": "Adoption des statuts, règlement intérieur et charte des membres"
-    }
-  ]
-}
+backend:
+  name: git-gateway
+  branch: main  # ou 'master' selon le nom de ta branche par défaut
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "about"
+    label: "Page À Propos"
+    files:
+      - file: "src/data/about.json"
+        label: "Contenu À propos"
+        name: "about_content"
+        fields:
+          - { label: "Titre principal", name: "heroTitle", widget: "string" }
+          - { label: "Sous-titre", name: "heroSubtitle", widget: "text" }
+          - label: "Événements fondateurs (Timeline)"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
