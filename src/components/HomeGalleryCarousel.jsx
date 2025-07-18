@@ -1,42 +1,20 @@
+// src/components/HomeGalleryCarousel.jsx
 import React from "react";
 import Slider from "react-slick";
 import { Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
-
 import news from "../data/newsData";
 import activities from "../data/activitiesData";
 import publications from "../data/publicationsData";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const HomeGalleryCarousel = () => {
   const allItems = [
-    ...news.map((item, i) => ({
-      ...item,
-      type: "actualité",
-      link: `/actualites/${item.slug || i}`,
-    })),
-    ...activities.events.map((item, i) => ({
-      ...item,
-      type: "événement",
-      link: `/activites/evenements/${item.slug || i}`,
-    })),
-    ...activities.missions.map((item, i) => ({
-      ...item,
-      type: "mission",
-      link: `/activites/missions/${item.slug || i}`,
-    })),
-    ...activities.trainings.map((item, i) => ({
-      ...item,
-      type: "formation",
-      link: `/activites/formations/${item.slug || i}`,
-    })),
-    ...publications.map((item, i) => ({
-      ...item,
-      type: "publication",
-      link: `/publications/${item.slug || i}`,
-    })),
+    ...news.map((item) => ({ ...item, type: "actualite" })),
+    ...activities.events.map((item) => ({ ...item, type: "evenement" })),
+    ...activities.missions.map((item) => ({ ...item, type: "mission" })),
+    ...activities.trainings.map((item) => ({ ...item, type: "formation" })),
+    ...publications.map((item) => ({ ...item, type: "publication" })),
   ];
 
   const settings = {
@@ -66,10 +44,27 @@ const HomeGalleryCarousel = () => {
           Actualités, Activités & Publications
         </h2>
         <Slider {...settings}>
-          {allItems.map((item, index) => (
-            <div key={index} className="px-3">
-              <Link to={item.link}>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+          {allItems.map((item, index) => {
+            const slug = item.slug || index;
+            const link =
+              item.type === "actualite"
+                ? `/actualites/${slug}`
+                : item.type === "evenement"
+                ? `/activites/evenements/${slug}`
+                : item.type === "mission"
+                ? `/activites/missions/${slug}`
+                : item.type === "formation"
+                ? `/activites/formations/${slug}`
+                : item.type === "publication"
+                ? `/publications/${slug}`
+                : "#";
+
+            return (
+              <div key={index} className="px-3">
+                <a
+                  href={link}
+                  className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col"
+                >
                   {item.image && (
                     <img
                       src={item.image}
@@ -94,10 +89,10 @@ const HomeGalleryCarousel = () => {
                       <span>{item.date || item.period}</span>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </a>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </section>
