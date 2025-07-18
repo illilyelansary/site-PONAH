@@ -24,18 +24,21 @@ export default function Header() {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+          {/* Logo et Nom */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
               <img src={LogoPonah} alt="Logo PONAH" className="h-12 w-auto" />
-              <div>
+              <div className="leading-tight">
                 <h1 className="text-xl font-bold text-gray-900">PONAH</h1>
-                <p className="text-sm text-gray-600">Plateforme des ONG Nationales</p>
+                <p className="text-sm text-gray-600">
+                  Plateforme des ONG Nationales<br />
+                  Actives dans l'Humanitaire
+                </p>
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Navigation bureau */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
@@ -52,7 +55,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Bouton menu mobile */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -63,7 +66,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Menu mobile */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
