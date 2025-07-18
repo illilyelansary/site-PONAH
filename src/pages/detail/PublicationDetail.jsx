@@ -1,19 +1,17 @@
-// src/pages/detail/PublicationDetail.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
 import publications from "../../data/publicationsData";
 
 const PublicationDetail = () => {
   const { slug } = useParams();
-  const item = publications.find((p, i) => p.slug === slug || i.toString() === slug);
+  const publication = publications.find((item) => item.slug === slug);
 
-  if (!item) return <div className="p-8 text-center">Publication introuvable</div>;
+  if (!publication) return <div className="p-6">Publication non trouvée.</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4 text-primary">{item.title}</h1>
-      {item.image && <img src={item.image} alt={item.title} className="w-full rounded mb-6" />}
-      <p className="text-gray-700 text-lg leading-relaxed">{item.description}</p>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">{publication.title}</h1>
+      <p>Détails à venir...</p>
     </div>
   );
 };
