@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck } from 'lucide-react';
+import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search } from 'lucide-react';
 import defaultMembers from '../../data/membersData_detailed_full';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
@@ -81,6 +81,11 @@ const Members = () => {
     doc.save('Membres_PONAH_Global.pdf');
   };
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setCurrentPage(1);
+  };
+
   const filteredMembers = membersData.filter(member => {
     const nomMatch = (member['Nom complet de l’ONG'] || '').toLowerCase().includes(searchTerm.toLowerCase());
     const acronymeMatch = (member['Acronyme'] || '').toLowerCase().includes(searchTerm.toLowerCase());
@@ -108,13 +113,16 @@ const Members = () => {
 
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between">
         {isAdmin && <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />}
-        <input
-          type="text"
-          placeholder="Rechercher..."
-          className="border px-4 py-2 rounded w-full"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className="relative w-full">
+          <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Rechercher par nom ou acronyme..."
+            className="pl-8 border px-4 py-2 rounded w-full"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        </div>
         <select
           value={selectedZone}
           onChange={(e) => setSelectedZone(e.target.value)}
@@ -126,6 +134,8 @@ const Members = () => {
           ))}
         </select>
       </div>
+
+      {/* reste du composant inchangé */}
 
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {paginatedMembers.map((m, i) => (
