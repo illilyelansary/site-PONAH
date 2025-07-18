@@ -7,6 +7,7 @@ import {
 import heroImage from '../../assets/hero-image.jpg';
 import communityImage1 from '../../assets/community-1.jpg';
 import { galerieHome } from '../../data/galerieHome';
+import HomeGalleryCarousel from '../components/HomeGalleryCarousel';
 
 const Home = () => {
   const stats = [
@@ -87,7 +88,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+  {/* Section galerie défilante */}
+      <HomeGalleryCarousel />
       {/* Mission */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
