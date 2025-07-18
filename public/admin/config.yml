@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # ou master selon ton dépôt
+  branch: main  # ou 'master' selon le nom de ta branche par défaut
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
@@ -15,7 +15,7 @@ collections:
         fields:
           - { label: "Titre principal", name: "heroTitle", widget: "string" }
           - { label: "Sous-titre", name: "heroSubtitle", widget: "text" }
-          - label: "Événements fondateurs"
+          - label: "Événements fondateurs (Timeline)"
             name: "timeline"
             widget: "list"
             fields:
