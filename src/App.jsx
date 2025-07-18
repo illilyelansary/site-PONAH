@@ -13,6 +13,18 @@ import Activities from './components/pages/Activities';
 import Publications from './components/pages/Publications';
 import News from './components/pages/News';
 import Contact from './components/pages/Contact';
+import ActualiteDetail from "./pages/detail/ActualiteDetail";
+import EvenementDetail from "./pages/detail/EvenementDetail";
+import MissionDetail from "./pages/detail/MissionDetail";
+import FormationDetail from "./pages/detail/FormationDetail";
+import PublicationDetail from "./pages/detail/PublicationDetail";
+
+<Route path="/actualites/:slug" element={<ActualiteDetail />} />
+<Route path="/activites/evenements/:slug" element={<EvenementDetail />} />
+<Route path="/activites/missions/:slug" element={<MissionDetail />} />
+<Route path="/activites/formations/:slug" element={<FormationDetail />} />
+<Route path="/publications/:slug" element={<PublicationDetail />} />
+
 
 function App() {
   // Exemple de fonction d'inscription (à adapter selon votre backend)
