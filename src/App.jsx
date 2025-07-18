@@ -19,13 +19,6 @@ import MissionDetail from "./pages/detail/MissionDetail";
 import FormationDetail from "./pages/detail/FormationDetail";
 import PublicationDetail from "./pages/detail/PublicationDetail";
 
-<Route path="/actualites/:slug" element={<ActualiteDetail />} />
-<Route path="/activites/evenements/:slug" element={<EvenementDetail />} />
-<Route path="/activites/missions/:slug" element={<MissionDetail />} />
-<Route path="/activites/formations/:slug" element={<FormationDetail />} />
-<Route path="/publications/:slug" element={<PublicationDetail />} />
-
-
 function App() {
   // Exemple de fonction d'inscription (à adapter selon votre backend)
   const handleRegister = async (formData) => {
@@ -37,11 +30,9 @@ function App() {
       });
       if (!res.ok) {
         const err = await res.json();
-        // Apostrophe correctement échappée ci-dessous
         throw new Error(err.message || 'Échec de l\'inscription');
       }
       const data = await res.json();
-      // … votre logique post-inscription
       return data;
     } catch (err) {
       console.error(err);
@@ -63,7 +54,13 @@ function App() {
             <Route path="/publications" element={<Publications />} />
             <Route path="/actualites" element={<News />} />
             <Route path="/contact" element={<Contact />} />
-            {/* Page d'administration accessible uniquement via URL directe */}
+
+            {/* Routes de détails dynamiques */}
+            <Route path="/actualites/:slug" element={<ActualiteDetail />} />
+            <Route path="/activites/evenements/:slug" element={<EvenementDetail />} />
+            <Route path="/activites/missions/:slug" element={<MissionDetail />} />
+            <Route path="/activites/formations/:slug" element={<FormationDetail />} />
+            <Route path="/publications/:slug" element={<PublicationDetail />} />
           </Routes>
         </main>
         <Footer />
