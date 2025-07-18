@@ -88,6 +88,42 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Mot du Président */}
+<section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      {/* Texte du message */}
+      <div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Mot du Président</h2>
+        <h3 className="text-xl font-semibold text-primary mb-6">Dr Elmehdi AG WAKINA</h3>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Bienvenue sur la plateforme officielle de la <strong>PONAH</strong> – <em>Plateforme des ONG Nationales Actives dans l’Humanitaire</em>.<br /><br />
+          Dans un contexte humanitaire complexe, marqué par des crises multidimensionnelles au Mali, la PONAH s’érige comme une réponse collective, stratégique et solidaire pour mieux coordonner l’action des ONG nationales.<br /><br />
+          Notre objectif est clair : <strong>valoriser les initiatives locales, renforcer la résilience des populations</strong>, et <strong>porter la voix des acteurs nationaux</strong> au cœur de l’action humanitaire.<br /><br />
+          À travers cette plateforme, nous affirmons notre engagement pour une action plus <strong>inclusive, équitable et localisée</strong>, au service des communautés affectées.<br /><br />
+          J’invite tous les partenaires techniques et financiers, les autorités nationales et locales, ainsi que la société civile, à collaborer étroitement avec nous pour <strong>une réponse humanitaire plus juste, plus efficace et ancrée dans les réalités maliennes</strong>.<br /><br />
+          <strong>Ensemble, faisons de la solidarité une force durable.</strong>
+        </p>
+      </div>
+
+      {/* Photo du Président */}
+      <div className="text-center">
+        <img 
+          src="/images/president.jpg" 
+          alt="Dr Elmehdi AG WAKINA, Président de la PONAH" 
+          className="rounded-lg shadow-lg mx-auto w-72 h-72 object-cover"
+        />
+        <div className="mt-4">
+          <h4 className="text-lg font-semibold text-gray-800">Dr Elmehdi AG WAKINA</h4>
+          <p className="text-sm text-gray-600">Président de la PONAH</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      
   {/* Section galerie défilante */}
       <HomeGalleryCarousel />
       {/* Mission */}
