@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import { Search, Users, X, FileText, CheckCircle, FileCheck2, UserCheck } from 'lucide-react';
+import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck } from 'lucide-react';
 import defaultMembers from '../../data/membersData_detailed_full';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
@@ -23,60 +23,12 @@ const faqData = [
 const Members = () => {
   const [membersData, setMembersData] = useState(defaultMembers);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedZone, setSelectedZone] = useState('');
   const [selectedMember, setSelectedMember] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const { user } = useAuth();
   const isAdmin = user && user.role === 'admin';
-
   const itemsPerPage = 12;
-
-const exportAllToPDF = () => {
-  const doc = new jsPDF('landscape');
-  doc.setFontSize(12);
-  doc.text('Liste complète des membres de la PONAH', 14, 15);
-
-  const headers = [[
-    'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
-    'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-    'Fonction', 'Téléphone', 'Email'
-  ]];
-
-  const body = membersData.map(m => [
-    m['Nom complet de l’ONG'] || '',
-    m['Acronyme'] || '',
-    m['Date de création'] || '',
-    m['Numéro d’accord cadre'] || '',
-    m['Adresse physique'] || '',
-    m['Zones d’intervention'] || '',
-    m['Nom du responsable'] || '',
-    m['Prénom du responsable'] || '',
-    m['Fonction du responsable'] || '',
-    m['Téléphone du responsable'] || '',
-    m['Email du responsable'] || ''
-  ]);
-
-  doc.autoTable({
-    head: headers,
-    body: body,
-    startY: 20,
-    styles: {
-      fontSize: 7,
-      cellPadding: 1,
-      halign: 'left',
-      valign: 'middle',
-    },
-    headStyles: {
-      fillColor: [41, 128, 185], // Bleu pro
-      textColor: [255, 255, 255],
-      fontStyle: 'bold',
-    },
-    theme: 'grid',
-    margin: { top: 20 },
-    pageBreak: 'auto'
-  });
-
-  doc.save('Membres_PONAH_Global.pdf');
-};
 
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
@@ -92,17 +44,55 @@ const exportAllToPDF = () => {
     reader.readAsBinaryString(file);
   };
 
-  const filteredMembers = membersData.filter(member =>
-    member['Nom complet de l’ONG'] &&
-    member['Nom complet de l’ONG'].toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const exportAllToPDF = () => {
+    const doc = new jsPDF('landscape');
+    doc.setFontSize(12);
+    doc.text('Liste complète des membres de la PONAH', 14, 15);
+
+    const headers = [[
+      'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
+      'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
+      'Fonction', 'Téléphone', 'Email']];
+
+    const body = membersData.map(m => [
+      m['Nom complet de l’ONG'] || '',
+      m['Acronyme'] || '',
+      m['Date de création'] || '',
+      m['Numéro d’accord cadre'] || '',
+      m['Adresse physique'] || '',
+      m['Zones d’intervention'] || '',
+      m['Nom du responsable'] || '',
+      m['Prénom du responsable'] || '',
+      m['Fonction du responsable'] || '',
+      m['Téléphone du responsable'] || '',
+      m['Email du responsable'] || ''
+    ]);
+
+    doc.autoTable({
+      head: headers,
+      body: body,
+      startY: 20,
+      styles: { fontSize: 7, cellPadding: 1 },
+      headStyles: { fillColor: [41, 128, 185], textColor: [255, 255, 255] },
+      theme: 'grid',
+      pageBreak: 'auto'
+    });
+
+    doc.save('Membres_PONAH_Global.pdf');
+  };
+
+  const filteredMembers = membersData.filter(member => {
+    const nomMatch = (member['Nom complet de l’ONG'] || '').toLowerCase().includes(searchTerm.toLowerCase());
+    const acronymeMatch = (member['Acronyme'] || '').toLowerCase().includes(searchTerm.toLowerCase());
+    const zoneMatch = selectedZone === '' || member['Zones d’intervention'] === selectedZone;
+    return zoneMatch && (nomMatch || acronymeMatch);
+  });
 
   const paginatedMembers = filteredMembers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
 
   return (
     <div className="min-h-screen">
-      {/* HERO */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Membres</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -110,34 +100,33 @@ const exportAllToPDF = () => {
         </p>
       </section>
 
-      {/* BOUTON PDF */}
       <div className="text-center mt-4">
-        <button
-          onClick={exportAllToPDF}
-          className="bg-primary text-white px-6 py-2 rounded shadow"
-        >
+        <button onClick={exportAllToPDF} className="bg-primary text-white px-6 py-2 rounded shadow">
           Exporter tous les membres en PDF
         </button>
       </div>
 
-      {/* IMPORT + FILTRES */}
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between">
-        {isAdmin && (
-          <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
-        )}
-        <input type="text" placeholder="Rechercher..." className="border px-4 py-2 rounded w-full" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        {isAdmin && <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />}
+        <input
+          type="text"
+          placeholder="Rechercher..."
+          className="border px-4 py-2 rounded w-full"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <select
+          value={selectedZone}
+          onChange={(e) => setSelectedZone(e.target.value)}
+          className="border px-3 py-2 rounded"
+        >
+          <option value="">Toutes les zones</option>
+          {[...new Set(membersData.map(m => m['Zones d’intervention']).filter(Boolean))].sort().map((zone, i) => (
+            <option key={i} value={zone}>{zone}</option>
+          ))}
+        </select>
       </div>
 
-      {/* STATISTIQUES */}
-      <section className="py-6 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div><div className="text-3xl font-bold text-primary">{membersData.length}</div><div>ONG Membres</div></div>
-          <div><div className="text-3xl font-bold text-secondary">{[...new Set(membersData.map(m => m['Zones d’intervention']).filter(Boolean))].length}</div><div>Zones</div></div>
-          <div><div className="text-3xl font-bold text-accent">{membersData.filter(m => m.recent).length}</div><div>Nouveaux Membres</div></div>
-        </div>
-      </section>
-
-      {/* LISTE DES MEMBRES */}
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {paginatedMembers.map((m, i) => (
           <div key={i} onClick={() => setSelectedMember(m)} className="bg-white border p-4 rounded shadow cursor-pointer">
@@ -150,14 +139,18 @@ const exportAllToPDF = () => {
         ))}
       </div>
 
-      {/* PAGINATION */}
       <div className="text-center my-6">
         {Array.from({ length: totalPages }, (_, i) => (
-          <button key={i} onClick={() => setCurrentPage(i + 1)} className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}>{i + 1}</button>
+          <button
+            key={i}
+            onClick={() => setCurrentPage(i + 1)}
+            className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}
+          >
+            {i + 1}
+          </button>
         ))}
       </div>
 
-      {/* MODALE MEMBRE */}
       {selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
@@ -176,7 +169,6 @@ const exportAllToPDF = () => {
         </div>
       )}
 
-      {/* ADHÉSION */}
       <section className="py-16 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
@@ -191,7 +183,6 @@ const exportAllToPDF = () => {
         </div>
       </section>
 
-      {/* ÉQUIPE */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10">Notre Équipe Dirigeante</h2>
@@ -208,7 +199,6 @@ const exportAllToPDF = () => {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Questions Fréquentes</h2>
