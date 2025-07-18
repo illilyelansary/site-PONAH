@@ -7,6 +7,7 @@ const news = [
     excerpt: 'Les 9 axes stratégiques ont été validés lors de l\'atelier de restitution.',
     date: '30 octobre 2024',
     image: '/images/news1-new.jpg'
+    link: "/actualites"
   },
   {
     id: 2,
