@@ -207,6 +207,13 @@ const Members = () => {
           <a href="mailto:ponah.mali@gmail.com" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Demander l'adhésion</a>
         </div>
       </section>
+      {/* Formulaire d'adhésion */}
+      <section id="formulaire-adhesion" className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Formulaire d'Adhésion</h2>
+          <InscriptionForm />
+        </div>
+      </section>
 
       {/* Équipe dirigeante */}
       <section className="py-16 bg-white">
