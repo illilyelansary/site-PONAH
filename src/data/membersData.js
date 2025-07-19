@@ -593,7 +593,7 @@ const membersData = [
     "Date de création": "2018-03-30 00:00:00",
     "Numéro d’accord cadre": "1480",
     "Adresse physique": "Tombouctou",
-    "Zones d’intervention": "Mopti, Tombouctou, Gao, Kidal et district de Bamako",
+    "Zones d’intervention": "Ségou, San, Ménaka, Kayes, Sikasso, Koulikoro, Mopti, Tombouctou, Gao, Kidal et district de Bamako",
     "Nom du responsable": "Moussa Abba ",
     "Prénom du responsable": "Diallo",
     "Fonction du responsable": "Président",
