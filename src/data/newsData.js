@@ -7,7 +7,8 @@ const news = [
     excerpt: 'Les 9 axes stratégiques ont été validés lors de l\'atelier de restitution.',
     date: '30 octobre 2024',
     image: '/images/news1-new.jpg',
-    slug: 'validation-strategie-nationale-localisation'
+    slug: 'validation-strategie-nationale-localisation',
+    link: '/actualites/validation-strategie-nationale-localisation'
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const news = [
     excerpt: '72 OSC ont bénéficié d\'une formation complète dans 3 régions.',
     date: '15 décembre 2024',
     image: '/images/news2.jpg',
-    slug: 'formation-360-acteurs-grs'
+    slug: 'formation-grs-osc-2024',
+    link: '/actualites/formation-grs-osc-2024'
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ const news = [
     excerpt: 'Des promesses de financement et de nouveaux partenariats ont été obtenus.',
     date: '20 septembre 2024',
     image: '/images/news3.jpg',
-    slug: 'mission-plaidoyer-qatar'
+    slug: 'mission-plaidoyer-qatar-2024',
+    link: '/actualites/mission-plaidoyer-qatar-2024'
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ const news = [
     excerpt: 'Les bases méthodologiques pour évaluer les progrès ont été posées.',
     date: '30 mai 2024',
     image: '/images/news4.jpg',
-    slug: 'lancement-barometre-localisation'
+    slug: 'lancement-barometre-localisation',
+    link: '/actualites/lancement-barometre-localisation'
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ const news = [
     excerpt: 'Point d\'étape sur les 13 recommandations du Forum National.',
     date: '3 mai 2024',
     image: '/images/news5.jpg',
-    slug: 'table-ronde-recommandations'
+    slug: 'table-ronde-recommandations-forum',
+    link: '/actualites/table-ronde-recommandations-forum'
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ const news = [
     excerpt: 'La PONAH a été officiellement enregistrée en janvier 2024.',
     date: '18 janvier 2024',
     image: '/images/news6.jpg',
-    slug: 'creation-officielle-ponah'
+    slug: 'creation-officielle-ponah',
+    link: '/actualites/creation-officielle-ponah'
   }
 ];
 
