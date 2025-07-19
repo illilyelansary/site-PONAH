@@ -33,7 +33,7 @@ const About = () => {
     },
     {
       title: 'Assemblée Générale',
-      members: 130,
+      members: 152,
       description: 'Instance suprême de la PONAH, elle se tient annuellement et regroupe tous les membres de la plateforme.'
     }
   ];
@@ -197,7 +197,7 @@ const About = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Couverture Nationale</h3>
                 <p className="text-gray-600 mb-4">
-                  La PONAH couvre l'ensemble du territoire malien avec ses 130 ONG membres réparties 
+                  La PONAH couvre l'ensemble du territoire malien avec ses 152 ONG membres réparties 
                   dans toutes les régions du pays.
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
@@ -250,7 +250,7 @@ const About = () => {
             {[
               {
                 title: 'Ancrage Communautaire',
-                description: 'Facilité d\'accès et proximité avec les populations locales grâce à notre réseau de 130+ ONG membres'
+                description: 'Facilité d\'accès et proximité avec les populations locales grâce à notre réseau de 150+ ONG membres'
               },
               {
                 title: 'Connaissance du Contexte',
