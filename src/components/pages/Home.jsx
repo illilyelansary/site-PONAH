@@ -88,62 +88,63 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-   {/* Mot du Président */}
-<section className="py-16 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      
-      {/* Texte du message */}
-      <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-3">Mot du Président</h2>
-        <h3 className="text-lg font-medium text-primary mb-6">Dr Elmehdi AG WAKINA</h3>
-        <div className="text-gray-700 text-base leading-normal space-y-4">
-          <p>
-            Bienvenue sur la plateforme officielle de la <strong>PONAH</strong> – 
-            <em> Plateforme des ONG Nationales Actives dans l’Humanitaire</em>.
-          </p>
-          <p>
-            Dans un contexte humanitaire complexe, marqué par des crises multidimensionnelles au Mali, 
-            la PONAH s’érige comme une réponse collective, stratégique et solidaire pour mieux coordonner 
-            l’action des ONG nationales.
-          </p>
-          <p>
-            Notre objectif est clair : <strong>valoriser les initiatives locales, renforcer la résilience des populations</strong>, 
-            et <strong>porter la voix des acteurs nationaux</strong> au cœur de l’action humanitaire.
-          </p>
-          <p>
-            À travers cette plateforme, nous affirmons notre engagement pour une action plus 
-            <strong> inclusive, équitable et localisée</strong>, au service des communautés affectées.
-          </p>
-          <p>
-            J’invite tous les partenaires techniques et financiers, les autorités nationales et locales, ainsi que la société civile, 
-            à collaborer étroitement avec nous pour <strong>une réponse humanitaire plus juste, plus efficace et ancrée dans les réalités maliennes</strong>.
-          </p>
-          <p><strong>Ensemble, faisons de la solidarité une force durable.</strong></p>
+
+      {/* Mot du Président */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            {/* Texte du message */}
+            <div>
+              <div className="border-l-4 border-primary pl-4 bg-primary/5 p-6 rounded-lg shadow-sm">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">Mot du Président</h2>
+                <h3 className="text-lg font-medium text-primary mb-6">Dr Elmehdi AG WAKINA</h3>
+                <div className="text-gray-700 text-base leading-normal space-y-4">
+                  <p>
+                    Bienvenue sur la plateforme officielle de la <strong>PONAH</strong> – 
+                    <em> Plateforme des ONG Nationales Actives dans l’Humanitaire</em>.
+                  </p>
+                  <p>
+                    Dans un contexte humanitaire complexe, marqué par des crises multidimensionnelles au Mali, 
+                    la PONAH s’érige comme une réponse collective, stratégique et solidaire pour mieux coordonner 
+                    l’action des ONG nationales.
+                  </p>
+                  <p>
+                    Notre objectif est clair : <strong>valoriser les initiatives locales, renforcer la résilience des populations</strong>, 
+                    et <strong>porter la voix des acteurs nationaux</strong> au cœur de l’action humanitaire.
+                  </p>
+                  <p>
+                    À travers cette plateforme, nous affirmons notre engagement pour une action plus 
+                    <strong> inclusive, équitable et localisée</strong>, au service des communautés affectées.
+                  </p>
+                  <p>
+                    J’invite tous les partenaires techniques et financiers, les autorités nationales et locales, ainsi que la société civile, 
+                    à collaborer étroitement avec nous pour <strong>une réponse humanitaire plus juste, plus efficace et ancrée dans les réalités maliennes</strong>.
+                  </p>
+                  <p><strong>Ensemble, faisons de la solidarité une force durable.</strong></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo du Président */}
+            <div className="text-center">
+              <img 
+                src="/images/president.jpg" 
+                alt="Dr Elmehdi AG WAKINA, Président de la PONAH" 
+                className="rounded-xl shadow-lg mx-auto w-72 h-72 object-cover"
+              />
+              <div className="mt-4">
+                <h4 className="text-lg font-semibold text-gray-800">Dr Elmehdi AG WAKINA</h4>
+                <p className="text-sm text-gray-500">Président de la PONAH</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Photo du Président */}
-      <div className="text-center">
-        <img 
-          src="/images/president.jpg" 
-          alt="Dr Elmehdi AG WAKINA, Président de la PONAH" 
-          className="rounded-xl shadow-lg mx-auto w-72 h-72 object-cover"
-        />
-        <div className="mt-4">
-          <h4 className="text-lg font-semibold text-gray-800">Dr Elmehdi AG WAKINA</h4>
-          <p className="text-sm text-gray-500">Président de la PONAH</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      
-  {/* Section galerie défilante */}
+      {/* Galerie */}
       <HomeGalleryCarousel />
+
       {/* Mission */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,6 +213,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* Appel à l’action */}
       <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
