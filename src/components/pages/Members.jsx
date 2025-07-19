@@ -26,7 +26,7 @@ const faqData = [
   { question: "Comment adhérer à la PONAH ?", answer: "L’adhésion nécessite une demande timbrée, un Accord Cadre, le paiement des frais d’adhésion (50 000 FCFA) et l’engagement à respecter les statuts." },
   { question: "Quels sont les avantages d’être membre ?", answer: "Accès aux formations, représentations, participation aux mécanismes de coordination, échanges d’expériences, et renforcement des capacités." },
   { question: "Comment collaborer avec la PONAH ?", answer: "Nous collaborons avec les ONG, les agences de coopération internationales, les bailleurs de fonds et les institutions gouvernementales." },
-  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l’ensemble du territoire malien avec plus de 120+ ONG membres réparties dans toutes les régions et le district de Bamako." },
+  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l’ensemble du territoire malien avec plus de 150+ ONG membres réparties dans toutes les régions et le district de Bamako." },
 ];
 
 const Members = () => {
