@@ -1792,20 +1792,6 @@ const membersData = [
     "Unnamed: 11": "nan"
   },
   {
-    "Nom complet de l’ONG": "Association Malienne pour la Survie au Sahel",
-    "Acronyme": "AMSS",
-    "Date de création": "1991-09-21 00:00:00",
-    "Numéro d’accord cadre": "0026/0286",
-    "Adresse physique": "Tombouctou, route de kabara ,face BIM S.A",
-    "Zones d’intervention": " Kidal, Menaka, Gao, Tombouctou, Mopti, Segou, Sikasso, Koulikoro et district de Bamako",
-    "Nom du responsable": "Elmehdi",
-    "Prénom du responsable": "AG WAKINA",
-    "Fonction du responsable": "Directeur de programmes",
-    "Téléphone du responsable": "76023225",
-    "Email du responsable": "amss@ong-amss.org",
-    "Unnamed: 11": "nan"
-  },
-  {
     "Nom complet de l’ONG": "Association pour l'Employabilité, la Protection et la Promotion des droits des jeunes de Gourma Rharous",
     "Acronyme": "HONNEY-Mali",
     "Date de création": "2021-11-19 00:00:00",
