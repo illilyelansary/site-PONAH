@@ -212,6 +212,15 @@ const About = () => {
                   <div>• District de Bamako</div>
                   <div>• Région de Taoudéni</div>
                   <div>• Région de Ménaka</div>
+                   <div>• Région de Nioro</div>
+                  <div>• Région de Kita</div>
+                  <div>• Région de Dioila</div>
+                  <div>• Région de Nara</div>
+                  <div>• Région de Bougouni</div>
+                  <div>• Région de Koutila</div>
+                  <div>• Région de San</div>
+                  <div>• Région de Bandiagara</div>
+                  <div>• Région de Douentza</div>
                 </div>
               </div>
             </div>
