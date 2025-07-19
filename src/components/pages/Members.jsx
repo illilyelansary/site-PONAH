@@ -5,6 +5,7 @@ import defaultMembers from '../../data/membersData_detailed_full';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import InscriptionForm from '../../components/InscriptionForm';
 
 const teamData = [
   { name: "Dr Elmehdi AG WAKINA", role: "Président", description: "Responsable de la direction stratégique et de la représentation de la PONAH" },
