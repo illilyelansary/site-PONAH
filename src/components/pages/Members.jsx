@@ -193,18 +193,15 @@ const Members = () => {
         </div>
       )}
 
-      {/* Adhésion */}
+     {/* Adhésion */}
       <section className="py-16 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
           <p className="mb-10">L'adhésion à la PONAH est libre et volontaire pour toute ONG nationale qui accepte nos statuts</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <div className="flex flex-col items-center"><FileText className="w-10 h-10 text-green-600 mb-2" /><h3 className="font-bold">Demande d'adhésion</h3><p className="text-sm">Soumettre une demande timbrée adressée au Président</p></div>
-            <div className="flex flex-col items-center"><CheckCircle className="w-10 h-10 text-green-600 mb-2" /><h3 className="font-bold">Accord Cadre</h3><p className="text-sm">Fournir l'accord cadre de votre organisation</p></div>
-            <div className="flex flex-col items-center"><FileCheck2 className="w-10 h-10 text-green-600 mb-2" /><h3 className="font-bold">Frais d'adhésion</h3><p className="text-sm">50 000 FCFA non remboursable</p></div>
-            <div className="flex flex-col items-center"><UserCheck className="w-10 h-10 text-green-600 mb-2" /><h3 className="font-bold">Cotisation annuelle</h3><p className="text-sm">Engagement à payer 50 000 FCFA</p></div>
+            {/* ... critères d'adhésion */}
           </div>
-          <a href="mailto:ponah.mali@gmail.com" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Demander l'adhésion</a>
+          <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Devenir membre</a>
         </div>
       </section>
       {/* Formulaire d'adhésion */}
