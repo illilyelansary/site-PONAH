@@ -52,7 +52,7 @@ export default function Contact() {
       icon: Phone,
       title: 'Téléphone',
       details: [
-        '+223 76 02 32 25'
+        '+223 76 02 32 25',
         '+223 79 37 16 43'
       ]
     },
@@ -60,7 +60,7 @@ export default function Contact() {
       icon: Mail,
       title: 'Email',
       details: [
-        'secretariat@ponah.org'
+        'secretariat@ponah.org',
         'ponah.mali@gmail.com'
                ]
     },
