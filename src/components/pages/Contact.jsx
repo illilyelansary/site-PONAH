@@ -51,12 +51,18 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Téléphone',
-      details: ['+223 79 37 16 43']
+      details: [
+        '+223 76 02 32 25'
+        '+223 79 37 16 43'
+      ]
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['ponah.mali@gmail.com']
+      details: [
+        'secretariat@ponah.org'
+        'ponah.mali@gmail.com'
+               ]
     },
     {
       icon: Clock,
