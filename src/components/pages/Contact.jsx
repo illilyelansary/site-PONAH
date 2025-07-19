@@ -97,29 +97,59 @@ export default function Contact() {
     }
   ];
 
-  const leaders = [
+    const leaders = [
     {
-      name: 'Dr. Elmehdi AG WAKINA',
+      name: 'Dr Elmehdi AG WAKINA',
       title: 'Président',
-      desc:
-        'Responsable de la direction exécutive et de la représentation de la PONAH'
+      desc: 'Responsable de la direction stratégique et de la représentation de la PONAH'
     },
     {
-      name: 'Moussa A DIALLO',
+      name: 'Moussa Abba DIALLO',
       title: 'Vice-Président',
-      desc: "Appui à la direction de coordination des activités"
+      desc: 'Appui à la direction et coordination des activités'
     },
     {
-      name: 'Diangouna SOUMARE',
+      name: 'Dianguina SOUMARE',
       title: 'Secrétaire Général',
-      desc: 'Gestion administrative et coordination des organes'
+      desc: 'Gestion administrative et coordination des équipes'
     },
     {
-      name: 'Alidji Guitteye',
+      name: 'Alidji GUITTEYE',
       title: 'Trésorier Général',
       desc: 'Gestion financière et comptable de la plateforme'
+    },
+    {
+      name: 'YAYA BOIRE',
+      title: 'Trésorier Adjoint',
+      desc: 'Appui à la gestion financière et suivi budgétaire'
+    },
+    {
+      name: 'Louis Cheick SISSOKO',
+      title: 'Secrétaire chargé de l’Information, communication et organisation',
+      desc: 'Responsable de la communication interne et des événements'
+    },
+    {
+      name: 'Abdoul Moutalib Ag WATANE',
+      title: 'Secrétaire adjoint chargé de l’Information, communication et organisation',
+      desc: 'Appui aux actions de communication et d’organisation'
+    },
+    {
+      name: 'Nassouroun Walet OUEFAN',
+      title: 'Secrétaire chargée du Plaidoyer aux alliances',
+      desc: 'Coordination du plaidoyer et gestion des partenariats'
+    },
+    {
+      name: 'Moussa Ibrahim TOURE',
+      title: 'Secrétaire adjoint chargé du plaidoyer et aux alliances',
+      desc: 'Appui aux activités de plaidoyer et de représentation'
+    },
+    {
+      name: 'Abdoulaye A. TRAORE',
+      title: 'Secrétaire Permanent de la PONAH',
+      desc: 'Coordination des activités et suivi administratif permanent'
     }
   ];
+
 
   const faqs = [
     {
@@ -146,7 +176,7 @@ export default function Contact() {
     {
       question: 'Où intervient la PONAH ?',
       answer:
-        'La PONAH couvre l’ensemble du territoire malien avec ses 130+ ONG membres réparties dans les 11 régions du pays.',
+        'La PONAH couvre l’ensemble du territoire malien avec ses 150+ ONG membres réparties dans les 11 régions du pays.',
       linkText: 'Voir la carte →',
       link: '/activites'
     }
