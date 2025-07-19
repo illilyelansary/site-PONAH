@@ -593,7 +593,7 @@ const membersData = [
     "Date de création": "2018-03-30 00:00:00",
     "Numéro d’accord cadre": "1480",
     "Adresse physique": "Tombouctou",
-    "Zones d’intervention": "Mopti, Tombouctou, Gao, Kidal et district de Bamako",
+    "Zones d’intervention": "Ségou, San, Ménaka, Kayes, Sikasso, Koulikoro, Mopti, Tombouctou, Gao, Kidal et district de Bamako",
     "Nom du responsable": "Moussa Abba ",
     "Prénom du responsable": "Diallo",
     "Fonction du responsable": "Président",
@@ -1789,20 +1789,6 @@ const membersData = [
     "Fonction du responsable": "nan",
     "Téléphone du responsable": " ",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
-  },
-  {
-    "Nom complet de l’ONG": "Association Malienne pour la Survie au Sahel",
-    "Acronyme": "AMSS",
-    "Date de création": "1991-09-21 00:00:00",
-    "Numéro d’accord cadre": "0026/0286",
-    "Adresse physique": "Tombouctou, route de kabara ,face BIM S.A",
-    "Zones d’intervention": " Kidal, Menaka, Gao, Tombouctou, Mopti, Segou, Sikasso, Koulikoro et district de Bamako",
-    "Nom du responsable": "Elmehdi",
-    "Prénom du responsable": "AG WAKINA",
-    "Fonction du responsable": "Directeur de programmes",
-    "Téléphone du responsable": "76023225",
-    "Email du responsable": "amss@ong-amss.org",
     "Unnamed: 11": "nan"
   },
   {
