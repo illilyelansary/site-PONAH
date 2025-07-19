@@ -1,17 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import formations from "../../data/activitiesData/formations";
+import activitiesData from "../../data/activitiesData";
+const formations = activitiesData.trainings;
 
 const FormationDetail = () => {
   const { slug } = useParams();
-  const formation = formations.find((item) => item.slug === slug);
+  const formation = formations.find(f => f.slug === slug);
 
-  if (!formation) return <div className="p-6">Formation non trouvée.</div>;
+  if (!formation) return <div>Formation non trouvée.</div>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">{formation.title}</h1>
-      <p>Détails à venir...</p>
+    <div className="max-w-3xl mx-auto py-10 px-4">
+      <h1 className="text-3xl font-bold mb-4">{formation.title}</h1>
+      <p className="text-gray-600 mb-2"><strong>Période :</strong> {formation.period}</p>
+      <p className="text-lg text-gray-800">{formation.description}</p>
     </div>
   );
 };
