@@ -1,7 +1,15 @@
-// src/components/forms/InscriptionForm.jsx
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function InscriptionForm() {
+  const formRef = useRef();
+
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const zonesOptions = ['Bamako', 'Gao', 'Kayes', 'Kidal', 'Koulikoro', 'Mopti', 'Ségou', 'Sikasso', 'Tombouctou', 'Taoudéni', 'Ménaka'];
+  const domainesOptions = ['Éducation', 'Santé', 'Sécurité alimentaire', 'Eau-Hygiène', 'Genre', 'Environnement', 'Gouvernance', 'Protection', 'Développement économique'];
+
   const [form, setForm] = useState({
     nomONG: '',
     acronyme: '',
@@ -20,9 +28,6 @@ export default function InscriptionForm() {
     emailResp: ''
   });
 
-  const zonesOptions = ['Bamako', 'Gao', 'Kayes', 'Kidal', 'Koulikoro', 'Mopti', 'Ségou', 'Sikasso', 'Tombouctou', 'Taoudéni', 'Ménaka'];
-  const domainesOptions = ['Éducation', 'Santé', 'Sécurité alimentaire', 'Eau-Hygiène', 'Genre', 'Environnement', 'Gouvernance', 'Protection', 'Développement économique'];
-
   const handleChange = e => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));
@@ -39,13 +44,49 @@ export default function InscriptionForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('Formulaire soumis:', form);
-    alert('Votre demande a été soumise avec succès.');
+    setSending(true);
+
+    emailjs.send(
+      'smtp_zoho_ponah',           // ← Ton SERVICE ID EmailJS
+      'formulaire_adhesion',       // ← Ton TEMPLATE ID EmailJS
+      {
+        ...form,
+        zones: form.zones.join(', '),
+        domaines: form.domaines.join(', ')
+      },
+      'iXZaD4i2v60D279kC'           // ← Ta clé publique EmailJS
+    ).then(() => {
+      setSending(false);
+      setSuccess(true);
+      setForm({
+        nomONG: '',
+        acronyme: '',
+        dateCreation: '',
+        numeroAccord: '',
+        adresse: '',
+        emailONG: '',
+        telephone: '',
+        siteWeb: '',
+        zones: [],
+        domaines: [],
+        nomResp: '',
+        prenomResp: '',
+        fonctionResp: '',
+        telResp: '',
+        emailResp: ''
+      });
+    }).catch(err => {
+      setSending(false);
+      alert("Erreur lors de l'envoi. Veuillez réessayer.");
+      console.error(err);
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded shadow max-w-4xl mx-auto">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded shadow max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-center">Formulaire d’adhésion à la PONAH</h2>
+
+      {success && <div className="text-green-700 font-semibold bg-green-100 p-4 rounded">Demande envoyée avec succès !</div>}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input name="nomONG" value={form.nomONG} onChange={handleChange} placeholder="Nom complet de l’ONG *" className="border rounded px-3 py-2" required />
@@ -93,8 +134,8 @@ export default function InscriptionForm() {
         <input type="email" name="emailResp" value={form.emailResp} onChange={handleChange} placeholder="Email du responsable *" className="border rounded px-3 py-2" required />
       </div>
 
-      <button type="submit" className="bg-primary text-white px-6 py-3 rounded hover:bg-primary/90 w-full font-semibold">
-        Soumettre la demande
+      <button type="submit" disabled={sending} className="bg-primary text-white px-6 py-3 rounded hover:bg-primary/90 w-full font-semibold">
+        {sending ? "Envoi en cours..." : "Soumettre la demande"}
       </button>
     </form>
   );
