@@ -11,7 +11,7 @@ import HomeGalleryCarousel from '../../components/HomeGalleryCarousel';
 
 const Home = () => {
   const stats = [
-    { number: '130+', label: 'ONG Membres', icon: Users },
+    { number: '150+', label: 'ONG Membres', icon: Users },
     { number: '7.2M', label: 'Personnes dans le besoin', icon: Heart },
     { number: '13', label: 'Domaines d\'intervention', icon: Target },
     { number: '100%', label: 'Territoire malien couvert', icon: Globe },
