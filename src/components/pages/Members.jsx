@@ -7,10 +7,19 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
 const teamData = [
-  { name: "Elmehdi AG WAKINA", role: "Président", description: "Responsable de la direction stratégique et de la représentation de la PONAH" },
-  { name: "Moussa A. DIALLO", role: "Vice-Président", description: "Appui à la direction et coordination des activités" },
-  { name: "Dinguina SOUMARE", role: "Secrétaire Général", description: "Gestion administrative et coordination des équipes" },
-  { name: "Alfaji Guityaye", role: "Trésorier Général", description: "Gestion financière et comptable de la plateforme" },
+  { name: "Dr Elmehdi AG WAKINA", role: "Président", description: "Responsable de la direction stratégique et de la représentation de la PONAH" },
+  { name: "Moussa Abba DIALLO", role: "Vice-Président", description: "Appui à la direction et coordination des activités" },
+  { name: "Dianguina SOUMARE", role: "Secrétaire Général", description: "Gestion administrative et coordination des équipes" },
+  { name: "Alidji GUITTEYE", role: "Trésorier Général", description: "Gestion financière et comptable de la plateforme" },
+  { name: "YAYA BOIRE", role: "Trésorier Adjoint", description: "Appui à la gestion comptable" },
+  { name: "Louis Cheick SISSOKO", role: "Secrétaire chargé de l’Information, communication et organisation", description: "Responsable de la communication interne et externe" },
+  { name: "Abdoul Moutalib Ag WATANE", role: "Secrétaire adjoint chargé de l’Information, communication et organisation", description: "Soutien aux actions de communication et d’organisation" },
+  { name: "Nassouroun Walet OUEFAN", role: "Secrétaire chargée du Plaidoyer aux alliances", description: "Responsable des partenariats et du plaidoyer" },
+  { name: "Moussa Ibrahim TOURE", role: "Secrétaire adjoint chargé du plaidoyer et aux alliances", description: "Appui aux activités de plaidoyer et de collaboration" },
+  { name: "Gamny IGASTANE", role: "Président (autre structure)", description: "Responsable d'une structure affiliée" },
+  { name: "Abdoul Aziz AG ALWALI", role: "Membre", description: "Membre actif de la plateforme" },
+  { name: "Mouhamadou Farka MAIGA", role: "Membre", description: "Membre actif de la plateforme" },
+  { name: "Abdoulaye A. TRAORE", role: "Secrétaire Permanent", description: "Coordinateur des activités permanentes de la PONAH" }
 ];
 
 const faqData = [
