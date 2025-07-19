@@ -1,8 +1,8 @@
-// Formulaire d’adhésion mis à jour avec EmailJS, confirmation, et nouveaux champs
+// src/components/InscriptionForm.jsx
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-export default function InscriptionForm() {
+const InscriptionForm = () => {
   const [formData, setFormData] = useState({
     nomONG: '',
     acronyme: '',
@@ -16,105 +16,78 @@ export default function InscriptionForm() {
     fonction: '',
     email: '',
     telephone: '',
-    engageStatuts: false,
-    engageCotisation: false,
-    engageDemande: false,
-    engageAccord: false,
-    engageFrais: false
+    statuts: false,
+    cotisation: false,
+    demandeTimbee: false,
+    accordCadreFourni: false,
+    frais: false,
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [confirmation, setConfirmation] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send('service_ponah', 'template_adhesion_struct', formData, 'iXZaD4i2v60D279kC')
-      .then(() => setSubmitted(true))
-      .catch((error) => console.error('Erreur EmailJS:', error));
+
+    const templateParams = {
+      ...formData,
+      statuts: formData.statuts ? 'Oui' : 'Non',
+      cotisation: formData.cotisation ? 'Oui' : 'Non',
+      demandeTimbee: formData.demandeTimbee ? 'Oui' : 'Non',
+      accordCadreFourni: formData.accordCadreFourni ? 'Oui' : 'Non',
+      frais: formData.frais ? 'Oui' : 'Non',
+    };
+
+    emailjs
+      .send('smtp_zoho_ponah', 'formulaire_adhesion', templateParams, 'iXZaD4i2v60D279kC')
+      .then(() => {
+        setConfirmation(true);
+        setFormData({
+          nomONG: '', acronyme: '', dateCreation: '', accordCadre: '', adresse: '',
+          zones: '', domaines: '', nomResponsable: '', prenomResponsable: '', fonction: '',
+          email: '', telephone: '', statuts: false, cotisation: false, demandeTimbee: false,
+          accordCadreFourni: false, frais: false,
+        });
+      })
+      .catch((err) => console.error('Erreur EmailJS:', err));
   };
 
   return (
-    <section id="formulaire-adhesion" className="bg-white py-12">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6 text-center">Formulaire d’adhésion</h2>
-        {submitted ? (
-          <div className="text-green-700 bg-green-100 p-4 rounded text-center">
-            Merci ! Votre demande a été envoyée avec succès. Vous recevrez une confirmation par email.
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block font-medium">Nom complet de l’ONG *</label>
-                <input required name="nomONG" value={formData.nomONG} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Acronyme *</label>
-                <input required name="acronyme" value={formData.acronyme} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Date de création *</label>
-                <input required type="date" name="dateCreation" value={formData.dateCreation} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Numéro d’accord cadre</label>
-                <input name="accordCadre" value={formData.accordCadre} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block font-medium">Adresse physique *</label>
-                <input required name="adresse" value={formData.adresse} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Zones d’intervention *</label>
-                <input required name="zones" value={formData.zones} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Domaines d’intervention *</label>
-                <input required name="domaines" value={formData.domaines} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Prénom du responsable *</label>
-                <input required name="prenomResponsable" value={formData.prenomResponsable} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Nom du responsable *</label>
-                <input required name="nomResponsable" value={formData.nomResponsable} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Fonction *</label>
-                <input required name="fonction" value={formData.fonction} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Email *</label>
-                <input required type="email" name="email" value={formData.email} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-              <div>
-                <label className="block font-medium">Téléphone *</label>
-                <input required name="telephone" value={formData.telephone} onChange={handleChange} className="w-full border rounded px-3 py-2" />
-              </div>
-            </div>
+    <div className="bg-white p-6 rounded-lg shadow-md mt-10">
+      <h3 className="text-2xl font-bold mb-4">Formulaire d’adhésion à la PONAH</h3>
+      {confirmation && <p className="text-green-600 font-semibold mb-4">Merci ! Votre demande a été envoyée avec succès.</p>}
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" name="nomONG" required placeholder="Nom de l’ONG" value={formData.nomONG} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="acronyme" placeholder="Acronyme" value={formData.acronyme} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="dateCreation" placeholder="Date de création" value={formData.dateCreation} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="accordCadre" placeholder="Numéro d’accord cadre" value={formData.accordCadre} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="adresse" required placeholder="Adresse physique" value={formData.adresse} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="zones" required placeholder="Zones d’intervention" value={formData.zones} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="domaines" required placeholder="Domaines d’intervention" value={formData.domaines} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="nomResponsable" required placeholder="Nom du responsable" value={formData.nomResponsable} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="prenomResponsable" required placeholder="Prénom du responsable" value={formData.prenomResponsable} onChange={handleChange} className="border p-2 rounded" />
+        <input type="text" name="fonction" placeholder="Fonction du responsable" value={formData.fonction} onChange={handleChange} className="border p-2 rounded" />
+        <input type="email" name="email" required placeholder="Email" value={formData.email} onChange={handleChange} className="border p-2 rounded" />
+        <input type="tel" name="telephone" required placeholder="Téléphone" value={formData.telephone} onChange={handleChange} className="border p-2 rounded" />
 
-            <div className="space-y-3 mt-6">
-              <label className="block font-semibold mb-2">Engagements *</label>
-              <label className="flex items-center"><input type="checkbox" name="engageStatuts" checked={formData.engageStatuts} onChange={handleChange} required className="mr-2" /> Respecter les statuts de la PONAH</label>
-              <label className="flex items-center"><input type="checkbox" name="engageCotisation" checked={formData.engageCotisation} onChange={handleChange} required className="mr-2" /> Payer la cotisation annuelle de 50 000 FCFA</label>
-              <label className="flex items-center"><input type="checkbox" name="engageDemande" checked={formData.engageDemande} onChange={handleChange} required className="mr-2" /> Soumettre une demande timbrée</label>
-              <label className="flex items-center"><input type="checkbox" name="engageAccord" checked={formData.engageAccord} onChange={handleChange} required className="mr-2" /> Fournir l'accord cadre de l’ONG</label>
-              <label className="flex items-center"><input type="checkbox" name="engageFrais" checked={formData.engageFrais} onChange={handleChange} required className="mr-2" /> Payer les frais d’adhésion de 50 000 FCFA</label>
-            </div>
+        <div className="md:col-span-2 space-y-2">
+          <label className="block"><input type="checkbox" name="statuts" checked={formData.statuts} onChange={handleChange} className="mr-2" />Accepte les statuts de la PONAH *</label>
+          <label className="block"><input type="checkbox" name="cotisation" checked={formData.cotisation} onChange={handleChange} className="mr-2" />S’engage à payer la cotisation annuelle *</label>
+          <label className="block"><input type="checkbox" name="demandeTimbee" checked={formData.demandeTimbee} onChange={handleChange} className="mr-2" />Fournit une demande timbrée *</label>
+          <label className="block"><input type="checkbox" name="accordCadreFourni" checked={formData.accordCadreFourni} onChange={handleChange} className="mr-2" />Fournit l’accord cadre *</label>
+          <label className="block"><input type="checkbox" name="frais" checked={formData.frais} onChange={handleChange} className="mr-2" />S’engage à régler les frais d’adhésion *</label>
+        </div>
 
-            <div className="text-center mt-6">
-              <button type="submit" className="bg-green-700 text-white px-6 py-3 rounded">Envoyer la demande</button>
-            </div>
-          </form>
-        )}
-      </div>
-    </section>
+        <button type="submit" className="md:col-span-2 bg-primary text-white py-2 px-6 rounded hover:bg-primary/90">Envoyer la demande</button>
+      </form>
+    </div>
   );
-}
+};
+
+export default InscriptionForm;
