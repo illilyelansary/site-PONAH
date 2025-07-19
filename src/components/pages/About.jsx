@@ -24,7 +24,7 @@ const About = () => {
     {
       title: 'Comité Directeur',
       members: 9,
-      description: 'Dirigé par El Mehdi Ag WAKINA (Président), le comité directeur se réunit chaque trimestre pour orienter les actions de la plateforme.'
+      description: 'Dirigé par Dr. Elmehdi AG WAKINA (Président), le comité directeur se réunit chaque trimestre pour orienter les actions de la plateforme.'
     },
     {
       title: 'Commissariat aux Comptes',
