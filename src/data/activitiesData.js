@@ -2,68 +2,95 @@
 
 const events = [
   {
+    id: 1,
     title: 'Atelier de restitution du Baromètre',
     description: 'Validation des 9 axes pour la stratégie nationale.',
     date: '29-30 octobre 2024',
     location: 'CICB, Bamako',
-    slug: 'atelier-de-restitution-du-barometre'
+    image: '/images/event1.jpg',
+    slug: 'atelier-restitution-barometre',
+    link: '/activites/evenements/atelier-restitution-barometre'
   },
   {
+    id: 2,
     title: 'Formation GRS - Projet PARTAGE',
     description: '360 acteurs des OSC formés à Mopti, Ségou, Gao.',
     date: 'Novembre-Décembre 2024',
     location: 'Mopti, Ségou, Gao',
-    slug: 'formation-grs-projet-partage'
+    image: '/images/event2.jpg',
+    slug: 'formation-grs-partage-2024',
+    link: '/activites/evenements/formation-grs-partage-2024'
   },
   {
+    id: 3,
     title: 'Lancement du Baromètre de la Localisation',
     description: 'Présentation du cadre général et méthodologique.',
     date: '29-30 mai 2024',
     location: 'CICB, Bamako',
-    slug: 'lancement-du-barometre-de-la-localisation'
+    image: '/images/event3.jpg',
+    slug: 'lancement-barometre-localisation-2024',
+    link: '/activites/evenements/lancement-barometre-localisation-2024'
   },
   {
+    id: 4,
     title: 'Table ronde sur la Localisation',
     description: 'Évaluation des recommandations du forum.',
     date: '03 mai 2024',
     location: 'CICB, Bamako',
-    slug: 'table-ronde-sur-la-localisation'
+    image: '/images/event4.jpg',
+    slug: 'table-ronde-localisation-2024',
+    link: '/activites/evenements/table-ronde-localisation-2024'
   }
 ];
 
 const missions = [
   {
+    id: 1,
     title: 'Mission de plaidoyer au Qatar',
     description: 'Rencontres avec Qatar Charity et QFFD.',
     date: '16-20 septembre 2024',
-    slug: 'mission-de-plaidoyer-au-qatar'
+    image: '/images/mission1.jpg',
+    slug: 'mission-plaidoyer-qatar-2024',
+    link: '/activites/missions/mission-plaidoyer-qatar-2024'
   },
   {
+    id: 2,
     title: 'Lobby Tour aux États-Unis',
     description: 'Plaidoyer pour positionner les ONG locales.',
     date: 'Juin 2024',
-    slug: 'lobby-tour-aux-etats-unis'
+    image: '/images/mission2.jpg',
+    slug: 'lobby-tour-etats-unis-2024',
+    link: '/activites/missions/lobby-tour-etats-unis-2024'
   }
 ];
 
 const trainings = [
   {
+    id: 1,
     title: 'Formation des Coachs en GRS',
     description: 'Techniques d\'apprentissage et gestion des risques.',
     period: 'Novembre-Décembre 2024',
-    slug: 'formation-des-coachs-en-grs'
+    image: '/images/training1.jpg',
+    slug: 'formation-coachs-grs-2024',
+    link: '/activites/formations/formation-coachs-grs-2024'
   },
   {
+    id: 2,
     title: 'Formation Assurance Qualité',
     description: 'Session dans le cadre du projet LOCAL.',
     period: '21-25 octobre 2024',
-    slug: 'formation-assurance-qualite'
+    image: '/images/training2.jpg',
+    slug: 'formation-assurance-qualite-2024',
+    link: '/activites/formations/formation-assurance-qualite-2024'
   },
   {
+    id: 3,
     title: 'Consultation des OSC',
     description: 'Cartographie de 65 organisations.',
     period: '2024',
-    slug: 'consultation-des-osc'
+    image: '/images/training3.jpg',
+    slug: 'consultation-osc-2024',
+    link: '/activites/formations/consultation-osc-2024'
   }
 ];
 
