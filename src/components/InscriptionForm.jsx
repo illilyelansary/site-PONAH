@@ -23,6 +23,7 @@ const InscriptionForm = () => {
     emailONG: '', telephoneONG: '', web: '',
     zones: [], autresZones: '', domaines: [], autresDomaines: '',
     nomResponsable: '', prenomResponsable: '', fonction: '', telephone: '', email: '',
+    statuts: false, cotisation: false, demandeTimbee: false, accordCadreFourni: false, frais: false
   });
   const [confirmation, setConfirmation] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
@@ -53,6 +54,11 @@ const InscriptionForm = () => {
       ...formData,
       zones: formData.zones.join(', '),
       domaines: formData.domaines.join(', '),
+      statuts: formData.statuts ? 'Oui' : 'Non',
+      cotisation: formData.cotisation ? 'Oui' : 'Non',
+      demandeTimbee: formData.demandeTimbee ? 'Oui' : 'Non',
+      accordCadreFourni: formData.accordCadreFourni ? 'Oui' : 'Non',
+      frais: formData.frais ? 'Oui' : 'Non'
     };
 
     emailjs
@@ -64,6 +70,7 @@ const InscriptionForm = () => {
           emailONG: '', telephoneONG: '', web: '',
           zones: [], autresZones: '', domaines: [], autresDomaines: '',
           nomResponsable: '', prenomResponsable: '', fonction: '', telephone: '', email: '',
+          statuts: false, cotisation: false, demandeTimbee: false, accordCadreFourni: false, frais: false
         });
         setShowSummary(false);
       })
@@ -127,6 +134,26 @@ const InscriptionForm = () => {
               <input type="tel" name="telephone" required placeholder="Téléphone du responsable" value={formData.telephone} onChange={handleChange} className="border p-2 rounded" />
               <input type="email" name="email" required placeholder="Email du responsable" value={formData.email} onChange={handleChange} className="border p-2 rounded" />
             </div>
+          </fieldset>
+
+          {/* Documents obligatoires */}
+          <fieldset className="border p-4 rounded border-primary">
+            <legend className="text-lg font-semibold text-primary mb-2">📎 Documents et engagements</legend>
+            <label className="block text-sm">
+              <input type="checkbox" name="statuts" checked={formData.statuts} onChange={handleChange} className="mr-2" /> J’accepte les statuts de la PONAH
+            </label>
+            <label className="block text-sm">
+              <input type="checkbox" name="cotisation" checked={formData.cotisation} onChange={handleChange} className="mr-2" /> Je m’engage à payer la cotisation annuelle
+            </label>
+            <label className="block text-sm">
+              <input type="checkbox" name="demandeTimbee" checked={formData.demandeTimbee} onChange={handleChange} className="mr-2" /> J’ai fourni une demande timbrée
+            </label>
+            <label className="block text-sm">
+              <input type="checkbox" name="accordCadreFourni" checked={formData.accordCadreFourni} onChange={handleChange} className="mr-2" /> J’ai fourni l’accord cadre
+            </label>
+            <label className="block text-sm">
+              <input type="checkbox" name="frais" checked={formData.frais} onChange={handleChange} className="mr-2" /> J’ai réglé les frais d’adhésion
+            </label>
           </fieldset>
 
           <button type="submit" className="bg-primary text-white py-2 px-6 rounded hover:bg-primary/90">Prévisualiser et confirmer</button>
