@@ -1051,7 +1051,7 @@ const membersData = [
   },
   {
     "Nom complet de l’ONG": "Think Peace ",
-    "Acronyme": "TP",
+    "Acronyme": "Think Peace",
     "Date de création": "15/02/2016  28/08/2019",
     "Numéro d’accord cadre": "1605",
     "Adresse physique": "Hamdallaye ACI 2000, Près de Radisson Blu, derrière la Clinique Diafounou, Rue: 409, Porte : 57",
