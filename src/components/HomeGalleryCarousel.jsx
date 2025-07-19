@@ -1,5 +1,4 @@
 // src/components/HomeGalleryCarousel.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -12,8 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HomeGalleryCarousel = () => {
   const allItems = [
-    ...news.map((item) => ({ ...item, type: "actualité", link: `/actualites/${item.slug}` })),
-    ...activities.events.map((item) => ({ ...item, type: "événement", link: `/activites/evenements/${item.slug}` })),
+    ...news.map((item) => ({ ...item, type: "actualite", link: `/actualites/${item.slug}` })),
+    ...activities.events.map((item) => ({ ...item, type: "evenement", link: `/activites/evenements/${item.slug}` })),
     ...activities.missions.map((item) => ({ ...item, type: "mission", link: `/activites/missions/${item.slug}` })),
     ...activities.trainings.map((item) => ({ ...item, type: "formation", link: `/activites/formations/${item.slug}` })),
     ...publications.map((item) => ({ ...item, type: "publication", link: `/publications/${item.slug}` })),
@@ -28,8 +27,14 @@ const HomeGalleryCarousel = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
+      },
     ],
   };
 
