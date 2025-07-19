@@ -193,18 +193,61 @@ const Members = () => {
           </div>
         </div>
       )}
+      
+{/* Adhésion */}
+<section className="py-16 bg-primary/5">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
+    <p className="mb-10">
+      L'adhésion à la PONAH est libre et volontaire pour toute ONG nationale qui accepte nos statuts.
+    </p>
 
-     {/* Adhésion */}
-      <section className="py-16 bg-primary/5">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
-          <p className="mb-10">L'adhésion à la PONAH est libre et volontaire pour toute ONG nationale qui accepte nos statuts</p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            {/* ... critères d'adhésion */}
-          </div>
-          <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Devenir membre</a>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+      <div className="flex flex-col items-center">
+        <FileText className="w-10 h-10 text-green-600 mb-2" />
+        <h3 className="font-bold">Demande d'adhésion</h3>
+        <p className="text-sm">Soumettre une demande timbrée adressée au Président</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <CheckCircle className="w-10 h-10 text-green-600 mb-2" />
+        <h3 className="font-bold">Accord Cadre</h3>
+        <p className="text-sm">Fournir l'accord cadre de votre organisation</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <FileCheck2 className="w-10 h-10 text-green-600 mb-2" />
+        <h3 className="font-bold">Frais d'adhésion</h3>
+        <p className="text-sm">50 000 FCFA non remboursable</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <UserCheck className="w-10 h-10 text-green-600 mb-2" />
+        <h3 className="font-bold">Cotisation annuelle</h3>
+        <p className="text-sm">Engagement à payer 50 000 FCFA</p>
+      </div>
+    </div>
+
+    {/* Conditions */}
+    <div className="bg-white rounded-lg shadow-md p-6 text-left max-w-4xl mx-auto mb-10">
+      <h3 className="text-2xl font-semibold mb-4 text-center">Conditions pour devenir membre</h3>
+      <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm md:text-base">
+        <li>Être une ONG légalement reconnue au Mali.</li>
+        <li>Disposer d’un Accord Cadre signé avec le Gouvernement.</li>
+        <li>Soumettre une demande timbrée adressée au Président de la PONAH.</li>
+        <li>S’engager à respecter les statuts et règlements intérieurs de la PONAH.</li>
+        <li>Fournir les documents justificatifs requis (accord cadre, statuts, etc.).</li>
+        <li>Payer les frais d’adhésion de 50 000 FCFA (non remboursables).</li>
+        <li>S’acquitter de la cotisation annuelle fixée à 50 000 FCFA.</li>
+      </ul>
+      <p className="mt-4 italic text-sm text-gray-600">
+        Pour toute question, contactez-nous à :
+        <a href="mailto:secretariat@ponah.org" className="text-primary font-medium ml-1">secretariat@ponah.org</a>
+      </p>
+    </div>
+
+    {/* Bouton d’adhésion */}
+    <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Devenir membre</a>
         </div>
-      </section>
+</section>
+      
       {/* Formulaire d'adhésion */}
       <section id="formulaire-adhesion" className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4">
