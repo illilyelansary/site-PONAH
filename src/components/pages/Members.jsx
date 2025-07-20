@@ -1,4 +1,3 @@
-// MISE À JOUR COMPLÈTE AVEC FILTRAGE PAR RÉGION, COMPTEUR ET BOUTON DE RÉINITIALISATION
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search } from 'lucide-react';
@@ -28,7 +27,7 @@ const faqData = [
   { question: "Comment adhérer à la PONAH ?", answer: "L’adhésion nécessite une demande timbrée, un Accord Cadre, le paiement des frais d’adhésion (50 000 FCFA) et l’engagement à respecter les statuts." },
   { question: "Quels sont les avantages d’être membre ?", answer: "Accès aux formations, représentations, participation aux mécanismes de coordination, échanges d’expériences, et renforcement des capacités." },
   { question: "Comment collaborer avec la PONAH ?", answer: "Nous collaborons avec les ONG, les agences de coopération internationales, les bailleurs de fonds et les institutions gouvernementales." },
-  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l’ensemble du territoire malien avec plus de 150+ ONG membres réparties dans toutes les régions et le district de Bamako." },
+  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l’ensemble du territoire malien avec plus de 150+ ONG membres réparties dans toutes les régions et le district de Bamako." }
 ];
 
 const Members = () => {
@@ -41,7 +40,7 @@ const Members = () => {
   const isAdmin = user && user.role === 'admin';
   const itemsPerPage = 12;
 
-  const normalize = (str) => str ? str.normalize("NFD").replace(/\u0300-\u036f/g, "").toLowerCase() : "";
+  const normalize = (str) => str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
 
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
@@ -120,7 +119,6 @@ const Members = () => {
 
   return (
     <div className="min-h-screen">
-      {/* HÉRO */}
       <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Membres</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -128,14 +126,12 @@ const Members = () => {
         </p>
       </section>
 
-      {/* Export PDF */}
       <div className="text-center mt-4">
         <button onClick={exportAllToPDF} className="bg-primary text-white px-6 py-2 rounded shadow">
           Exporter tous les membres en PDF
         </button>
       </div>
 
-        {/* Recherche & Filtres avec réinitialisation */}
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between md:flex-wrap">
         {isAdmin && (
           <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
@@ -174,21 +170,10 @@ const Members = () => {
         </div>
       </div>
 
-      {/* Nombre de résultats */}
       <div className="max-w-7xl mx-auto px-4 mb-2 text-sm text-gray-600 italic">
         {filteredMembers.length} membre(s) trouvé(s)
       </div>
 
-      {/* Statistiques */}
-      <section className="py-6 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div><div className="text-3xl font-bold text-primary">{membersData.length}</div><div>ONG Membres</div></div>
-          <div><div className="text-3xl font-bold text-secondary">{zoneOptions.length}</div><div>Zones</div></div>
-          <div><div className="text-3xl font-bold text-accent">{membersData.filter(m => m.recent).length}</div><div>Nouveaux Membres</div></div>
-        </div>
-      </section>
-
-      {/* Liste Membres */}
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {paginatedMembers.map((m, i) => (
           <div key={i} onClick={() => setSelectedMember(m)} className="bg-white border p-4 rounded shadow cursor-pointer">
@@ -201,14 +186,12 @@ const Members = () => {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="text-center my-6">
         {Array.from({ length: totalPages }, (_, i) => (
           <button key={i} onClick={() => setCurrentPage(i + 1)} className={`mx-1 px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-primary text-white' : 'bg-gray-200'}`}>{i + 1}</button>
         ))}
       </div>
 
-      {/* Modale membre */}
       {selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
@@ -226,17 +209,52 @@ const Members = () => {
         </div>
       )}
 
-      {/* Adhésion */}
       <section className="py-16 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
           <p className="mb-10">L'adhésion à la PONAH est libre et volontaire pour toute ONG nationale qui accepte nos statuts.</p>
-          {/* ... blocs conditions adhésion ... */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div className="flex flex-col items-center">
+              <FileText className="w-10 h-10 text-green-600 mb-2" />
+              <h3 className="font-bold">Demande d'adhésion</h3>
+              <p className="text-sm">Soumettre une demande timbrée adressée au Président</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <CheckCircle className="w-10 h-10 text-green-600 mb-2" />
+              <h3 className="font-bold">Accord Cadre</h3>
+              <p className="text-sm">Fournir l'accord cadre de votre organisation</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FileCheck2 className="w-10 h-10 text-green-600 mb-2" />
+              <h3 className="font-bold">Frais d'adhésion</h3>
+              <p className="text-sm">50 000 FCFA non remboursable</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <UserCheck className="w-10 h-10 text-green-600 mb-2" />
+              <h3 className="font-bold">Cotisation annuelle</h3>
+              <p className="text-sm">Engagement à payer 50 000 FCFA</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg shadow-md p-6 text-left max-w-4xl mx-auto mb-10">
+            <h3 className="text-2xl font-semibold mb-4 text-center">Conditions pour devenir membre</h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm md:text-base">
+              <li>Être une ONG légalement reconnue au Mali.</li>
+              <li>Disposer d’un Accord Cadre signé avec le Gouvernement.</li>
+              <li>Soumettre une demande timbrée adressée au Président de la PONAH.</li>
+              <li>S’engager à respecter les statuts et règlements intérieurs de la PONAH.</li>
+              <li>Fournir les documents justificatifs requis (accord cadre, statuts, etc.).</li>
+              <li>Payer les frais d’adhésion de 50 000 FCFA (non remboursables).</li>
+              <li>S’acquitter de la cotisation annuelle fixée à 50 000 FCFA.</li>
+            </ul>
+            <p className="mt-4 italic text-sm text-gray-600">
+              Pour toute question, contactez-nous à :
+              <a href="mailto:secretariat@ponah.org" className="text-primary font-medium ml-1">secretariat@ponah.org</a>
+            </p>
+          </div>
           <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Devenir membre</a>
         </div>
       </section>
 
-      {/* Formulaire d'adhésion */}
       <section id="formulaire-adhesion" className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Formulaire d'Adhésion</h2>
@@ -244,7 +262,6 @@ const Members = () => {
         </div>
       </section>
 
-      {/* Équipe dirigeante */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-10">Notre Équipe Dirigeante</h2>
@@ -261,7 +278,6 @@ const Members = () => {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Questions Fréquentes</h2>
