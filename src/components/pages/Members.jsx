@@ -1,3 +1,4 @@
+// MISE À JOUR COMPLÈTE AVEC FILTRAGE PAR RÉGION, COMPTEUR ET BOUTON DE RÉINITIALISATION
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
 import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search } from 'lucide-react';
@@ -40,8 +41,7 @@ const Members = () => {
   const isAdmin = user && user.role === 'admin';
   const itemsPerPage = 12;
 
-  const normalize = (str) =>
-    str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
+  const normalize = (str) => str ? str.normalize("NFD").replace(/\u0300-\u036f/g, "").toLowerCase() : "";
 
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
@@ -112,13 +112,11 @@ const Members = () => {
   const paginatedMembers = filteredMembers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
 
-  const zoneOptions = [
-    ...new Set(
-      membersData
-        .flatMap(m => (m['Zones d’intervention'] || '').split(',').map(r => r.trim()))
-        .filter(Boolean)
-    )
-  ].sort((a, b) => a.localeCompare(b));
+  const zoneOptions = [...new Set(
+    membersData
+      .flatMap(m => (m['Zones d’intervention'] || '').split(',').map(r => r.trim()))
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b));
 
   return (
     <div className="min-h-screen">
@@ -137,7 +135,7 @@ const Members = () => {
         </button>
       </div>
 
-      {/* Recherche & Filtres */}
+        {/* Recherche & Filtres avec réinitialisation */}
       <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between md:flex-wrap">
         {isAdmin && (
           <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
@@ -152,29 +150,33 @@ const Members = () => {
             onChange={handleSearchChange}
           />
         </div>
-       <select
-  value={selectedZone}
-  onChange={(e) => setSelectedZone(e.target.value)}
-  className="border py-2 px-3 rounded w-full md:w-60"
->
-  <option value="">Toutes les zones</option>
-  {[
-    ...new Set(
-      membersData
-        .flatMap(m =>
-          (m['Zones d’intervention'] || '')
-            .split(',')
-            .map(r => r.trim())
-        )
-        .filter(Boolean)
-    )
-  ]
-    .sort((a, b) => a.localeCompare(b))
-    .map((region, i) => (
-      <option key={i} value={region}>{region}</option>
-  ))}
-</select>
+        <select
+          value={selectedZone}
+          onChange={(e) => setSelectedZone(e.target.value)}
+          className="border py-2 px-3 rounded w-full md:w-60"
+        >
+          <option value="">Toutes les zones</option>
+          {zoneOptions.map((region, i) => (
+            <option key={i} value={region}>{region}</option>
+          ))}
+        </select>
+        <div className="w-full text-right">
+          <button
+            onClick={() => {
+              setSearchTerm('');
+              setSelectedZone('');
+              setCurrentPage(1);
+            }}
+            className="text-sm text-blue-600 underline"
+          >
+            Réinitialiser les filtres
+          </button>
+        </div>
+      </div>
 
+      {/* Nombre de résultats */}
+      <div className="max-w-7xl mx-auto px-4 mb-2 text-sm text-gray-600 italic">
+        {filteredMembers.length} membre(s) trouvé(s)
       </div>
 
       {/* Statistiques */}
