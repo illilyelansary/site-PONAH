@@ -152,16 +152,29 @@ const Members = () => {
             onChange={handleSearchChange}
           />
         </div>
-        <select
-          value={selectedZone}
-          onChange={(e) => setSelectedZone(e.target.value)}
-          className="border py-2 px-3 rounded w-full md:w-60"
-        >
-          <option value="">Toutes les zones</option>
-          {zoneOptions.map((region, i) => (
-            <option key={i} value={region}>{region}</option>
-          ))}
-        </select>
+       <select
+  value={selectedZone}
+  onChange={(e) => setSelectedZone(e.target.value)}
+  className="border py-2 px-3 rounded w-full md:w-60"
+>
+  <option value="">Toutes les zones</option>
+  {[
+    ...new Set(
+      membersData
+        .flatMap(m =>
+          (m['Zones d’intervention'] || '')
+            .split(',')
+            .map(r => r.trim())
+        )
+        .filter(Boolean)
+    )
+  ]
+    .sort((a, b) => a.localeCompare(b))
+    .map((region, i) => (
+      <option key={i} value={region}>{region}</option>
+  ))}
+</select>
+
       </div>
 
       {/* Statistiques */}
