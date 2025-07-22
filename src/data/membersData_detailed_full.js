@@ -1321,7 +1321,7 @@ const membersData = [
     "Date de création": "1998-10-21 00:00:00",
     "Numéro d’accord cadre": "0336/001307",
     "Adresse physique": "Bamako",
-    "Zones d’intervention": "Toutes les regions du Mali et District de Bamako",
+    "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
     "Nom du responsable": "Amadou",
     "Prénom du responsable": "Togo",
     "Fonction du responsable": "Président du C.A",
