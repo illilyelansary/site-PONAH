@@ -33,12 +33,12 @@ const membersData = [
     "Date de création": "1997-06-19 00:00:00",
     "Numéro d’accord cadre": "AC  N° 0455/000909 du 15/04/2008, Avenant N° 3323/MATCL du 22/12/2010",
     "Adresse physique": "Segou",
-    "Zones d’intervention": "Kayes, Ségou, Koulikoro, Sikasso, Tombouctou",
+    "Zones d’intervention": "Kayes, Ségou, Koulikoro, Sikasso, Tombouctou, Bamako",
     "Nom du responsable": " Aly",
-    "Prénom du responsable": "Soumontera",
-    "Fonction du responsable": "Coordinateur",
+    "Prénom du responsable": "SOUMOUNTERA",
+    "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "21321297",
-    "Email du responsable": "wale@afribonemali.net",
+    "Email du responsable": "tiabou@yahoo.fr",
     "Unnamed: 11": "nan"
   },
   {
