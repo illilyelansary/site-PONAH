@@ -1385,20 +1385,7 @@ const membersData = [
     "Email du responsable": "hds_ong@yahoo.fr",
     "Unnamed: 11": "nan"
   },
-  {
-    "Nom complet de l’ONG": "Association pour la Promotion de la Santé de la Mère et de l'enfant",
-    "Acronyme": "IMANEH MALI",
-    "Date de création": "2011-01-06 00:00:00",
-    "Numéro d’accord cadre": "nan",
-    "Adresse physique": "Bamako",
-    "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
-    "Nom du responsable": "Kadiatou",
-    "Prénom du responsable": "Keita ",
-    "Fonction du responsable": "Présidente",
-    "Téléphone du responsable": "20-22-29-03",
-    "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
-  },
+  
   {
     "Nom complet de l’ONG": "INFA PLUSINFA PLUS",
     "Acronyme": "INFO PLUS",
@@ -1746,7 +1733,7 @@ const membersData = [
     "Prénom du responsable": "Oumou EP DOLO",
     "Fonction du responsable": "Directrice Exécutive",
     "Téléphone du responsable": "66519697/74972895",
-    "Email du responsable": "iamanehmali@afribonemali.net/ diombeleoumou8@gmail.com",
+    "Email du responsable": "iamanehmali@afribonemali.net",
     "Unnamed: 11": "nan"
   },
   {
