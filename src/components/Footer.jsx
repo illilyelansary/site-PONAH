@@ -109,6 +109,9 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">
                   ponah.mali@gmail.com
                 </p>
+                <p className="text-gray-300 text-sm">
+                  secretariat@ponah.org
+                </p>
               </div>
             </div>
           </div>
