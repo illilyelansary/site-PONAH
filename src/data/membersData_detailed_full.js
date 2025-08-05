@@ -632,7 +632,7 @@ const membersData = [
   {
     "Nom complet de l’ONG": "Association Protestante de la Santé au Mali",
     "Acronyme": "APSM",
-    "Date de création": "2008-01-14 00:00:00",
+    "Date de création": "6 mai 1992",
     "Numéro d’accord cadre": "0196/001394",
     "Adresse physique": "Bamako",
     "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
