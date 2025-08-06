@@ -1848,20 +1848,7 @@ const membersData = [
     "Email du responsable": "mamawaletn@gmail.com",
     "Unnamed: 11": "nan"
   },
-  {
-    "Nom complet de l’ONG": "Développement Holistique Africa",
-    "Acronyme": "DHA",
-    "Date de création": "2008-03-17 00:00:00",
-    "Numéro d’accord cadre": "0336/001307",
-    "Adresse physique": "Bamako",
-    "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
-    "Nom du responsable": "Amadou",
-    "Prénom du responsable": "Togo",
-    "Fonction du responsable": "Président",
-    "Téléphone du responsable": "603-71-53",
-    "Email du responsable": "aemdha@yahoo.fr",
-    "Unnamed: 11": "nan"
-  },
+  
   {
     "Nom complet de l’ONG": "Association des Jeunes Contre l'Enrolement dans le terrorisme",
     "Acronyme": "AJCET",
@@ -1952,12 +1939,12 @@ const membersData = [
     "Date de création": "2023-08-29 00:00:00",
     "Numéro d’accord cadre": "2011",
     "Adresse physique": "Daka Djerel",
-    "Zones d’intervention": "Mopti, Menaka, Gao, Tombouctou, Taoudenit, Bamako",
+    "Zones d’intervention": "Mopti, Menaka, Gao, Tombouctou, Taoudenit, Kidal, Bamako",
     "Nom du responsable": "Amadou",
     "Prénom du responsable": "Narba",
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76-34-46-77",
-    "Email du responsable": "nan",
+    "Email du responsable": "gunakaaneyong@gmail.com",
     "Unnamed: 11": "nan"
   },
   {
