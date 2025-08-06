@@ -962,7 +962,7 @@ const membersData = [
     "Prénom du responsable": " Diallo ",
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "76483661",
-    "Email du responsable": "imadel1@yahoo.fr",
+    "Email du responsable": "imadel@imadel-mali.org / imadel@imadel.net",
     "Unnamed: 11": "nan"
   },
   {
@@ -1136,13 +1136,13 @@ const membersData = [
   {
     "Nom complet de l’ONG": "Groupe des Artisants Ruraux d'Intédeyene",
     "Acronyme": "GARI",
-    "Date de création": "2004-11-02 00:00:00",
+    "Date de création": "1987-01-01 00:00:00",
     "Numéro d’accord cadre": "0004/000183",
     "Adresse physique": "Menaka",
-    "Zones d’intervention": "Tombouctou, Gao, Kidal, Bamako",
-    "Nom du responsable": "Ibrahim AG",
-    "Prénom du responsable": "nan",
-    "Fonction du responsable": "Representant",
+    "Zones d’intervention": "Gao, Menaka, Tombouctou, Kayes, Koulikoro, Ségou, Sikasso, Mopti,Bamako",
+    "Nom du responsable": "Ibrahim",
+    "Prénom du responsable": "Ag Idbaltanat",
+    "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "282-09-16",
     "Email du responsable": "ongarimenaka@yahoo.fr",
     "Unnamed: 11": "nan"
