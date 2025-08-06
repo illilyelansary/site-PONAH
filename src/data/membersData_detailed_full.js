@@ -808,7 +808,7 @@ const membersData = [
     "Prénom du responsable": "Traoré",
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "79130153",
-    "Email du responsable": "caeb@afribone.net. Ml",
+    "Email du responsable": "caebong@caebmali.org",
     "Unnamed: 11": "nan"
   },
   {
