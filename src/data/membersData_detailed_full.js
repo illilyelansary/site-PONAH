@@ -1653,20 +1653,6 @@ const membersData = [
     "Unnamed: 11": "nan"
   },
   {
-    "Nom complet de l’ONG": "Nouveaux horizon",
-    "Acronyme": "NOHO",
-    "Date de création": "03 Dcembre 2017",
-    "Numéro d’accord cadre": "0038/001193",
-    "Adresse physique": "nan",
-    "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
-    "Nom du responsable": "Atayabou",
-    "Prénom du responsable": "Salif IBRAHIM",
-    "Fonction du responsable": "Président",
-    "Téléphone du responsable": "75108817",
-    "Email du responsable": "noho@ong-noho.org/ ongnoho2000@gmail.com",
-    "Unnamed: 11": "nan"
-  },
-  {
     "Nom complet de l’ONG": "Groupe de Recherches Actions Formation pour le Développement Local au Mali",
     "Acronyme": "GRAFODEL",
     "Date de création": "2024-01-15 00:00:00",
