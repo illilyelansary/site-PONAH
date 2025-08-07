@@ -1653,7 +1653,7 @@ const membersData = [
     "Unnamed: 11": "nan"
   },
   {
-    "Nom complet de l’ONG": "Nouveau horizon",
+    "Nom complet de l’ONG": "Nouveaux horizon",
     "Acronyme": "NOHO",
     "Date de création": "03 Dcembre 2017",
     "Numéro d’accord cadre": "0038/001193",
@@ -1892,14 +1892,14 @@ const membersData = [
     "Unnamed: 11": "nan"
   },
   {
-    "Nom complet de l’ONG": "Nouveau horizon",
+    "Nom complet de l’ONG": "Nouveaux horizons",
     "Acronyme": "NOHO",
-    "Date de création": "03 Dcembre 2017",
+    "Date de création": "10 janvier 2000 modifiée 03 décembre 2007",
     "Numéro d’accord cadre": "0038/001193",
     "Adresse physique": "nan",
     "Zones d’intervention": "Bamako, Kayes, Koulikoro, Sikasso, Ségou, Mopti, Tombouctou, Gao, Kidal, Taoudénit, Ménaka, Nioro, Kita, Dioïla, Nara, Bougouni, Koutiala, San, Douentza, Bandiagara",
-    "Nom du responsable": "Atayabou",
-    "Prénom du responsable": "Mohomodou",
+    "Nom du responsable": "Salif",
+    "Prénom du responsable": "IBRAHIM",
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "72 82 02 19",
     "Email du responsable": "ongnoho200@gmail.com",
