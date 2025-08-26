@@ -27,6 +27,20 @@ const membersData = [
     "Email du responsable": "efesntamadrite@gmail.com",
     "Unnamed: 11": "nan"
   },
+   {
+    "Nom complet de l’ONG": "ONG AFRIQUE JEUNES 2020",
+    "Acronyme": "AJ2020",
+    "Date de création": "14/11/2007",
+    "Numéro d’accord cadre": "1742",
+    "Adresse physique": "Bamako",
+    "Zones d’intervention": "Kayes, Sikasso, Koulikoro, Ségou, Dioila, Nara, San, Mopti, Bandiagara,  Bankass, Douentza, Tombouctou, Gao",
+    "Nom du responsable": "COULIBALY",
+    "Prénom du responsable": "Sékou OUMAR",
+    "Fonction du responsable": "Président Exécutif",
+    "Téléphone du responsable": "73829998",
+    "Email du responsable": "afrikjeunes2020@gmail.com",
+    "Unnamed: 11": "nan"
+  },
   {
     "Nom complet de l’ONG": " Action Santé Population",
     "Acronyme": "WALE",
