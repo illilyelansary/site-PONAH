@@ -1514,16 +1514,16 @@ const membersData = [
   },
   {
     "Nom complet de l’ONG": "Association Tassaq Daouna",
-    "Acronyme": "Daouna",
+    "Acronyme": "ATD",
     "Date de création": "2023-03-31 00:00:00",
     "Numéro d’accord cadre": "1979",
     "Adresse physique": "Tombouctou",
     "Zones d’intervention": "Mopti, Tombouctou, Gao, Ménaka, Kidal, Bamako",
-    "Nom du responsable": "Mohamed AG Aboubacrine",
-    "Prénom du responsable": "Mohamed",
+    "Nom du responsable": "Ag Mohamed",
+    "Prénom du responsable": "Mohamed Mitta",
     "Fonction du responsable": "Président",
-    "Téléphone du responsable": "74-72-79-67",
-    "Email du responsable": "nan",
+    "Téléphone du responsable": "76 02 38 43 / 99 60 60 07",
+    "Email du responsable": "tassaqdaounaassociation@gmail.com",
     "Unnamed: 11": "nan"
   },
   {
