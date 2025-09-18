@@ -55,6 +55,20 @@ const membersData = [
     "Email du responsable": "tiabou@yahoo.fr",
     "Unnamed: 11": "nan"
   },
+ {
+    "Nom complet de l’ONG": "Appui au Développement Durable du Sahel-Malu",
+    "Acronyme": "ADDS-MALI",
+    "Date de création": "10/09/2021",
+    "Numéro d’accord cadre": "N° 1802",
+    "Adresse physique": "Gao château I ",
+    "Zones d’intervention": "Kayes, Koulikoro, Ségou, Mopti, Tombouctou, Gao, Kidal, Ménaka, Douentza, San, Bandiagara, Taoudeni, Bamako",
+    "Nom du responsable": " CISSE",
+    "Prénom du responsable": "Youssouf I",
+    "Fonction du responsable": "Prédisent",
+    "Téléphone du responsable": "76 30 69 96",
+    "Email du responsable": "addsmali28@gmail.com/ongaddsmali@gmail.com",
+    "Unnamed: 11": "nan"
+  },
   {
     "Nom complet de l’ONG": "Appui pour la Scolarisation et le Développement des Enfants et des Femmes pour une Meilleure Integration Nationale",
     "Acronyme": "ASDEMIN",
