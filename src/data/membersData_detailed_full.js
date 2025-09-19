@@ -55,6 +55,20 @@ const membersData = [
     "Email du responsable": "tiabou@yahoo.fr",
     "Unnamed: 11": "nan"
   },
+    {
+    "Nom complet de l’ONG": "Association des Conseillers Agricoles du Sahel",
+    "Acronyme": "A.C.A.S",
+    "Date de création": "21/05/2008",
+    "Numéro d’accord cadre": "N° 0566/000688",
+    "Adresse physique": "GAO(quartier saneye derriere SOMAGEP-GAO)",
+    "Zones d’intervention": "Tombouctou, GAO, Kidal, Menaka",
+    "Nom du responsable": "Bacha",
+    "Prénom du responsable": "Alassane MAÏGA",
+    "Fonction du responsable": "Coordinateur National",
+    "Téléphone du responsable": "76 43 20 85",
+    "Email du responsable": "ongacasmali@gmail.com",
+    "Unnamed: 11": "nan"
+  },
  {
     "Nom complet de l’ONG": "Appui au Développement Durable du Sahel-Malu",
     "Acronyme": "ADDS-MALI",
