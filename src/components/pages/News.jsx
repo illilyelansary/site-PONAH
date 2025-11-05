@@ -5,6 +5,21 @@ import { Calendar, Clock, ArrowRight, Tag, X } from 'lucide-react';
 const news = [
   {
     id: 1,
+    title: 'Participation à l\'atelier national sur la programmation humanitaire 2026',
+    excerpt: 'Le Président de la PONAH et des membres du CD ont pris part à l\'atelier national sur la programmation humanitaire 2026, présidé par le Secrétaire général du Ministère de la Santé et du Développement social.',
+    content: `Ce matin 5 Octobre 2025, Le Président de la PONAH avec certains membres du CD, ont pris part à l'atelier national sur la programmation humanitaire 2026. Présidée par M. Guindo, Secrétaire général du Ministère de la Santé et du Développement social.
+
+Cette rencontre a constitué un cadre d'échanges et de concertation entre les différents acteurs humanitaires intervenant au Mali. Elle a permis d'identifier les priorités stratégiques et de renforcer la coordination des actions en faveur des communautés vulnérables.
+
+La participation de la PONAH à cet atelier traduit leur engagement constant à contribuer aux efforts nationaux de planification et de mise en œuvre d'une réponse humanitaire efficace, inclusive et alignée sur les besoins des populations.`,
+    date: '5 octobre 2025',
+    category: 'coordination',
+    readTime: '3 min',
+    featured: true,
+    image: '/images/news7.jpg'
+  },
+  {
+    id: 2,
     title: 'Validation de la Stratégie Nationale de Localisation',
     excerpt: 'Les 9 axes stratégiques pour l\'élaboration de la Stratégie Nationale de Localisation ont été validés lors de l\'atelier de restitution.',
     content: `L'atelier de restitution de l'étude du Baromètre de la Localisation, tenu les 29 et 30 octobre 2024 au CICB, a marqué une étape importante dans le processus de localisation de l'aide humanitaire au Mali.
@@ -30,7 +45,7 @@ Une feuille de route a été élaborée pour guider l'élaboration de la straté
     image: '/images/news1-new.jpg'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Formation de 360 acteurs sur la gestion des risques de sécurité',
     excerpt: 'Dans le cadre du projet PARTAGE, 72 OSC ont bénéficié d\'une formation complète sur la gestion des risques sécuritaires.',
     content: `La PONAH a mené avec succès la formation de 360 acteurs locaux sur la gestion des risques de sécurité dans les régions de Mopti, Ségou et Gao. Cette initiative s'inscrit dans le cadre du projet PARTAGE, financé par ECHO.
@@ -52,7 +67,7 @@ Cette formation répond aux priorités critiques identifiées dans le rapport de
     image: '/images/news2.jpg'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Mission de plaidoyer fructueuse au Qatar',
     excerpt: 'La mission conjointe FONGIM-PONAH au Qatar a permis d\'obtenir des promesses de financement et de développer de nouveaux partenariats.',
     content: `Du 16 au 20 septembre 2024, une délégation de la PONAH a participé à une mission conjointe de plaidoyer au Qatar, aux côtés du FONGIM. Cette mission visait à diversifier les sources de financement humanitaire en s'adressant aux bailleurs non traditionnels.
@@ -74,7 +89,7 @@ Cette mission a permis d'obtenir des promesses concrètes de financement et d'é
     image: '/images/news3.jpg'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Lancement du Baromètre de la Localisation',
     excerpt: 'L\'atelier de lancement du baromètre de la localisation a posé les bases méthodologiques pour évaluer les progrès de la localisation au Mali.',
     content: `Les 29 et 30 mai 2024, la PONAH a organisé l'atelier de lancement du baromètre de la localisation au CICB, marquant une étape cruciale dans l'évaluation des progrès de la localisation de l'aide humanitaire au Mali.
@@ -97,7 +112,7 @@ Un comité de pilotage multi-acteurs a été proposé pour assurer le suivi de c
     image: '/images/news4.jpg'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Table Ronde sur l\'état d\'avancement des recommandations',
     excerpt: 'La PONAH a organisé une table ronde pour évaluer la mise en œuvre des 13 recommandations du Forum National sur la localisation.',
     content: `Le 3 mai 2024, la PONAH a organisé une table ronde au CICB avec la participation de 51 acteurs humanitaires pour faire le point sur la mise en œuvre des recommandations issues du Forum National sur la localisation de septembre 2022.
@@ -119,7 +134,7 @@ Cette table ronde a renforcé l'engagement de tous les acteurs à poursuivre les
     image: '/images/news5.jpg'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Création officielle de la PONAH',
     excerpt: 'La Plateforme des ONG Nationales Actives dans l\'Humanitaire a été officiellement créée et enregistrée.',
     content: `Le 18 janvier 2024 restera une date historique pour l'humanitaire malien avec la tenue de l'Assemblée Générale constitutive de la PONAH dans les locaux de l'ONG AMSS.
@@ -236,7 +251,7 @@ export default function News() {
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-40 object-cover"
+                className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <div className="flex items-center space-x-2 mb-2">
