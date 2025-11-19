@@ -61,9 +61,7 @@ const Members = () => {
     doc.setFontSize(12);
     doc.text('Liste complète des membres de la PONAH', 14, 15);
     const headers = [[
-      'Nom complet de l’ONG', 'Acronyme', 'Date de création', 'Numéro d’accord cadre',
-      'Adresse physique', 'Zones d’intervention', 'Nom du responsable', 'Prénom du responsable',
-      'Fonction', 'Téléphone', 'Email'
+      'Nom complet de l’ONG', 'Acronyme'
     ]];
     const body = membersData.map(m => [
       m['Nom complet de l’ONG'] || '',
