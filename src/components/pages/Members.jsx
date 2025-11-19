@@ -203,6 +203,7 @@ const Members = () => {
             <p><strong>Email:</strong> {selectedMember['Email du responsable']}</p>
             <p><strong>Adresse:</strong> {selectedMember['Adresse physique']}</p>
             <p><strong>Zone d’intervention:</strong> {selectedMember['Zones d’intervention']}</p>
+            <p><strong>Zone d’intervention:</strong> {selectedMember['Domaines d’intervention']}</p>
             <p><strong>Accord Cadre:</strong> {selectedMember['Numéro d’accord cadre']}</p>
           </div>
         </div>
