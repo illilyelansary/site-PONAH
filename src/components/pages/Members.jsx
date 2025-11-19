@@ -69,7 +69,7 @@ const Members = () => {
       m['Date de création'] || '',
       m['Numéro d’accord cadre'] || '',
       m['Adresse physique'] || '',
-      m['Zones d’intervention'] || '',
+      m["Domaines d'intervention"] || '',
       m['Domaines d'intervention'] || '',
       m['Nom du responsable'] || '',
       m['Prénom du responsable'] || '',
