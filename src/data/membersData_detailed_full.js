@@ -11,7 +11,7 @@ const membersData = [
     "Fonction du responsable": "Directeur de programmes",
     "Téléphone du responsable": "76023225",
     "Email du responsable": "amss@ong-amss.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "Gouvernance locale et cohésion sociale, Paix sécurité et stabilisation, Sécurité alimentaire et moyens de subsistance, Protection et VBG, Éducation et alphabétisation, Eau hygiène et assainissement, Santé et nutrition"
   },
   {
     "Nom complet de l’ONG": "ONG EFES N'TAMADRITE",
@@ -25,7 +25,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "73 10 93 64",
     "Email du responsable": "efesntamadrite@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
    {
     "Nom complet de l’ONG": "ONG AFRIQUE JEUNES 2020",
@@ -39,7 +39,7 @@ const membersData = [
     "Fonction du responsable": "Président Exécutif",
     "Téléphone du responsable": "73829998",
     "Email du responsable": "afrikjeunes2020@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Action Santé Population",
@@ -53,7 +53,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "21321297",
     "Email du responsable": "tiabou@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
     {
     "Nom complet de l’ONG": "Association des Conseillers Agricoles du Sahel",
@@ -67,7 +67,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "76 43 20 85",
     "Email du responsable": "ongacasmali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
  {
     "Nom complet de l’ONG": "Appui au Développement Durable du Sahel-Malu",
@@ -81,7 +81,7 @@ const membersData = [
     "Fonction du responsable": "Prédisent",
     "Téléphone du responsable": "76 30 69 96",
     "Email du responsable": "addsmali28@gmail.com/ongaddsmali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Appui pour la Scolarisation et le Développement des Enfants et des Femmes pour une Meilleure Integration Nationale",
@@ -95,7 +95,7 @@ const membersData = [
     "Fonction du responsable": "Directrice executive ",
     "Téléphone du responsable": "82959530",
     "Email du responsable": "nwouefane@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Promotion  du Sahel",
@@ -109,7 +109,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": " 76473304/66754338",
     "Email du responsable": "souattara1@gmail.com ",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action Couverture et Développement",
@@ -123,7 +123,7 @@ const membersData = [
     "Fonction du responsable": "Secrétaire permanent",
     "Téléphone du responsable": "66767250",
     "Email du responsable": "acdorangemali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Association Jeunesse Actions Mali",
@@ -137,7 +137,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "79437928",
     "Email du responsable": "damadoubaba@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour la Recherche et le Développement Social",
@@ -151,7 +151,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76452798",
     "Email du responsable": "ongards2003@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour l'Employabilité, la Protection et la Promotion des droits des jeunes de Gourma Rharous",
@@ -165,7 +165,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Executif",
     "Téléphone du responsable": "73 46 39 90",
     "Email du responsable": "onghonney@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Subaahi Gumo ",
@@ -179,7 +179,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "76737159",
     "Email du responsable": " subaahigumo@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Conservation de la Faune et l'Environement",
@@ -193,7 +193,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76419340",
     "Email du responsable": "nomonkomoriba61@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Formation et d'Appui au  Développement",
@@ -207,7 +207,7 @@ const membersData = [
     "Fonction du responsable": "Présidente ",
     "Téléphone du responsable": "76 23 36 43",
     "Email du responsable": "assitancoulibaly2019@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Appui aux Projets et Initiatives des Femmes",
@@ -221,7 +221,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "63388748/ 76051138",
     "Email du responsable": "apifgao5@yahoo.fr  / ahmadousalihoumaiga@gmail.com  ",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe de Recherches d'Actions et d'Assistance pour le Développement Communautaire",
@@ -235,7 +235,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "76 07 22 03",
     "Email du responsable": "dembelefousseni_@gmail,com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour la Promotion de la Formation et l'Emploi des Jeunes ",
@@ -249,7 +249,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "76 12 27 32",
     "Email du responsable": "aprofej2009@gmail,com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe Action Recherche Pour le Développement Local",
@@ -263,7 +263,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "76213577",
     "Email du responsable": "onggardl@yahoo.fr/mohamedl.dicko@onggardl.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "HELP FOR SAHEL",
@@ -277,7 +277,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Executif",
     "Téléphone du responsable": "77292417",
     "Email du responsable": "ong@helpforsahel.org alassaneagmohamar66@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association AMAAN GOURMA",
@@ -291,7 +291,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "77639251",
     "Email du responsable": "cp.gourma015@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Yam-Giribolo-Tumo (Association pour la Promotion de la Femme)",
@@ -305,7 +305,7 @@ const membersData = [
     "Fonction du responsable": "Directrice ",
     "Téléphone du responsable": "76372228",
     "Email du responsable": "ongyagtubandiagara@gmail.com ;tembelyyaiguerefifi@outlook.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Actions Integrées pour le Developpement des Zones Lacustre ",
@@ -319,7 +319,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif ",
     "Téléphone du responsable": "76 06 09 72 ",
     "Email du responsable": "m.toure@aidzl.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "FEMMES ET DEVELOPPEMENT",
@@ -333,7 +333,7 @@ const membersData = [
     "Fonction du responsable": "Directrice Excécutive",
     "Téléphone du responsable": "76 07 73 49",
     "Email du responsable": "fedev2000@yahoo.fr / fedevbko@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour l'Education à l'Environnement et le Développement Durable ",
@@ -347,7 +347,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "76 07 22 03",
     "Email du responsable": "dembelefousseni_@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association des Femmes Entreprenantes du Mali ",
@@ -361,7 +361,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76071242",
     "Email du responsable": "infoafem06@gmail.com  ",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Pour La Promotion Des Filles Descolarisees Au Mali",
@@ -375,7 +375,7 @@ const membersData = [
     "Fonction du responsable": "Présidante ",
     "Téléphone du responsable": "76413768",
     "Email du responsable": "aprofidmali@gmail.com   ",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le developpement des Initiatives communautaires",
@@ -389,7 +389,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "79 36 95 96",
     "Email du responsable": "aaguili@ongadicom.com/alassaneadicko@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Organisation Malienne pour la Paix, l’Intégration et le Développement Economique et Social ",
@@ -403,7 +403,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": " 75 86 42 88 ",
     "Email du responsable": "ongompides@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association d'Appui au Développement communautaire du Mali",
@@ -417,7 +417,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "72 17 27 63",
     "Email du responsable": "aadecom17@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour l'Appui au Développement",
@@ -431,7 +431,7 @@ const membersData = [
     "Fonction du responsable": "Coordinatrice",
     "Téléphone du responsable": "76060262",
     "Email du responsable": "kadidiadj@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association d'Appui aux Femmes Démunies",
@@ -445,7 +445,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "65072950",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Ambe Kunko Pour la Lutte Contre la Maltraitance des Femmes et Des Enfants",
@@ -459,7 +459,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "78796775",
     "Email du responsable": "ambekunko@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Association Contre l'exploitation Sexuelle des Enfants au Mali",
@@ -473,7 +473,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "76060603",
     "Email du responsable": "acesem18@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Développement et d'Appui aux Initiatives Villageoises",
@@ -487,7 +487,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "78979060",
     "Email du responsable": "adaiv.ong@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action pour le Développement et Contre la Pauvreté au Sahel",
@@ -501,7 +501,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "76711747",
     "Email du responsable": "adcops@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Aide au Développement Durable",
@@ -515,7 +515,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "90 95 28 53",
     "Email du responsable": "contact@add-kidalmali.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Développement Durable des Femmes au Mali",
@@ -529,7 +529,7 @@ const membersData = [
     "Fonction du responsable": "Directrice Executive",
     "Téléphone du responsable": "66780741",
     "Email du responsable": "addfmali@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association  pour le Développement du Nord",
@@ -543,7 +543,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "76041989",
     "Email du responsable": "adenord@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Développement des Initiatives Locales au Mali",
@@ -557,7 +557,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "77 19 08 99",
     "Email du responsable": "adil-mali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Pour le Développement des Initiatives Communautaires au Sahel",
@@ -571,7 +571,7 @@ const membersData = [
     "Fonction du responsable": "DIRECTEUR EXCUTIF",
     "Téléphone du responsable": "76051912",
     "Email du responsable": "adicsahel@gmail,com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne des Droits de L'Homme",
@@ -585,7 +585,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75226037",
     "Email du responsable": "amadoubiga7@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Jeunesse et Développement du Mali",
@@ -599,7 +599,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "76 43 47 31",
     "Email du responsable": "ajdmorga@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "RED",
@@ -613,7 +613,7 @@ const membersData = [
     "Fonction du responsable": "nan",
     "Téléphone du responsable": "nan",
     "Email du responsable": "redbamako@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour le Développement, la Protection de L'Environnement et la Lutte Contre la Désertification",
@@ -627,7 +627,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "76463336",
     "Email du responsable": "mouhamadoumaiga@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Solidarité et le Développement",
@@ -641,7 +641,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "78 19 27 29",
     "Email du responsable": "secretariat@amsode.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Agence pour la Promotion des Entreprises Privées",
@@ -655,7 +655,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "66758535",
     "Email du responsable": "apeppourtous@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Libre pour la Promotion le L'habitat et du Logement",
@@ -669,7 +669,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "62 01 52 88",
     "Email du responsable": "Seydoudiakité13@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Protestante de la Santé au Mali",
@@ -683,7 +683,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "20 20 17 41",
     "Email du responsable": "apsm@apsmmali.ml",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Service de la Nation",
@@ -697,7 +697,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "74 41 68 19/    66 54 19 72",
     "Email du responsable": "apsnmali2016@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action Recherches pour le Développement des Initiatives Locales",
@@ -711,7 +711,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "66 98 25 81",
     "Email du responsable": "ardil_tombouctou@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Soutien au Développement des Activités de Population",
@@ -725,7 +725,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "71 38 93 22",
     "Email du responsable": "asdap@asdapmali.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Soutien aux Populations Démunies et de Lutte Contre l'Exclusion",
@@ -739,7 +739,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "73 76 59 09",
     "Email du responsable": "ongaspod@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Soutien aux Revenus et  Economies Fragiles",
@@ -753,7 +753,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76309290",
     "Email du responsable": "ongasref@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Sahélienne d'Appui au éeveloppement Décentralisé",
@@ -767,7 +767,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "76045465",
     "Email du responsable": "ongassaddec@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "ASSAHSSAL",
@@ -781,7 +781,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "65570537",
     "Email du responsable": "assahkid@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Association pour la Promotion de La Femme et de L’Enfant",
@@ -795,7 +795,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "76021486",
     "Email du responsable": "assoprofen2002@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " AVENIR ",
@@ -809,7 +809,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "22376192291/76464056",
     "Email du responsable": "avenirprogramme@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Avenir-Enfance- Sahel",
@@ -823,7 +823,7 @@ const membersData = [
     "Fonction du responsable": "Chargé des Projets et Programmes",
     "Téléphone du responsable": "76429991",
     "Email du responsable": "avenir0307@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Azhar",
@@ -837,7 +837,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "78176139",
     "Email du responsable": "assi.namar@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Conseil et Appui pour l'Education à la Base",
@@ -851,7 +851,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "79130153",
     "Email du responsable": "caebong@caebmali.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Carrefour Développement",
@@ -865,7 +865,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76286294",
     "Email du responsable": "card@afribonemali.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Communauté- Agriculture-Santé- Education au Sahel",
@@ -879,7 +879,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Executif",
     "Téléphone du responsable": "76492752",
     "Email du responsable": "case.sahel1@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Cadre d’Etude de Recherche et de Concertation pour Agir",
@@ -893,7 +893,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif",
     "Téléphone du responsable": "76082288",
     "Email du responsable": "ong.cerca@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Cercle de Recherche et d'Appui pour le Développement",
@@ -907,7 +907,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "91707713",
     "Email du responsable": "ongcradi2@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Développement durable des ressources naturelles au Sahel",
@@ -921,7 +921,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "nan",
     "Email du responsable": "ongddrnas@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Eduquer, Former les Femmes, un Appui au Développement",
@@ -935,7 +935,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76 04 52 91",
     "Email du responsable": "ongeffad@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Environnement et Développement du Tiers-Monde",
@@ -949,7 +949,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "222 55 64",
     "Email du responsable": "enda-mali@cifeb.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Equipe de Recherche-Action pour le Développement Durable",
@@ -963,7 +963,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "82807056",
     "Email du responsable": "contact@eradd.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Forum de la Jeunesse pour le Changement",
@@ -977,7 +977,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": " 79 42 73 31",
     "Email du responsable": "abouhassfati@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Groupe de Recherche, d'Etude et de Formation , Femme-Action",
@@ -991,7 +991,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "65 72 34 04",
     "Email du responsable": "greffa_ong@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Intiative Malienne d'Appui au Développement Local",
@@ -1005,7 +1005,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "76483661",
     "Email du responsable": "imadel@imadel-mali.org / imadel@imadel.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Oeuvre Malienne pour l'Aide de L'Enfance au Sahel",
@@ -1019,7 +1019,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Programme",
     "Téléphone du responsable": "76252762",
     "Email du responsable": "omaesa@afribonemali.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Oui pour une Enfance Noble Mali",
@@ -1033,7 +1033,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif",
     "Téléphone du responsable": "77 64 64 64",
     "Email du responsable": "openmali@openmali.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Plate Forme d'Initiative d'Expertise en Education et d'Appui à  la Promotion des Collectivités Décentralisées",
@@ -1047,7 +1047,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "66 05 42 62",
     "Email du responsable": "mkampo1@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Protection de l'Environement",
@@ -1061,7 +1061,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif",
     "Téléphone du responsable": "20233380",
     "Email du responsable": "stopsahel@orangemali.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "TASSAGHT",
@@ -1075,7 +1075,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "76046428",
     "Email du responsable": "tassaghtmali@gmail.com; agalwaly@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Think Peace ",
@@ -1089,7 +1089,7 @@ const membersData = [
     "Fonction du responsable": "Coordonnateur National",
     "Téléphone du responsable": "79230217",
     "Email du responsable": "ak.bocoum@thinkpeace-sahel.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Windila Konda",
@@ -1103,7 +1103,7 @@ const membersData = [
     "Fonction du responsable": "Responable",
     "Téléphone du responsable": "76 14 62 04",
     "Email du responsable": "ongwindilakonda@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "ONG WOIYO Kondeye",
@@ -1117,7 +1117,7 @@ const membersData = [
     "Fonction du responsable": "Secrétaire Générale ",
     "Téléphone du responsable": "22376227524/90239360",
     "Email du responsable": "woiyokondeye@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Le Reseau D'Appui et de Conseils aux Initiatives des Artisans",
@@ -1131,7 +1131,7 @@ const membersData = [
     "Fonction du responsable": "Coordinatrice National",
     "Téléphone du responsable": "76123117",
     "Email du responsable": "rac_mali@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "TILALTE",
@@ -1145,7 +1145,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76023535",
     "Email du responsable": "ong.tilalte23@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action Mopti",
@@ -1159,7 +1159,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "nan",
     "Email du responsable": "mopti@actionmopti.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Développement Rural",
@@ -1173,7 +1173,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "229-20-03",
     "Email du responsable": "ampdr@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe des Artisants Ruraux d'Intédeyene",
@@ -1187,7 +1187,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "282-09-16",
     "Email du responsable": "ongarimenaka@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association NOVA-MALI",
@@ -1201,7 +1201,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "62-09-15-15",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Talilt/Aide",
@@ -1215,7 +1215,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76-03-53-27",
     "Email du responsable": "contact@talilt.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association des Jeunes pour l'Assistance d'Aide Humanitaire-Mali",
@@ -1229,7 +1229,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "66-61-31-27",
     "Email du responsable": "ajaah.mali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association A.SORO",
@@ -1243,7 +1243,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "44-39-91-10",
     "Email du responsable": "associationsoro@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Developpement Intégré et Durable",
@@ -1257,7 +1257,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76-41-87-20",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action pour la Formation et l'auto-promotion Rurale",
@@ -1271,7 +1271,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "242-0175",
     "Email du responsable": "afar@afribonemali.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association GUNA-KAANEY",
@@ -1285,7 +1285,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif",
     "Téléphone du responsable": "76-34-46-77",
     "Email du responsable": "gunakaaneyong@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action Humanitaire pour les Initiatives de Développement Nord-Sud au Sahel",
@@ -1299,7 +1299,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "66 88 01 95",
     "Email du responsable": "ahdinordsudsahelonggoundam@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association ARC-EN CIEL pour le Deloppement",
@@ -1313,7 +1313,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "66-78-33-75",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association AWAAREY de GABERO",
@@ -1327,7 +1327,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "66-97-05-96",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Actions Tartit pour le Développement Durable",
@@ -1341,7 +1341,7 @@ const membersData = [
     "Fonction du responsable": "President",
     "Téléphone du responsable": "76-25-05-79",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Centre de recherche et d'expertise pour le développement local",
@@ -1355,7 +1355,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "63-09-15-56",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Développement Holistique Africa",
@@ -1369,7 +1369,7 @@ const membersData = [
     "Fonction du responsable": "Président du C.A",
     "Téléphone du responsable": "76037153 / 76037155",
     "Email du responsable": "ongdha03@gmail.com",
-    "Unnamed: 11": "Actualisé. Merci "
+    "Domaines d'intervention": "Actualisé. Merci "
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
@@ -1383,7 +1383,7 @@ const membersData = [
     "Fonction du responsable": "Président du C.A",
     "Téléphone du responsable": "78-66-22-56",
     "Email du responsable": "yaya.bamadio@diam-sahel.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe de Formation, Consultation et Etude",
@@ -1397,7 +1397,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "221-86-12",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Groupe de Reflexion pour les Initiativesde Développement",
@@ -1411,7 +1411,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76-20-69-91",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Harmonie du Développement au Sahel",
@@ -1425,7 +1425,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire permanent",
     "Téléphone du responsable": "244-24-96",
     "Email du responsable": "hds_ong@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   
   {
@@ -1440,7 +1440,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire Générale",
     "Téléphone du responsable": "678-55-54",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association NMA-DEVELOPPEMENT",
@@ -1454,7 +1454,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "93-60-53-90",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Organisation Malienne pour le Développement Durable au Sahel",
@@ -1468,7 +1468,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75-39-13-47",
     "Email du responsable": "omddscontact@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour la Promotion et l'Apui au Développement",
@@ -1482,7 +1482,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76-37-25-55",
     "Email du responsable": "dedeou7@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Saheliennes pour la Justice, la Gouvernance, la Paix, et la sécurité",
@@ -1496,7 +1496,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75-95-96-14",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Sahélienne d'Apui aux Initiatives de Base",
@@ -1510,7 +1510,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "673-03-36",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Save Our Sahel",
@@ -1524,7 +1524,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75-30-34-27",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Sahel Etude Action pour le Développement",
@@ -1538,7 +1538,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "282-03-02",
     "Email du responsable": "sead-gao@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Tassaq Daouna",
@@ -1552,7 +1552,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 02 38 43 / 99 60 60 07",
     "Email du responsable": "tassaqdaounaassociation@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association TILE KOURA pour la Promotion des Femmes Rurales",
@@ -1566,7 +1566,7 @@ const membersData = [
     "Fonction du responsable": "Directrice générale",
     "Téléphone du responsable": "76 16 74 74",
     "Email du responsable": "tilecouraml@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association ALMOUBARAKA",
@@ -1580,7 +1580,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75-45-39-25",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Associel Emergent",
@@ -1594,7 +1594,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "75-34-41-44",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Terre Douce d'Afrique ",
@@ -1608,7 +1608,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif",
     "Téléphone du responsable": "20 23 16 31",
     "Email du responsable": "terredouceafeique@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Cabinet de Recherches Actions pour le Developpement Endogene",
@@ -1622,7 +1622,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 49 01 82",
     "Email du responsable": "crade@afribone.net.ml",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Union pour un Avenir Ecologique et Solidaire",
@@ -1636,7 +1636,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "76 08 79 79",
     "Email du responsable": "onguaves@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association TEKELTTE de Tessalit",
@@ -1650,7 +1650,7 @@ const membersData = [
     "Fonction du responsable": "Directeur exécutif ",
     "Téléphone du responsable": "82 69 03 86",
     "Email du responsable": "tekeltte2008@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association SELLE",
@@ -1664,7 +1664,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76 21  51 89",
     "Email du responsable": "ongselle99@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action pour le Développement du Mali",
@@ -1678,7 +1678,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "79 23 88 52/69760892",
     "Email du responsable": "ongadm0679@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Tanfo de Kalanda",
@@ -1692,7 +1692,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 75 91 73",
     "Email du responsable": "contact@ong-atk.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe de Recherches Actions Formation pour le Développement Local au Mali",
@@ -1706,7 +1706,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 14 22 39",
     "Email du responsable": "grafodelmali11@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Collectif Cri de Cœur",
@@ -1720,7 +1720,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 10 75 22",
     "Email du responsable": "cridecoeurmali@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Développement inclusif et intégral",
@@ -1734,7 +1734,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 16 64 25    ",
     "Email du responsable": "adiimali343@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "imidierar (Les vulnérables)",
@@ -1748,7 +1748,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 38 31 00",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour la Promotion de la Santé de la Mère et de l'Enfant",
@@ -1762,7 +1762,7 @@ const membersData = [
     "Fonction du responsable": "Directrice Exécutive",
     "Téléphone du responsable": "66519697/74972895",
     "Email du responsable": "iamanehmali@afribonemali.net",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Vivre au Sahel ",
@@ -1776,7 +1776,7 @@ const membersData = [
     "Fonction du responsable": "Cordinateur national",
     "Téléphone du responsable": "70 71 15 15",
     "Email du responsable": "med.ab@vivreausahel.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour l'Employabilité, la Protection et la Promotion des droits des jeunes de Gourma Rharous",
@@ -1790,7 +1790,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Executif",
     "Téléphone du responsable": "73 46 39 90",
     "Email du responsable": "imaiga364@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Subaahi Gumo ",
@@ -1804,7 +1804,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "76737159",
     "Email du responsable": " subaahigumo@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "FEMME ET DEVELOPPEMENT",
@@ -1818,7 +1818,7 @@ const membersData = [
     "Fonction du responsable": "Directrice excécutive",
     "Téléphone du responsable": "76 07 73 49",
     "Email du responsable": "fedev2000@yahoo.fr / fedevbko@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": " Association Contre l'exploitation Sexuelle des Enfants au Mali",
@@ -1832,7 +1832,7 @@ const membersData = [
     "Fonction du responsable": "Responsable",
     "Téléphone du responsable": "77 08 40 23",
     "Email du responsable": "acesem18@yahoo.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action pour le Développement et Contre la Pauvreté au Sahel",
@@ -1846,7 +1846,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "79 04 18 63",
     "Email du responsable": "adcops@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "TASSAGHT",
@@ -1860,7 +1860,7 @@ const membersData = [
     "Fonction du responsable": "Coordonnateur",
     "Téléphone du responsable": "76046428",
     "Email du responsable": "tassaght@afribone.ml",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Talilt/Aide",
@@ -1874,7 +1874,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76-03-57-27",
     "Email du responsable": "mamawaletn@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   
   {
@@ -1889,7 +1889,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "71-98-94-32",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association TEKELTTE de Tessalit",
@@ -1903,7 +1903,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "71 27 11 11",
     "Email du responsable": "tekeltte2008@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action pour le Développementrt du Mali",
@@ -1917,7 +1917,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "79 23 88 52",
     "Email du responsable": "ongadm0679@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Nouveaux horizons",
@@ -1931,7 +1931,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "72 82 02 19",
     "Email du responsable": "ongnoho200@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association Subaahi Gumo ",
@@ -1945,7 +1945,7 @@ const membersData = [
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "76737159",
     "Email du responsable": " subaahigumo@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Groupe Action Recherche Pour le Développement Local",
@@ -1959,7 +1959,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "76213577",
     "Email du responsable": "onggardl@yahoo.fr/djibo3131@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association GUNA-KAANEY",
@@ -1973,7 +1973,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76-34-46-77",
     "Email du responsable": "gunakaaneyong@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Action Humanitaire pour les Initiatives de Développement Nord-Sud au Sahel",
@@ -1987,7 +1987,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76-08-21-93",
     "Email du responsable": "nan",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association TILE COURA pour la Promotion et la protections des droits des Femmes des femmes et filles vulnérables",
@@ -2001,7 +2001,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76 21 56 13",
     "Email du responsable": "tilecouraml@gmail.com",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association pour le Progrès et la Defense des Droits des Femmes ",
@@ -2015,7 +2015,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76 25 33 36",
     "Email du responsable": "tenecoul2004@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Association de Soutien au Développement des Activités de Population",
@@ -2029,7 +2029,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "66 72 07 65",
     "Email du responsable": "asdap@asdapmali.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
@@ -2043,7 +2043,7 @@ const membersData = [
     "Fonction du responsable": "Président du Conseil d'Administration",
     "Téléphone du responsable": "78-66-22-56",
     "Email du responsable": "yaya.bamadio@diam-sahel.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "Talilt/Aide",
@@ -2057,7 +2057,7 @@ const membersData = [
     "Fonction du responsable": "Présidente",
     "Téléphone du responsable": "76-03-53-27",
     "Email du responsable": "mamawaletn@talilt.org",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   },
   {
     "Nom complet de l’ONG": "ONG AZHAR",
@@ -2071,7 +2071,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "78176139",
     "Email du responsable": "assi.namar@yahoo.fr",
-    "Unnamed: 11": "nan"
+    "Domaines d'intervention": "nan"
   }
 ];
 
