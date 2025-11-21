@@ -95,7 +95,7 @@ const membersData = [
     "Fonction du responsable": "Directrice executive ",
     "Téléphone du responsable": "82959530",
     "Email du responsable": "nwouefane@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "la VBG, le SSR, la protection de l’enfant, la consolidation de la paix ; les services sociaux de base, éducation et la santé communautaire, les droits des femmes et l’autonomisation des femmes et des filles, le WASH, la sécurité alimentaire et la santé nutritionnelle"
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Promotion  du Sahel",
@@ -627,7 +627,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "76463336",
     "Email du responsable": "mouhamadoumaiga@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Environnement, Agriculture, Elevage, Pêche, Artisanat, Education, Formation, Santé, Coopération-recherche, Aide humanitaire d'urgence, Sécurité alimentaire et nutrition, Santé reproduction, Eau, Hygiène et assainissement (WASH), Education et protection de l'enfant, moyens d'existence et développement économique, VBG , résilience et adaptation au changement climatique, genre et inclusion sociale, plaidoyer et partenariats stratégiques "
   },
   {
     "Nom complet de l’ONG": "Association Malienne pour la Solidarité et le Développement",
@@ -809,7 +809,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "22376192291/76464056",
     "Email du responsable": "avenirprogramme@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Santé/Nutrition, Lutte antimine, Securité Alimentaire, Education, Gestion des conflit, protection, WASH, Protection de l'environnement"
   },
   {
     "Nom complet de l’ONG": "Avenir-Enfance- Sahel",
@@ -1119,6 +1119,20 @@ const membersData = [
     "Email du responsable": "woiyokondeye@yahoo.fr",
     "Domaines d’intervention": "nan"
   },
+    {
+    "Nom complet de l’ONG": "Association pour le Dévéloppement de la Jeunesse au Sahal",
+    "Acronyme": "ADJS",
+    "Date de création": "06/11/2008",
+    "Numéro d’accord cadre": "0958/001280",
+    "Adresse physique": "Bamako Kalaban Coro Sicoro prêt du Casino",
+    "Zones d’intervention": "District de Bamako, Koulikoro, Tomboctou ",
+    "Nom du responsable": "GATTA",
+    "Prénom du responsable": "Ibrahim Aly",
+    "Fonction du responsable": "Président ",
+    "Téléphone du responsable": "66 74 30 11",
+    "Email du responsable": "adjsmali17@gmail.com",
+    "Domaines d’intervention": "Humanitaire, Autonomisation  Economique femmes et jeunes, VBG, Securité alimentaire"
+  },
   {
     "Nom complet de l’ONG": "Le Reseau D'Appui et de Conseils aux Initiatives des Artisans",
     "Acronyme": "RAC",
@@ -1187,7 +1201,7 @@ const membersData = [
     "Fonction du responsable": "Directeur",
     "Téléphone du responsable": "282-09-16",
     "Email du responsable": "ongarimenaka@yahoo.fr",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Santé,Education,Eau Hygiene et Assainissement,Paix cohésion sociale,Securité alimentaire,Wash urgence,Changement climatique,Protection"
   },
   {
     "Nom complet de l’ONG": "Association NOVA-MALI",
@@ -1271,7 +1285,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "242-0175",
     "Email du responsable": "afar@afribonemali.net",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Sécurité alimentaire et nutritionnelle, Gestion des ressources naturelles, Protection de l'Environnement et changement climatique, Education (Scolarisation des filles), Autonomisation Economique des femmes, Approvisionnement en Eau potable, Hygiène /Assainissement, Santé de la Reproduction et VBG"
   },
   {
     "Nom complet de l’ONG": "Association GUNA-KAANEY",
