@@ -71,7 +71,7 @@ const Members = () => {
       m["Numéro d'accord cadre"] || '',
       m['Adresse physique'] || '',
       m["Zones d'intervention"] || '',
-      m['Domaines d'intervention'] || '',
+      m["Domaines d'intervention"] || '',
       m['Nom du responsable'] || '',
       m['Prénom du responsable'] || '',
       m['Fonction du responsable'] || '',
@@ -98,7 +98,7 @@ const Members = () => {
     const nom = normalize(member["Nom complet de l'ONG"]);
     const acronyme = normalize(member['Acronyme']);
     const zones = normalize(member["Zones d'intervention"]);
-    const domaines = normalize(member['Domaines d'intervention']);
+    const domaines = normalize(member["Domaines d'intervention"]);
     const search = normalize(searchTerm);
     const selectedZ = normalize(selectedZone);
     const selectedD = normalize(selectedDomain);
@@ -122,7 +122,7 @@ const Members = () => {
 
   const domainOptions = [...new Set(
     membersData
-      .flatMap(m => (m['Domaines d'intervention'] || '').split(',').map(d => d.trim()))
+      .flatMap(m => (m["Domaines d'intervention"] || '').split(',').map(d => d.trim()))
       .filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
@@ -230,7 +230,7 @@ const Members = () => {
             <p><strong>Email:</strong> {selectedMember['Email du responsable']}</p>
             <p><strong>Adresse:</strong> {selectedMember['Adresse physique']}</p>
             <p><strong>Zone d'intervention:</strong> {selectedMember["Zones d'intervention"]}</p>
-            <p><strong>Domaines d'intervention:</strong> {selectedMember['Domaines d'intervention']}</p>
+            <p><strong>Domaines d'intervention:</strong> {selectedMember["Domaines d'intervention"]}</p>
             <p><strong>Accord Cadre:</strong> {selectedMember["Numéro d'accord cadre"]}</p>
           </div>
         </div>
