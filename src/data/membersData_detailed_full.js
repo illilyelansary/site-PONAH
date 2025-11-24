@@ -1532,13 +1532,13 @@ const membersData = [
     "Date de création": "2023-10-23 00:00:00",
     "Numéro d’accord cadre": "2025",
     "Adresse physique": "Menaka",
-    "Zones d’intervention": "Kayes, Koulikoro, Sikasso, Segou, Mopti, Tombouctou, Gao, Kidal, Douentza, Nioro, Nara, Bandiagara, Bamako",
-    "Nom du responsable": "Albacher AG",
-    "Prénom du responsable": "Abdoulahi",
-    "Fonction du responsable": "Président",
-    "Téléphone du responsable": "75-30-34-27",
-    "Email du responsable": "nan",
-    "Domaines d’intervention": "nan"
+    "Zones d’intervention": "Kays, Koulikoro, Sikasso, Segou, Mopti, Tombouctou, Gao, Kidal, Douentza, Nioro, Nara, Bandiangara et le district de Bamako",
+    "Nom du responsable": "AG BACKA",
+    "Prénom du responsable": "Ibrahim",
+    "Fonction du responsable": "Directeur Executif",
+    "Téléphone du responsable": "72-88-10-19",
+    "Email du responsable": "saveoursahel.mali@gmail.com",
+    "Domaines d’intervention": "Education, l’eau hygiène et assainissement (WASH), sécurité alimentaire, la protection de l’enfant /VBG"
   },
   {
     "Nom complet de l’ONG": "Sahel Etude Action pour le Développement",
