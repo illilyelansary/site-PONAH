@@ -1383,7 +1383,7 @@ const membersData = [
     "Fonction du responsable": "Président du C.A",
     "Téléphone du responsable": "76037153 / 76037155",
     "Email du responsable": "ongdha03@gmail.com",
-    "Domaines d’intervention": "Actualisé. Merci "
+    "Domaines d’intervention": " "
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
@@ -1692,7 +1692,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "79 23 88 52/69760892",
     "Email du responsable": "ongadm0679@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "La santé, la sécurité alimentaire et nutrition, l'agriculture, l'éducation, la défenses des droits des femmes et filles et les AGR"
   },
   {
     "Nom complet de l’ONG": "Association Tanfo de Kalanda",
@@ -1945,7 +1945,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "72 82 02 19",
     "Email du responsable": "ongnoho200@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "La sécurité alimentaire/ résilience, santé Communautaire/Nutrition, Wash, l’Education/ Alphabétisation de base et post Alpha, Gouvernance Démocratique et Redevable, l’Emploi jeunes/ AGR, Gestion des Conflits, protection"
   },
   {
     "Nom complet de l’ONG": "Association Subaahi Gumo ",
