@@ -68,9 +68,9 @@ const Members = () => {
       m["Nom complet de l'ONG"] || '',
       m['Acronyme'] || '',
       m['Date de création'] || '',
-      m['Numéro d'accord cadre'] || '',
+      m["Numéro d'accord cadre"] || '',
       m['Adresse physique'] || '',
-      m['Zones d'intervention'] || '',
+      m["Zones d'intervention"] || '',
       m['Domaines d'intervention'] || '',
       m['Nom du responsable'] || '',
       m['Prénom du responsable'] || '',
@@ -97,7 +97,7 @@ const Members = () => {
   const filteredMembers = membersData.filter((member) => {
     const nom = normalize(member["Nom complet de l'ONG"]);
     const acronyme = normalize(member['Acronyme']);
-    const zones = normalize(member['Zones d'intervention']);
+    const zones = normalize(member["Zones d'intervention"]);
     const domaines = normalize(member['Domaines d'intervention']);
     const search = normalize(searchTerm);
     const selectedZ = normalize(selectedZone);
@@ -116,7 +116,7 @@ const Members = () => {
 
   const zoneOptions = [...new Set(
     membersData
-      .flatMap(m => (m['Zones d'intervention'] || '').split(',').map(r => r.trim()))
+      .flatMap(m => (m["Zones d'intervention"] || '').split(',').map(r => r.trim()))
       .filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
@@ -229,9 +229,9 @@ const Members = () => {
             <p><strong>Fonction:</strong> {selectedMember['Fonction du responsable']}</p>
             <p><strong>Email:</strong> {selectedMember['Email du responsable']}</p>
             <p><strong>Adresse:</strong> {selectedMember['Adresse physique']}</p>
-            <p><strong>Zone d'intervention:</strong> {selectedMember['Zones d'intervention']}</p>
+            <p><strong>Zone d'intervention:</strong> {selectedMember["Zones d'intervention"]}</p>
             <p><strong>Domaines d'intervention:</strong> {selectedMember['Domaines d'intervention']}</p>
-            <p><strong>Accord Cadre:</strong> {selectedMember['Numéro d'accord cadre']}</p>
+            <p><strong>Accord Cadre:</strong> {selectedMember["Numéro d'accord cadre"]}</p>
           </div>
         </div>
       )}
