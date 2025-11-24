@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search, Building2 } from 'lucide-react';
+import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search } from 'lucide-react';
 import defaultMembers from '../../data/membersData_detailed_full';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
@@ -13,8 +13,8 @@ const teamData = [
   { name: "Dianguina SOUMARE", role: "Secrétaire Général", description: "Gestion administrative et coordination des équipes" },
   { name: "Alidji GUITTEYE", role: "Trésorier Général", description: "Gestion financière et comptable de la plateforme" },
   { name: "YAYA BOIRE", role: "Trésorier Adjoint", description: "Appui à la gestion comptable" },
-  { name: "Louis Cheick SISSOKO", role: "Secrétaire chargé de l'Information, communication et organisation", description: "Responsable de la communication interne et externe" },
-  { name: "Abdoul Moutalib Ag WATANE", role: "Secrétaire adjoint chargé de l'Information, communication et organisation", description: "Soutien aux actions de communication et d'organisation" },
+  { name: "Louis Cheick SISSOKO", role: "Secrétaire chargé de l’Information, communication et organisation", description: "Responsable de la communication interne et externe" },
+  { name: "Abdoul Moutalib Ag WATANE", role: "Secrétaire adjoint chargé de l’Information, communication et organisation", description: "Soutien aux actions de communication et d’organisation" },
   { name: "Nassouroun Walet OUEFAN", role: "Secrétaire chargée du Plaidoyer aux alliances", description: "Responsable des partenariats et du plaidoyer" },
   { name: "Moussa Ibrahim TOURE", role: "Secrétaire adjoint chargé du plaidoyer et aux alliances", description: "Appui aux activités de plaidoyer et de collaboration" },
   { name: "Gamny IGASTANE", role: "Président (autre structure)", description: "Responsable d'une structure affiliée" },
@@ -24,41 +24,23 @@ const teamData = [
 ];
 
 const faqData = [
-  { question: "Comment adhérer à la PONAH ?", answer: "L'adhésion nécessite une demande timbrée, un Accord Cadre, le paiement des frais d'adhésion (50 000 FCFA) et l'engagement à respecter les statuts." },
-  { question: "Quels sont les avantages d'être membre ?", answer: "Accès aux formations, représentations, participation aux mécanismes de coordination, échanges d'expériences, et renforcement des capacités." },
+  { question: "Comment adhérer à la PONAH ?", answer: "L’adhésion nécessite une demande timbrée, un Accord Cadre, le paiement des frais d’adhésion (50 000 FCFA) et l’engagement à respecter les statuts." },
+  { question: "Quels sont les avantages d’être membre ?", answer: "Accès aux formations, représentations, participation aux mécanismes de coordination, échanges d’expériences, et renforcement des capacités." },
   { question: "Comment collaborer avec la PONAH ?", answer: "Nous collaborons avec les ONG, les agences de coopération internationales, les bailleurs de fonds et les institutions gouvernementales." },
-  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l'ensemble du territoire malien avec plus de 150+ ONG membres réparties dans toutes les régions et le district de Bamako." }
-];
-
-// Définir les domaines d'intervention principaux
-const interventionDomains = [
-  { id: 'all', label: 'Tous les domaines' },
-  { id: 'agriculture', label: 'Agriculture et Élevage', keywords: ['agriculture', 'élevage', 'pêche', 'agroécologie', 'agr'] },
-  { id: 'wash', label: 'Eau, Hygiène et Assainissement (WASH)', keywords: ['eau', 'hygiène', 'assainissement', 'wash', 'hydraulique', 'approvisionnement en eau'] },
-  { id: 'education', label: 'Éducation et Alphabétisation', keywords: ['éducation', 'alphabétisation', 'scolarisation', 'education', 'alpha'] },
-  { id: 'environment', label: 'Environnement et Changement Climatique', keywords: ['environnement', 'changement climatique', 'climat', 'restauration des terres', 'ressources naturelles', 'gestion des ressources'] },
-  { id: 'gender', label: 'Genre et VBG', keywords: ['genre', 'vbg', 'femmes', 'filles', 'autonomisation'] },
-  { id: 'governance', label: 'Gouvernance et Décentralisation', keywords: ['gouvernance', 'décentralisation', 'foncier', 'démocratique', 'redevable'] },
-  { id: 'humanitarian', label: 'Humanitaire et Aide d\'Urgence', keywords: ['humanitaire', 'urgence', 'aide d\'urgence', 'aide humanitaire'] },
-  { id: 'nutrition', label: 'Nutrition', keywords: ['nutrition', 'nutritionnel'] },
-  { id: 'peace', label: 'Paix et Cohésion Sociale', keywords: ['paix', 'cohésion sociale', 'stabilisation', 'consolidation de la paix', 'conflit', 'gestion des conflits'] },
-  { id: 'protection', label: 'Protection', keywords: ['protection', 'enfant', 'protection de l\'enfant'] },
-  { id: 'health', label: 'Santé et Santé de la Reproduction', keywords: ['santé', 'ssr', 'reproduction', 'santé de la reproduction', 'santé communautaire'] },
-  { id: 'food_security', label: 'Sécurité Alimentaire et Résilience', keywords: ['sécurité alimentaire', 'résilience', 'moyens de subsistance', 'moyens d\'existence', 'securité alimentaire'] }
+  { question: "Où intervient la PONAH ?", answer: "La PONAH couvre l’ensemble du territoire malien avec plus de 150+ ONG membres réparties dans toutes les régions et le district de Bamako." }
 ];
 
 const Members = () => {
   const [membersData, setMembersData] = useState(defaultMembers);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedZone, setSelectedZone] = useState('');
-  const [selectedDomain, setSelectedDomain] = useState('all');
   const [selectedMember, setSelectedMember] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const { user } = useAuth();
   const isAdmin = user && user.role === 'admin';
   const itemsPerPage = 12;
 
-  const normalize = (str) => str ? str.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase() : "";
+  const normalize = (str) => str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
 
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
@@ -79,16 +61,16 @@ const Members = () => {
     doc.setFontSize(12);
     doc.text('Liste complète des membres de la PONAH', 14, 15);
     const headers = [[
-      'Nom complet de l\'ONG', 'Acronyme'
+      'Nom complet de l’ONG', 'Acronyme'
     ]];
     const body = membersData.map(m => [
-      m['Nom complet de l\'ONG'] || '',
+      m['Nom complet de l’ONG'] || '',
       m['Acronyme'] || '',
       m['Date de création'] || '',
-      m['Numéro d\'accord cadre'] || '',
+      m['Numéro d’accord cadre'] || '',
       m['Adresse physique'] || '',
-      m['Zones d\'intervention'] || '',
-      m['Domaines d\'intervention'] || '',
+      m['Zones d’intervention'] || '',
+      m['Domaines d’intervention'] || '',
       m['Nom du responsable'] || '',
       m['Prénom du responsable'] || '',
       m['Fonction du responsable'] || '',
@@ -111,34 +93,18 @@ const Members = () => {
     setCurrentPage(1);
   };
 
-  // Fonction pour vérifier si un membre correspond au domaine sélectionné
-  const matchesDomain = (member, domainId) => {
-    if (domainId === 'all') return true;
-    
-    const domainsText = normalize(member['Domaines d\'intervention'] || '');
-    if (domainsText === 'nan' || !domainsText) return false;
-    
-    const domain = interventionDomains.find(d => d.id === domainId);
-    if (!domain || !domain.keywords) return false;
-    
-    return domain.keywords.some(keyword => 
-      domainsText.includes(normalize(keyword))
-    );
-  };
-
   const filteredMembers = membersData.filter((member) => {
-    const nom = normalize(member['Nom complet de l\'ONG']);
+    const nom = normalize(member['Nom complet de l’ONG']);
     const acronyme = normalize(member['Acronyme']);
-    const zones = normalize(member['Zones d\'intervention']);
+    const zones = normalize(member['Zones d’intervention']);
     const search = normalize(searchTerm);
     const selected = normalize(selectedZone);
 
     const nomMatch = nom.includes(search);
     const acronymeMatch = acronyme.includes(search);
     const zoneMatch = selected === '' || (zones && zones.includes(selected));
-    const domainMatch = matchesDomain(member, selectedDomain);
 
-    return zoneMatch && domainMatch && (nomMatch || acronymeMatch);
+    return zoneMatch && (nomMatch || acronymeMatch);
   });
 
   const paginatedMembers = filteredMembers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
@@ -146,7 +112,7 @@ const Members = () => {
 
   const zoneOptions = [...new Set(
     membersData
-      .flatMap(m => (m['Zones d\'intervention'] || '').split(',').map(r => r.trim()))
+      .flatMap(m => (m['Zones d’intervention'] || '').split(',').map(r => r.trim()))
       .filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
@@ -181,10 +147,7 @@ const Members = () => {
         </div>
         <select
           value={selectedZone}
-          onChange={(e) => {
-            setSelectedZone(e.target.value);
-            setCurrentPage(1);
-          }}
+          onChange={(e) => setSelectedZone(e.target.value)}
           className="border py-2 px-3 rounded w-full md:w-60"
         >
           <option value="">Toutes les zones</option>
@@ -192,24 +155,11 @@ const Members = () => {
             <option key={i} value={region}>{region}</option>
           ))}
         </select>
-        <select
-          value={selectedDomain}
-          onChange={(e) => {
-            setSelectedDomain(e.target.value);
-            setCurrentPage(1);
-          }}
-          className="border py-2 px-3 rounded w-full md:w-60"
-        >
-          {interventionDomains.map(domain => (
-            <option key={domain.id} value={domain.id}>{domain.label}</option>
-          ))}
-        </select>
         <div className="w-full text-right">
           <button
             onClick={() => {
               setSearchTerm('');
               setSelectedZone('');
-              setSelectedDomain('all');
               setCurrentPage(1);
             }}
             className="text-sm text-blue-600 underline"
@@ -230,7 +180,7 @@ const Members = () => {
               <Users className="text-primary" />
               <h3 className="text-sm font-medium">{m['Acronyme']}</h3>
             </div>
-            <p className="text-xs mt-1">{m['Nom complet de l\'ONG']}</p>
+            <p className="text-xs mt-1">{m['Nom complet de l’ONG']}</p>
           </div>
         ))}
       </div>
@@ -245,16 +195,16 @@ const Members = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
             <button className="absolute top-2 right-2" onClick={() => setSelectedMember(null)}><X /></button>
-            <h2 className="text-xl font-bold mb-2">{selectedMember['Nom complet de l\'ONG']}</h2>
+            <h2 className="text-xl font-bold mb-2">{selectedMember['Nom complet de l’ONG']}</h2>
             <p><strong>Acronyme:</strong> {selectedMember['Acronyme']}</p>
             <p><strong>Date de création:</strong> {selectedMember['Date de création']}</p>
             <p><strong>Responsable:</strong> {`${selectedMember['Prénom du responsable']} ${selectedMember['Nom du responsable']}`}</p>
             <p><strong>Fonction:</strong> {selectedMember['Fonction du responsable']}</p>
             <p><strong>Email:</strong> {selectedMember['Email du responsable']}</p>
             <p><strong>Adresse:</strong> {selectedMember['Adresse physique']}</p>
-            <p><strong>Zone d'intervention:</strong> {selectedMember['Zones d\'intervention']}</p>
-            <p><strong>Domaines d'intervention:</strong> {selectedMember['Domaines d\'intervention']}</p>
-            <p><strong>Accord Cadre:</strong> {selectedMember['Numéro d\'accord cadre']}</p>
+            <p><strong>Zone d’intervention:</strong> {selectedMember['Zones d’intervention']}</p>
+            <p><strong>Domaines d’intervention:</strong> {selectedMember['Domaines d’intervention']}</p>
+            <p><strong>Accord Cadre:</strong> {selectedMember['Numéro d’accord cadre']}</p>
           </div>
         </div>
       )}
@@ -286,15 +236,15 @@ const Members = () => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 text-left max-w-4xl mx-auto mb-10">
-            <h3 className="text-xl font-bold mb-4 text-primary">Critères d'adhésion</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center">Conditions pour devenir membre</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm md:text-base">
               <li>Être une ONG légalement reconnue au Mali.</li>
-              <li>Disposer d'un Accord Cadre signé avec le Gouvernement.</li>
+              <li>Disposer d’un Accord Cadre signé avec le Gouvernement.</li>
               <li>Soumettre une demande timbrée adressée au Président de la PONAH.</li>
-              <li>S'engager à respecter les statuts et règlements intérieurs de la PONAH.</li>
+              <li>S’engager à respecter les statuts et règlements intérieurs de la PONAH.</li>
               <li>Fournir les documents justificatifs requis (accord cadre, statuts, etc.).</li>
-              <li>Payer les frais d'adhésion de 50 000 FCFA (non remboursables).</li>
-              <li>S'acquitter de la cotisation annuelle fixée à 50 000 FCFA.</li>
+              <li>Payer les frais d’adhésion de 50 000 FCFA (non remboursables).</li>
+              <li>S’acquitter de la cotisation annuelle fixée à 50 000 FCFA.</li>
             </ul>
             <p className="mt-4 italic text-sm text-gray-600">
               Pour toute question, contactez-nous à :
