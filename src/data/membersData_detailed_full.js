@@ -389,7 +389,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "79 36 95 96",
     "Email du responsable": "aaguili@ongadicom.com/alassaneadicko@yahoo.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Securité Alimentaire et Resilience, Santé de la Reproduction, VBG Autonomisation Economique des femmes et jeunes  Gestion des Ressources Naturelles et changement climatique, Education, WASH, Humanitaire"
   },
   {
     "Nom complet de l’ONG": "Organisation Malienne pour la Paix, l’Intégration et le Développement Economique et Social ",
@@ -1019,7 +1019,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Programme",
     "Téléphone du responsable": "76252762",
     "Email du responsable": "omaesa@afribonemali.net",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Education, Securité Alimentaire, Nutrition, Santé de la Reproduction, Autonomisation Economique des femmes et jeunes,  Gestion des Ressources Naturelles et changement climatique,  WASH, Humanitaire, Gouvernance et Décentralisation."
   },
   {
     "Nom complet de l’ONG": "Association Oui pour une Enfance Noble Mali",
@@ -1650,7 +1650,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "76 08 79 79",
     "Email du responsable": "onguaves@yahoo.fr",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Agroécologie, Aide d’urgence, Environnement, Santé, Education, Hydraulique, protection, Genre, Artisanat, Culture, Tourisme"
   },
   {
     "Nom complet de l’ONG": "Association TEKELTTE de Tessalit",
@@ -1734,7 +1734,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "76 10 75 22",
     "Email du responsable": "cridecoeurmali@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "La sécurité alimentaire/ résilience, santé Communautaire/Nutrition, Wash, l’Education/ Alphabétisation de base et post Alpha, Gouvernance Démocratique et Redevable, l’Emploi jeunes/ AGR, Gestion des Conflits, protection"
   },
   {
     "Nom complet de l’ONG": "Association pour le Développement inclusif et intégral",
@@ -1812,13 +1812,13 @@ const membersData = [
     "Date de création": "24/07/91 suivant récépissé N°0764/MAT-DNAT",
     "Numéro d’accord cadre": "Accord – Cadre signé le 26 août 1993 sous le N°422 renouvelé le 09 janvier 2008 sous le N°0127/000422",
     "Adresse physique": " Badalabougou SEMA GEXCO Rue 136 Porte 710;  ",
-    "Zones d’intervention": "Ségou",
+    "Zones d’intervention": "District de Bamako, Sikasso, Ségou, Koulikoro, Mopti, Bandiagara, Douentza, Tombouctou, Taoudenni",
     "Nom du responsable": "Mahamane ",
     "Prénom du responsable": " Bouri",
     "Fonction du responsable": "Sécretaire General",
     "Téléphone du responsable": "76737159",
     "Email du responsable": " subaahigumo@yahoo.fr",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Éducation et Protection, Santé, Sécurité alimentaire, Changements climatiques, Eau Hygiène et Assainissement, Autonomisation des femmes et des jeunes, Décentralisation et Gouvernance, Paix et Cohésion sociale"
   },
   {
     "Nom complet de l’ONG": "FEMME ET DEVELOPPEMENT",
@@ -2047,7 +2047,7 @@ const membersData = [
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
-    "Acronyme": "DS",
+    "Acronyme": "ODS",
     "Date de création": "2021-07-08 00:00:00",
     "Numéro d’accord cadre": "1770",
     "Adresse physique": "Bamako",
@@ -2057,7 +2057,7 @@ const membersData = [
     "Fonction du responsable": "Président du Conseil d'Administration",
     "Téléphone du responsable": "78-66-22-56",
     "Email du responsable": "yaya.bamadio@diam-sahel.org",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Humanitaires, Gouvernance, Protection, Genre"
   },
   {
     "Nom complet de l’ONG": "Talilt/Aide",
@@ -2073,6 +2073,20 @@ const membersData = [
     "Email du responsable": "mamawaletn@talilt.org",
     "Domaines d’intervention": "nan"
   },
+   {
+    "Nom complet de l’ONG": "Agence de Developpement Durable de Mopti",
+    "Acronyme": "ADDM",
+    "Date de création": "07-12-2020",
+    "Numéro d’accord cadre": "1694",
+    "Adresse physique": "Mopti",
+    "Zones d’intervention": "Bamako, Segou, San, Mopti, Bandiagara, Douentza",
+    "Nom du responsable": "Coulibaly ",
+    "Prénom du responsable": "Mahamadou",
+    "Fonction du responsable": "Président",
+    "Téléphone du responsable": "63609957",
+    "Email du responsable": "addrsmali@gmail.com",
+    "Domaines d’intervention": "Protection, Securité alimentaires, Resilience communautaire, changement climaique"
+  },
   {
     "Nom complet de l’ONG": "ONG AZHAR",
     "Acronyme": "AZHAR",
@@ -2085,7 +2099,7 @@ const membersData = [
     "Fonction du responsable": "Coordinateur National",
     "Téléphone du responsable": "78176139",
     "Email du responsable": "assi.namar@yahoo.fr",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Humanitaire,Secuirisation des Moyens d'existence, Securite' climatique, Restauration des terres, Gouvernance fonciere , consolidation de paix"
   }
 ];
 
