@@ -34,6 +34,7 @@ const Members = () => {
   const [membersData, setMembersData] = useState(defaultMembers);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedZone, setSelectedZone] = useState('');
+  const [selectedDomaine, setSelectedDomaine] = useState('');
   const [selectedMember, setSelectedMember] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const { user } = useAuth();
@@ -42,6 +43,7 @@ const Members = () => {
 
   const normalize = (str) => str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
 
+  // Upload Excel
   const handleExcelUpload = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -56,27 +58,21 @@ const Members = () => {
     reader.readAsBinaryString(file);
   };
 
+  // Export PDF
   const exportAllToPDF = () => {
     const doc = new jsPDF('landscape');
     doc.setFontSize(12);
     doc.text('Liste complète des membres de la PONAH', 14, 15);
+
     const headers = [[
       'Nom complet de l’ONG', 'Acronyme'
     ]];
+
     const body = membersData.map(m => [
       m['Nom complet de l’ONG'] || '',
-      m['Acronyme'] || '',
-      m['Date de création'] || '',
-      m['Numéro d’accord cadre'] || '',
-      m['Adresse physique'] || '',
-      m['Zones d’intervention'] || '',
-      m['Domaines d’intervention'] || '',
-      m['Nom du responsable'] || '',
-      m['Prénom du responsable'] || '',
-      m['Fonction du responsable'] || '',
-      m['Téléphone du responsable'] || '',
-      m['Email du responsable'] || ''
+      m['Acronyme'] || ''
     ]);
+
     doc.autoTable({
       head: headers,
       body: body,
@@ -93,26 +89,39 @@ const Members = () => {
     setCurrentPage(1);
   };
 
+  // Filtrage combiné : recherche + zone + domaine
   const filteredMembers = membersData.filter((member) => {
     const nom = normalize(member['Nom complet de l’ONG']);
     const acronyme = normalize(member['Acronyme']);
     const zones = normalize(member['Zones d’intervention']);
+    const domaines = normalize(member['Domaines d’intervention']);
+
     const search = normalize(searchTerm);
-    const selected = normalize(selectedZone);
+    const selectedZoneNorm = normalize(selectedZone);
+    const selectedDomaineNorm = normalize(selectedDomaine);
 
     const nomMatch = nom.includes(search);
     const acronymeMatch = acronyme.includes(search);
-    const zoneMatch = selected === '' || (zones && zones.includes(selected));
+    const zoneMatch = selectedZoneNorm === '' || (zones && zones.includes(selectedZoneNorm));
+    const domaineMatch = selectedDomaineNorm === '' || (domaines && domaines.includes(selectedDomaineNorm));
 
-    return zoneMatch && (nomMatch || acronymeMatch);
+    return zoneMatch && domaineMatch && (nomMatch || acronymeMatch);
   });
 
   const paginatedMembers = filteredMembers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(filteredMembers.length / itemsPerPage);
 
+  // Liste unique des zones
   const zoneOptions = [...new Set(
     membersData
       .flatMap(m => (m['Zones d’intervention'] || '').split(',').map(r => r.trim()))
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b));
+
+  // Liste unique des domaines
+  const domaineOptions = [...new Set(
+    membersData
+      .flatMap(m => (m['Domaines d’intervention'] || '').split(',').map(r => r.trim()))
       .filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
@@ -131,11 +140,15 @@ const Members = () => {
         </button>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 mt-8 mb-4 flex flex-col md:flex-row items-center gap-4 justify-between md:flex-wrap">
+      {/* Filtres */}
+      <div className="max-w-6xl mx-auto px-4 mt-8 mb-4 grid grid-cols-1 md:grid-cols-4 gap-4">
+        
         {isAdmin && (
           <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
         )}
-        <div className="relative w-full">
+
+        {/* Search */}
+        <div className="relative w-full md:col-span-1 col-span-1">
           <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
           <input
             type="text"
@@ -145,30 +158,46 @@ const Members = () => {
             onChange={handleSearchChange}
           />
         </div>
+
+        {/* Filtre zone */}
         <select
           value={selectedZone}
           onChange={(e) => setSelectedZone(e.target.value)}
-          className="border py-2 px-3 rounded w-full md:w-60"
+          className="border py-2 px-3 rounded w-full"
         >
           <option value="">Toutes les zones</option>
           {zoneOptions.map((region, i) => (
             <option key={i} value={region}>{region}</option>
           ))}
         </select>
-        <div className="w-full text-right">
-          <button
-            onClick={() => {
-              setSearchTerm('');
-              setSelectedZone('');
-              setCurrentPage(1);
-            }}
-            className="text-sm text-blue-600 underline"
-          >
-            Réinitialiser les filtres
-          </button>
-        </div>
+
+        {/* Filtre domaine */}
+        <select
+          value={selectedDomaine}
+          onChange={(e) => setSelectedDomaine(e.target.value)}
+          className="border py-2 px-3 rounded w-full"
+        >
+          <option value="">Tous les domaines</option>
+          {domaineOptions.map((d, i) => (
+            <option key={i} value={d}>{d}</option>
+          ))}
+        </select>
+
+        {/* Reset */}
+        <button
+          onClick={() => {
+            setSearchTerm('');
+            setSelectedZone('');
+            setSelectedDomaine('');
+            setCurrentPage(1);
+          }}
+          className="text-sm text-blue-600 underline w-full text-left md:col-span-1"
+        >
+          Réinitialiser les filtres
+        </button>
       </div>
 
+      {/* Résultats */}
       <div className="max-w-7xl mx-auto px-4 mb-2 text-sm text-gray-600 italic">
         {filteredMembers.length} membre(s) trouvé(s)
       </div>
@@ -191,6 +220,7 @@ const Members = () => {
         ))}
       </div>
 
+      {/* Modal */}
       {selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
@@ -209,10 +239,12 @@ const Members = () => {
         </div>
       )}
 
+      {/* Le reste du code (inchangé) : Team, FAQ, Inscription */}
       <section className="py-16 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Rejoindre la PONAH</h2>
           <p className="mb-10">L'adhésion à la PONAH est libre et volontaire pour toute ONG nationale qui accepte nos statuts.</p>
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             <div className="flex flex-col items-center">
               <FileText className="w-10 h-10 text-green-600 mb-2" />
@@ -235,6 +267,7 @@ const Members = () => {
               <p className="text-sm">Engagement à payer 50 000 FCFA</p>
             </div>
           </div>
+
           <div className="bg-white rounded-lg shadow-md p-6 text-left max-w-4xl mx-auto mb-10">
             <h3 className="text-2xl font-semibold mb-4 text-center">Conditions pour devenir membre</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm md:text-base">
@@ -251,7 +284,10 @@ const Members = () => {
               <a href="mailto:secretariat@ponah.org" className="text-primary font-medium ml-1">secretariat@ponah.org</a>
             </p>
           </div>
-          <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">Devenir membre</a>
+
+          <a href="#formulaire-adhesion" className="mt-6 inline-block bg-green-700 text-white px-6 py-3 rounded">
+            Devenir membre
+          </a>
         </div>
       </section>
 
@@ -291,6 +327,7 @@ const Members = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };
