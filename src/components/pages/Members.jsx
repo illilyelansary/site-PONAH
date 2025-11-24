@@ -94,17 +94,20 @@ const Members = () => {
   };
 
   const filteredMembers = membersData.filter((member) => {
-    const nom = normalize(member['Nom complet de l’ONG']);
+    const nom = normalize(member["Nom complet de l'ONG"]);
     const acronyme = normalize(member['Acronyme']);
-    const zones = normalize(member['Zones d’intervention']);
+    const zones = normalize(member["Zones d'intervention"]);
+    const domaines = normalize(member["Domaines d'intervention"]);
     const search = normalize(searchTerm);
-    const selected = normalize(selectedZone);
+    const selectedZ = normalize(selectedZone);
+    const selectedD = normalize(selectedDomain);
 
     const nomMatch = nom.includes(search);
     const acronymeMatch = acronyme.includes(search);
-    const zoneMatch = selected === '' || (zones && zones.includes(selected));
+    const zoneMatch = selectedZ === '' || (zones && zones.includes(selectedZ));
+    const domainMatch = selectedD === '' || (domaines && domaines.includes(selectedD));
 
-    return zoneMatch && (nomMatch || acronymeMatch);
+    return zoneMatch && domainMatch && (nomMatch || acronymeMatch);
   });
 
   const paginatedMembers = filteredMembers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
