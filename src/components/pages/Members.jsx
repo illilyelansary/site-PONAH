@@ -65,7 +65,7 @@ const Members = () => {
       "Nom complet de l'ONG", 'Acronyme'
     ]];
     const body = membersData.map(m => [
-      m['Nom complet de l'ONG'] || '',
+      m["Nom complet de l'ONG"] || '',
       m['Acronyme'] || '',
       m['Date de création'] || '',
       m['Numéro d'accord cadre'] || '',
@@ -95,7 +95,7 @@ const Members = () => {
   };
 
   const filteredMembers = membersData.filter((member) => {
-    const nom = normalize(member['Nom complet de l'ONG']);
+    const nom = normalize(member["Nom complet de l'ONG"]);
     const acronyme = normalize(member['Acronyme']);
     const zones = normalize(member['Zones d'intervention']);
     const domaines = normalize(member['Domaines d'intervention']);
@@ -207,7 +207,7 @@ const Members = () => {
               <Users className="text-primary" />
               <h3 className="text-sm font-medium">{m['Acronyme']}</h3>
             </div>
-            <p className="text-xs mt-1">{m['Nom complet de l'ONG']}</p>
+            <p className="text-xs mt-1">{m["Nom complet de l'ONG"]}</p>
           </div>
         ))}
       </div>
@@ -222,7 +222,7 @@ const Members = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded max-w-lg relative">
             <button className="absolute top-2 right-2" onClick={() => setSelectedMember(null)}><X /></button>
-            <h2 className="text-xl font-bold mb-2">{selectedMember['Nom complet de l'ONG']}</h2>
+            <h2 className="text-xl font-bold mb-2">{selectedMember["Nom complet de l'ONG"]}</h2>
             <p><strong>Acronyme:</strong> {selectedMember['Acronyme']}</p>
             <p><strong>Date de création:</strong> {selectedMember['Date de création']}</p>
             <p><strong>Responsable:</strong> {`${selectedMember['Prénom du responsable']} ${selectedMember['Nom du responsable']}`}</p>
