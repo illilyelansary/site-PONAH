@@ -14,6 +14,20 @@ const membersData = [
     "Domaines d’intervention": "Gouvernance locale et cohésion sociale, Paix sécurité et stabilisation, Sécurité alimentaire et moyens de subsistance, Protection et VBG, Éducation et alphabétisation, Eau hygiène et assainissement, Santé et nutrition"
   },
   {
+    "Nom complet de l’ONG": "ONG EFES FESTIVAL AU DESERT",
+    "Acronyme": "EFES",
+    "Date de création": "17 juillet 1997",
+    "Numéro d’accord cadre": "00902",
+    "Adresse physique": "Kalaban Coura ACI 30M – Bamako, Mali",
+    "Zones d’intervention": "Kayes, Koulikoro, Sikasso, Segou, Mopti, Tombouctou, Gao, Kidal, Taoudenit, Menaka, Nioro, Kita, Dioila, Koutiala, Bougouni, San, Douentza, Bandiagara, Ténenkou, Bamako",
+    "Nom du responsable": "ANSAR",
+    "Prénom du responsable": "Mohamed Aly",
+    "Fonction du responsable": "Président",
+    "Téléphone du responsable": "76 21 22 69/69 01 11 98",
+    "Email du responsable": "admin@festival-au-desert.org/ansarmanny@gmail.com",
+    "Domaines d’intervention": "Action humanitaire, Aide d’urgence et Protection, Sécurité alimentaire et Nutrition, Eau Hygiène et Assainissement (WASH), Éducation Alphabétisation et Formation professionnelle, Santé communautaire et Appui au système de santé, Développement économique rural et Appui au secteur privé, Gouvernance Paix et Cohésion sociale, Environnement Changement climatique et Résilience, Culture Arts et Sauvegarde du patrimoine, Promotion du Genre et Inclusion sociale"
+  },
+  {
     "Nom complet de l’ONG": "ONG EFES N'TAMADRITE",
     "Acronyme": "ONG EFES N'TAMADRITE",
     "Date de création": "26 fevrier 2016",
