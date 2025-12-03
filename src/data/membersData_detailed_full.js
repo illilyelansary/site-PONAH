@@ -2003,6 +2003,35 @@ const membersData = [
     "Email du responsable": "nan",
     "Domaines d’intervention": "nan"
   },
+  
+  {
+    "Nom complet de l’ONG": "ONG Action Concertée pour le Développement Durable de Ménaka",
+    "Acronyme": "ACDM",
+    "Date de création": "03/02/2021",
+    "Numéro d’accord cadre": "2024",
+    "Adresse physique": "Quartier Chateau Gao",
+    "Zones d’intervention": "Mopti, Menaka, Gao, Tombouctou, Taoudennit, Bamako",
+    "Nom du responsable": "NAN",
+    "Prénom du responsable": "Nan",
+    "Fonction du responsable": "Président",
+    "Téléphone du responsable": "97171102, 78401995",
+    "Email du responsable": "ongacdm@gmail.com",
+    "Domaines d’intervention": "nan"
+  },
+   {
+    "Nom complet de l’ONG": "Groupe d'Entraide pour la Promotion de la Famille",
+    "Acronyme": "GEPF",
+    "Date de création": "NAN",
+    "Numéro d’accord cadre": "2024",
+    "Adresse physique": "Bamako",
+    "Zones d’intervention": "Bamako",
+    "Nom du responsable": "NAN",
+    "Prénom du responsable": "Nan",
+    "Fonction du responsable": "Président",
+    "Téléphone du responsable": "66976462, 74864580",
+    "Email du responsable": "onggepf@yahoo.fr",
+    "Domaines d’intervention": "nan"
+  },
   {
     "Nom complet de l’ONG": "Association TILE COURA pour la Promotion et la protections des droits des Femmes des femmes et filles vulnérables",
     "Acronyme": "ATC",
