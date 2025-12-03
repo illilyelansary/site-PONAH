@@ -403,7 +403,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": " 75 86 42 88 ",
     "Email du responsable": "ongompides@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "SANTÉ, SÉCURITÉ ALIMENTAIRE, WASH, ÉDUCATION, PAIX, GOUVERNANCE, ENVIRONNEMENT, PROTECTION, VBG, AGR, EMPLOI FEMMES/JEUNES"
   },
   {
     "Nom complet de l’ONG": "Association d'Appui au Développement communautaire du Mali",
@@ -711,20 +711,6 @@ const membersData = [
     "Fonction du responsable": "Coordinateur",
     "Téléphone du responsable": "66 98 25 81",
     "Email du responsable": "ardil_tombouctou@yahoo.fr",
-    "Domaines d’intervention": "nan"
-  },
-  {
-    "Nom complet de l’ONG": "Association de Soutien au Développement des Activités de Population",
-    "Acronyme": "ASDAP",
-    "Date de création": "2008-03-17 00:00:00",
-    "Numéro d’accord cadre": "0333/000424",
-    "Adresse physique": "Bamako",
-    "Zones d’intervention": "Koulikoro, Segou, Mopti, Sikasso, Kayes, Bamako",
-    "Nom du responsable": "Traoré Fatoumata  ",
-    "Prénom du responsable": "  Touré",
-    "Fonction du responsable": "Responsable",
-    "Téléphone du responsable": "71 38 93 22",
-    "Email du responsable": "asdap@asdapmali.org",
     "Domaines d’intervention": "nan"
   },
   {
@@ -1383,7 +1369,7 @@ const membersData = [
     "Fonction du responsable": "Président du C.A",
     "Téléphone du responsable": "76037153 / 76037155",
     "Email du responsable": "ongdha03@gmail.com",
-    "Domaines d’intervention": " "
+    "Domaines d’intervention": "Éducation, Autonomisation des femmes rurales, Karité, santé, Wash, Sécurité alimentaire, urgence, Environnement, reboisement, Droit des enfants"
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
@@ -1482,7 +1468,7 @@ const membersData = [
     "Fonction du responsable": "Président",
     "Téléphone du responsable": "75-39-13-47",
     "Email du responsable": "omddscontact@gmail.com",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Securité Alimentaire et Resilience, Santé de la Reproduction, VBG Autonomisation Economique des femmes et jeunes  Gestion des Ressources Naturelles et changement climatique, Education, WASH, Humanitaire"
   },
   {
     "Nom complet de l’ONG": "Association pour la Promotion et l'Apui au Développement",
@@ -1920,20 +1906,6 @@ const membersData = [
     "Domaines d’intervention": "nan"
   },
   {
-    "Nom complet de l’ONG": "Action pour le Développementrt du Mali",
-    "Acronyme": "ADM",
-    "Date de création": "2021-03-30 00:00:00",
-    "Numéro d’accord cadre": "1733",
-    "Adresse physique": "Bamako",
-    "Zones d’intervention": "Bamako",
-    "Nom du responsable": "Diarra",
-    "Prénom du responsable": "Nouhoum ",
-    "Fonction du responsable": "Président",
-    "Téléphone du responsable": "79 23 88 52",
-    "Email du responsable": "ongadm0679@gmail.com",
-    "Domaines d’intervention": "nan"
-  },
-  {
     "Nom complet de l’ONG": "Nouveaux horizons",
     "Acronyme": "NOHO",
     "Date de création": "10 janvier 2000 modifiée 03 décembre 2007",
@@ -2072,7 +2044,7 @@ const membersData = [
     "Fonction du responsable": "Directeur Exécutif",
     "Téléphone du responsable": "66 72 07 65",
     "Email du responsable": "asdap@asdapmali.org",
-    "Domaines d’intervention": "nan"
+    "Domaines d’intervention": "Renforcement du système de santé, Santé, VIH/SIDA et Développement, Nutrition et Sécurité Alimentaire (SA), EHA/WASH et Développement Durable, Promotion et protection des droits des filles/femmes"
   },
   {
     "Nom complet de l’ONG": "DIAM-SAHEL",
