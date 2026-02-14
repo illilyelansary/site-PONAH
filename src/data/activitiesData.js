@@ -61,6 +61,15 @@ const missions = [
     image: '/images/mission2.jpg',
     slug: 'lobby-tour-etats-unis-2024',
     link: '/activites/missions/lobby-tour-etats-unis-2024'
+  },
+   {
+    id: 3,
+    title: 'Participation stratégique à l’atelier régional du FONGA sur la localisation de l’aide',
+    description: 'La retraite des forums d’ONG d’Afrique de l’Ouest et Centrale à Dakar. Cet événement crucial, organisé par le FONGA du 9 au 13 février 2026, a été une plateforme d’échanges de haut niveau sur l’avenir de l’action humanitaire dans la région.',
+    date: '09-13 fevrier 2026',
+    image: '/images/mission3.jpg',
+    slug: 'atelier-régional-du-FONGA-dakar-2026',
+    link: '/activites/missions/atelier-régional-du-FONGA-dakar-2026'
   }
 ];
 
