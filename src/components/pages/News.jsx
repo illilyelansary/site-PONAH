@@ -7,10 +7,10 @@ const news = [
   {
     id: 8,
     title: 'Participation stratégique à l\'atelier régional du FONGA sur la localisation de l\'aide',
-    excerpt: 'Le Dr Emehdi Ag Wakina, Président de la PONAH, a participé à la retraite des forums d\'ONG d\'Afrique de l\'Ouest et Centrale à Dakar, un événement crucial pour l\'avenir de l\'action humanitaire.',
-    content: `Cette semaine, le Dr Emehdi Ag Wakina, Président de la Plateforme des ONG Nationales Actives dans l\' Humanitaires (PONAH) et Directeur des programmes de l\'Association Malienne pour la Survie au Sahel (AMSS), a pris part à la retraite des forums d\'ONG d\'Afrique de l\'Ouest et Centrale à Dakar. Cet événement crucial, organisé par le FONGA du 9 au 13 février 2026, a été une plateforme d\'échanges de haut niveau sur l\'avenir de l\'action humanitaire dans la région.\n\nAu cœur des discussions : la **localisation**. Comme l\'a souligné le Dr Wakina dans son discours de clôture, « la localisation n’est plus un slogan, ni une aspiration lointaine. Elle est un impératif stratégique et éthique. Elle est l’expression d’un leadership africain assumé. »\n\nCette retraite a permis de renforcer la conviction que les organisations nationales et locales sont les piliers centraux des réponses humanitaires et des dynamiques de développement. Les débats ont porté sur le renforcement des capacités institutionnelles, l\'accès équitable aux financements et la consolidation d\'une voix collective pour un impact durable au profit des communautés.\n\nUn grand merci au FONGA pour avoir créé ce cadre de convergence et de co-construction. Nous repartons de Dakar avec la responsabilité collective de transformer ces engagements en changements tangibles.`,
-    date: '13 février 2026',
-    category: 'plaidoyer',
+  excerpt: 'Le Dr Emehdi Ag Wakina, Président de la PONAH, a participé à la retraite des forums d\'ONG d\'Afrique.',
+  content: `Cette semaine, le Dr Emehdi Ag Wakina, Président de la Plateforme des ONG Nationales Actives dans l'Humanitaire ...`,
+  date: '13 février 2026',
+  category: 'plaidoyer',
     readTime: '4 min',
     featured: true,
     image: '/images/f11b241c-3dee-4795-8dcc-f9c1e6a8bd51.jpg' // Assurez-vous que cette image est dans votre dossier public/images
