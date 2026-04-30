@@ -1,8 +1,36 @@
 // src/components/pages/News.jsx
 import React, { useState } from 'react';
-import { Calendar, Clock, ArrowRight, Tag, X } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Tag, X, Download } from 'lucide-react';
 
 const news = [
+  {
+    id: 9,
+    title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
+    excerpt: 'La PONAH recrute un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent dans la coordination, le plaidoyer et le renforcement des capacités.',
+    content: `Créée en 2024, la Plateforme des ONG Nationales Actives dans l’Humanitaire (PONAH) regroupe 151 ONG nationales. Dans le cadre de la mise en œuvre de son plan d’action 2026-2027, avec le soutien de la DG ECHO, la PONAH recherche un(e) Spécialiste Humanitaire pour appuyer, accompagner et soutenir la Plateforme.
+
+Informations principales du poste :
+- Titre du poste : Spécialiste Humanitaire
+- Nombre de postes : un (01)
+- Département : Secrétariat Permanent
+- Lieu d’affectation : Bamako avec déplacements dans les régions
+- Type de contrat : Contrat à durée déterminée (CDD)
+- Durée du contrat : 11 mois
+- Superviseur direct : Secrétaire Permanent
+- Date limite de dépôt : lundi 11 mai 2026 à 12h00
+
+Le/la Spécialiste Humanitaire contribuera au renforcement de l’efficacité collective des ONG nationales membres, à l’amélioration de leur positionnement dans le système humanitaire, ainsi qu’à la promotion des principes de localisation, de redevabilité et de coordination.
+
+Les candidat(e)s intéressé(e)s doivent soumettre un CV détaillé, une lettre de motivation, trois références professionnelles ainsi que les copies certifiées des diplômes et attestations de travail. Les dossiers doivent être transmis par courrier électronique à ponah.mali@gmail.com ou déposés physiquement au Secrétariat permanent de la PONAH, situé dans les locaux de l’AMSS à Banankabougou, Rue 737, Porte 419.
+
+Les candidatures féminines sont fortement encouragées. Seul(e)s les candidat(e)s présélectionné(e)s seront contacté(e)s.`,
+    date: '29 avril 2026',
+    category: 'recrutement',
+    readTime: '5 min',
+    featured: true,
+    image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
+    downloadUrl: '/documents/AvisderecrutementSpecialisteHumanitairePONAH.pdf'
+  },
   {
     id: 8,
     title: 'Participation stratégique à l\'atelier régional du FONGA sur la localisation de l\'aide',
@@ -181,7 +209,8 @@ const categories = [
   { id: 'plaidoyer', label: 'Plaidoyer' },
   { id: 'recherche', label: 'Recherche' },
   { id: 'coordination', label: 'Coordination' },
-  { id: 'institutionnel', label: 'Institutionnel' }
+  { id: 'institutionnel', label: 'Institutionnel' },
+  { id: 'recrutement', label: 'Recrutement' }
 ];
 
 export default function News() {
@@ -316,6 +345,15 @@ export default function News() {
                 <Clock className="inline w-4 h-4 mr-1" /> {modalArticle.readTime}
               </div>
               <p className="whitespace-pre-line text-gray-700">{modalArticle.content}</p>
+              {modalArticle.downloadUrl && (
+                <a
+                  href={modalArticle.downloadUrl}
+                  download
+                  className="inline-flex items-center mt-6 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90"
+                >
+                  <Download className="w-4 h-4 mr-2" /> Télécharger l’avis complet
+                </a>
+              )}
             </div>
           </div>
         </div>

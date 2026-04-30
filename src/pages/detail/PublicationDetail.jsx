@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Download } from 'lucide-react';
 import publications from '../../data/publicationsData';
 
 const PublicationDetail = () => {
@@ -21,11 +22,21 @@ const PublicationDetail = () => {
   return (
     <div className="max-w-4xl mx-auto py-12 px-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">{publication.title}</h1>
-      <p className="text-sm text-gray-500 mb-6">Année : {publication.year}</p>
+      <p className="text-sm text-gray-500 mb-6">{publication.year ? `Année : ${publication.year}` : publication.date}</p>
       <p className="text-lg text-gray-700 leading-relaxed mb-6">
         {publication.description}
       </p>
-      <Link to="/publications" className="text-blue-600 font-medium underline hover:text-blue-800">
+      {publication.downloadUrl && (
+        <a
+          href={publication.downloadUrl}
+          download
+          className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 mb-6"
+        >
+          <Download className="w-4 h-4 mr-2" /> Télécharger la publication
+        </a>
+      )}
+
+      <Link to="/publications" className="block text-blue-600 font-medium underline hover:text-blue-800">
         ← Retour aux publications
       </Link>
     </div>

@@ -2,6 +2,17 @@
 
 const publications = [
   {
+    id: 4,
+    title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
+    description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent de la PONAH dans la coordination, le plaidoyer et le renforcement des capacités des ONG nationales.',
+    date: 'Avril 2026',
+    year: '2026',
+    image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
+    slug: 'avis-recrutement-specialiste-humanitaire-ponah-2026',
+    link: '/publications/avis-recrutement-specialiste-humanitaire-ponah-2026',
+    downloadUrl: '/documents/AvisderecrutementSpecialisteHumanitairePONAH.pdf'
+  },
+  {
     id: 1,
     title: 'Brochure de Présentation de la PONAH',
     description: 'Une vue d’ensemble de la Plateforme des ONG Humanitaires nationales.',

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Download } from 'lucide-react';
 import news from '../../data/newsData';
 
 const ActualiteDetail = () => {
@@ -27,9 +28,19 @@ const ActualiteDetail = () => {
         alt={article.title}
         className="w-full h-auto rounded-lg shadow-md mb-6"
       />
-      <p className="text-lg text-gray-700 leading-relaxed mb-6">
-        {article.excerpt}
+      <p className="text-lg text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
+        {article.content || article.excerpt}
       </p>
+
+      {article.downloadUrl && (
+        <a
+          href={article.downloadUrl}
+          download
+          className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 mb-6"
+        >
+          <Download className="w-4 h-4 mr-2" /> Télécharger l’avis complet
+        </a>
+      )}
 
       <Link
         to="/actualites"

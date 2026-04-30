@@ -10,6 +10,18 @@ const Publications = () => {
 
   const publications = [
     {
+      id: 9,
+      title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
+      description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent de la PONAH. Date limite de dépôt : 11 mai 2026 à 12h00.',
+      category: 'recrutement',
+      date: 'Avril 2026',
+      type: 'PDF',
+      size: '235 KB',
+      pages: 5,
+      downloadUrl: '/documents/AvisderecrutementSpecialisteHumanitairePONAH.pdf',
+      featured: true
+    },
+    {
       id: 1,
       title: 'Brochure de Présentation de la PONAH',
       description: 'Document de présentation officiel de la Plateforme des ONG Nationales Actives dans l\'Humanitaire.',
@@ -110,12 +122,13 @@ const Publications = () => {
     { id: 'formation', label: 'Formation' },
     { id: 'plaidoyer', label: 'Plaidoyer' },
     { id: 'juridique', label: 'Documents juridiques' },
-    { id: 'communique', label: 'Communiqués' }
+    { id: 'communique', label: 'Communiqués' },
+    { id: 'recrutement', label: 'Recrutements' }
   ];
 
   const stats = [
-    { number: '8+', label: 'Publications disponibles' },
-    { number: '200+', label: 'Pages de contenu' },
+    { number: '9+', label: 'Publications disponibles' },
+    { number: '205+', label: 'Pages de contenu' },
     { number: '4', label: 'Catégories principales' },
     { number: '2024', label: 'Année de création' }
   ];
