@@ -10,6 +10,18 @@ const Publications = () => {
 
   const publications = [
     {
+      id: 10,
+      title: 'Avis d’appel d’offres : fourniture de mobilier de bureau à Bamako',
+      description: 'Avis d’appel d’offres pour la sélection d’une entreprise chargée de la fourniture de mobilier de bureau à Bamako. Date limite de dépôt : 11 mai 2026 à 16h30.',
+      category: 'appel-offres',
+      date: '11 avril 2026',
+      type: 'PDF',
+      size: '288 KB',
+      pages: 1,
+      downloadUrl: '/documents/avis-appel-offres-mobilier-bureau-engim-mali-2026.pdf',
+      featured: true
+    },
+    {
       id: 9,
       title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
       description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent de la PONAH. Date limite de dépôt : 11 mai 2026 à 12h00.',
@@ -123,12 +135,13 @@ const Publications = () => {
     { id: 'plaidoyer', label: 'Plaidoyer' },
     { id: 'juridique', label: 'Documents juridiques' },
     { id: 'communique', label: 'Communiqués' },
-    { id: 'recrutement', label: 'Recrutements' }
+    { id: 'recrutement', label: 'Recrutements' },
+    { id: 'appel-offres', label: 'Appels d’offres' }
   ];
 
   const stats = [
-    { number: '9+', label: 'Publications disponibles' },
-    { number: '205+', label: 'Pages de contenu' },
+    { number: '10+', label: 'Publications disponibles' },
+    { number: '206+', label: 'Pages de contenu' },
     { number: '4', label: 'Catégories principales' },
     { number: '2024', label: 'Année de création' }
   ];

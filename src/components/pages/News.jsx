@@ -4,6 +4,31 @@ import { Calendar, Clock, ArrowRight, Tag, X, Download } from 'lucide-react';
 
 const news = [
   {
+    id: 10,
+    title: 'Avis d’appel d’offres : fourniture de mobilier de bureau à Bamako',
+    excerpt: 'ENGIM Mali lance un appel d’offres pour sélectionner une entreprise chargée de la fourniture de mobilier de bureau à Bamako. Date limite de dépôt : 11 mai 2026 à 16h30.',
+    content: `ENGIM Mali envisage d’attribuer un marché de biens pour la sélection d’une entreprise de fourniture de mobilier de bureau à Bamako, financé par l’Agence Italienne pour la Coopération au Développement (AICS) et le Département des Libertés Civiles et de l’Immigration (DLCI) du Ministère de l’intérieur italien.
+
+Référence de l’avis : DAO2026/EMLI/N°006.
+
+Projets concernés :
+- Promotion de l’emploi et de l’entrepreneuriat des jeunes et des femmes dans la filière karité et le secteur des énergies renouvelables au Mali – AID 013244/03/8
+- Redémarrer le travail décent pour tous pour une société dynamique, inclusive et solidaire au Mali – RESTART/CUP F41D24000140008/MININT_RELINT2024
+- Mission ENGIM au Mali, ainsi que d’éventuels projets futurs et autres activités
+
+Les propositions doivent être présentées conformément aux instructions détaillées figurant dans le dossier d’appel d’offres, incluant les termes de référence, les clauses contractuelles et le cahier des charges.
+
+Le dossier de candidature peut être retiré auprès du bureau d’ENGIM Mali, situé à Faso Kanu, non loin du Bureau du Conseiller économique et commercial près de l’Ambassade de la République Populaire de Chine à Bamako.
+
+La date limite de dépôt des propositions est fixée au lundi 11 mai 2026 à 16h30, heure de Bamako. Info line : 74 43 37 02.`,
+    date: '11 avril 2026',
+    category: 'appel-offres',
+    readTime: '3 min',
+    featured: true,
+    image: '/images/avis-appel-offres-mobilier-bureau-engim-mali-2026.jpg',
+    downloadUrl: '/documents/avis-appel-offres-mobilier-bureau-engim-mali-2026.pdf'
+  },
+  {
     id: 9,
     title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
     excerpt: 'La PONAH recrute un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent dans la coordination, le plaidoyer et le renforcement des capacités.',
@@ -210,7 +235,8 @@ const categories = [
   { id: 'recherche', label: 'Recherche' },
   { id: 'coordination', label: 'Coordination' },
   { id: 'institutionnel', label: 'Institutionnel' },
-  { id: 'recrutement', label: 'Recrutement' }
+  { id: 'recrutement', label: 'Recrutement' },
+  { id: 'appel-offres', label: 'Appels d’offres' }
 ];
 
 export default function News() {

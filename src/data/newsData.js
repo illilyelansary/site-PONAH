@@ -2,6 +2,25 @@
 
 const news = [
   {
+    id: 10,
+    title: 'Avis d’appel d’offres : fourniture de mobilier de bureau à Bamako',
+    excerpt: 'ENGIM Mali lance un appel d’offres pour sélectionner une entreprise chargée de la fourniture de mobilier de bureau à Bamako. Date limite de dépôt : 11 mai 2026 à 16h30.',
+    content: `ENGIM Mali envisage d’attribuer un marché de biens pour la sélection d’une entreprise de fourniture de mobilier de bureau à Bamako, dans le cadre des projets Karité, RESTART, ainsi que pour d’éventuels projets futurs et autres activités de la mission ENGIM au Mali.
+
+Référence publique : DAO2026/EMLI/N°006.
+
+Le dossier d’appel d’offres comprend les instructions de soumission, les termes de référence, les clauses contractuelles et le cahier des charges. Les candidats doivent soumettre l’ensemble des formulaires et documents requis conformément aux exigences du dossier.
+
+Le dossier de candidature peut être retiré auprès du bureau d’ENGIM Mali, situé à Faso Kanu, non loin du Bureau du Conseiller économique et commercial près de l’Ambassade de la République Populaire de Chine à Bamako.
+
+La date limite de dépôt des propositions est fixée au lundi 11 mai 2026 à 16h30, heure de Bamako. Info line : 74 43 37 02.`,
+    date: '11 avril 2026',
+    image: '/images/avis-appel-offres-mobilier-bureau-engim-mali-2026.jpg',
+    slug: 'avis-appel-offres-mobilier-bureau-engim-mali-2026',
+    link: '/actualites/avis-appel-offres-mobilier-bureau-engim-mali-2026',
+    downloadUrl: '/documents/avis-appel-offres-mobilier-bureau-engim-mali-2026.pdf'
+  },
+  {
     id: 9,
     title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
     excerpt: 'La PONAH lance un avis de recrutement pour un poste de Spécialiste Humanitaire basé à Bamako, avec déplacements dans les régions. Date limite de dépôt : 11 mai 2026 à 12h00.',
