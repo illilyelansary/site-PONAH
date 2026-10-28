@@ -22,7 +22,7 @@ const PublicationDetail = () => {
   return (
     <div className="max-w-4xl mx-auto py-12 px-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">{publication.title}</h1>
-      <p className="text-sm text-gray-500 mb-6">{publication.year ? `Année : ${publication.year}` : publication.date}</p>
+      <p className="text-sm text-gray-500 mb-6">Publié le {publication.date}</p>
       <p className="text-lg text-gray-700 leading-relaxed mb-6">
         {publication.description}
       </p>

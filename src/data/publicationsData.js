@@ -2,6 +2,17 @@
 
 const publications = [
   {
+    id: 4,
+    title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
+    description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer la coordination, le plaidoyer et le renforcement des capacités des ONG nationales. Date limite de dépôt : mercredi 28 octobre 2026 à 17h00.',
+    date: '21 octobre 2026',
+    year: '2026',
+    image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
+    slug: 'avis-recrutement-specialiste-humanitaire-ponah-2026',
+    link: '/publications/avis-recrutement-specialiste-humanitaire-ponah-2026',
+    downloadUrl: '/documents/AvisderecrutementSpecialisteHumanitairePONAH.pdf'
+  },
+  {
     id: 5,
     title: 'Avis d’appel d’offres : fourniture de mobilier de bureau à Bamako',
     description: 'Avis d’appel d’offres pour la sélection d’une entreprise chargée de la fourniture de mobilier de bureau à Bamako pour les projets Karité, RESTART et les activités de la mission ENGIM au Mali.',
@@ -11,17 +22,6 @@ const publications = [
     slug: 'avis-appel-offres-mobilier-bureau-engim-mali-2026',
     link: '/publications/avis-appel-offres-mobilier-bureau-engim-mali-2026',
     downloadUrl: '/documents/avis-appel-offres-mobilier-bureau-engim-mali-2026.pdf'
-  },
-  {
-    id: 4,
-    title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
-    description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer le Secrétariat Permanent de la PONAH dans la coordination, le plaidoyer et le renforcement des capacités des ONG nationales.',
-    date: 'Avril 2026',
-    year: '2026',
-    image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
-    slug: 'avis-recrutement-specialiste-humanitaire-ponah-2026',
-    link: '/publications/avis-recrutement-specialiste-humanitaire-ponah-2026',
-    downloadUrl: '/documents/AvisderecrutementSpecialisteHumanitairePONAH.pdf'
   },
   {
     id: 1,
