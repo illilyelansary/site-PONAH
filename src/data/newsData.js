@@ -23,14 +23,14 @@ La date limite de dépôt des propositions est fixée au lundi 11 mai 2026 à 16
   {
     id: 9,
     title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
-    excerpt: 'La PONAH relance son appel à candidatures pour un poste de Spécialiste Humanitaire basé à Bamako, avec déplacements dans les régions. Date limite de dépôt : mercredi 28 octobre 2026 à 17h00.',
+    excerpt: 'La PONAH prolonge d’une semaine son appel à candidatures pour un poste de Spécialiste Humanitaire basé à Bamako, avec déplacements dans les régions. Date limite de dépôt : mercredi 4 novembre 2026 à 17h00.',
     content: `Dans le cadre de la mise en œuvre de son plan d’action 2026-2027, avec le soutien de la DG ECHO, la Plateforme des ONG Nationales Actives dans l’Humanitaire (PONAH) recrute un(e) Spécialiste Humanitaire pour appuyer, accompagner et soutenir la Plateforme.
 
 Le poste est basé à Bamako, avec des déplacements dans les régions. Il s’agit d’un contrat à durée déterminée (CDD) de cinq (5) mois, placé sous la supervision directe du Secrétaire Permanent.
 
 Les candidat(e)s intéressé(e)s doivent soumettre un CV détaillé, une lettre de motivation, trois références professionnelles ainsi que les copies certifiées des diplômes et attestations de travail.
 
-La date limite de dépôt des candidatures est fixée au mercredi 28 octobre 2026 à 17h00. Les dossiers peuvent être envoyés par courrier électronique à ponah.mali@gmail.com ou déposés physiquement au Secrétariat permanent de la PONAH, situé dans les locaux de l’AMSS à Banankabougou, Rue 737, Porte 419.`,
+La date limite de dépôt des candidatures est fixée au mercredi 4 novembre 2026 à 17h00. Les dossiers peuvent être envoyés par courrier électronique à ponah.mali@gmail.com ou déposés physiquement au Secrétariat permanent de la PONAH, situé dans les locaux de l’AMSS à Banankabougou, Rue 737, Porte 419.`,
     date: '21 octobre 2026',
     image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
     slug: 'avis-recrutement-specialiste-humanitaire-ponah-2026',
