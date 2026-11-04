@@ -31,7 +31,7 @@ La date limite de dépôt des propositions est fixée au lundi 11 mai 2026 à 16
   {
     id: 9,
     title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
-    excerpt: 'La PONAH prolonge d’une semaine l’appel à candidatures pour le recrutement d’un(e) Spécialiste Humanitaire. Date limite : mercredi 4 novembre 2026 à 17h00.',
+    excerpt: 'La PONAH prolonge l’appel à candidatures pour le recrutement d’un(e) Spécialiste Humanitaire jusqu’au lundi 9 novembre 2026 à 17h00.',
     content: `Créée en 2024, la Plateforme des ONG Nationales Actives dans l’Humanitaire (PONAH) regroupe 151 ONG nationales. Dans le cadre de la mise en œuvre de son plan d’action 2026-2027, avec le soutien de la DG ECHO, la PONAH recherche un(e) Spécialiste Humanitaire pour appuyer, accompagner et soutenir la Plateforme.
 
 Informations principales du poste :
@@ -42,7 +42,7 @@ Informations principales du poste :
 - Type de contrat : Contrat à durée déterminée (CDD)
 - Durée du contrat : 5 mois
 - Superviseur direct : Secrétaire Permanent
-- Date limite de dépôt : mercredi 4 novembre 2026 à 17h00
+- Date limite de dépôt : lundi 9 novembre 2026 à 17h00
 
 Le/la Spécialiste Humanitaire contribuera au renforcement de l’efficacité collective des ONG nationales membres, à l’amélioration de leur positionnement dans le système humanitaire, ainsi qu’à la promotion des principes de localisation, de redevabilité et de coordination.
 

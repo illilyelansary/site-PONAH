@@ -4,7 +4,7 @@ const publications = [
   {
     id: 4,
     title: 'Avis de recrutement : Spécialiste Humanitaire au compte de la PONAH',
-    description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer la coordination, le plaidoyer et le renforcement des capacités des ONG nationales. Date limite de dépôt : mercredi 4 novembre 2026 à 17h00.',
+    description: 'Avis officiel de recrutement d’un(e) Spécialiste Humanitaire pour appuyer la coordination, le plaidoyer et le renforcement des capacités des ONG nationales. Date limite de dépôt : lundi 9 novembre 2026 à 17h00.',
     date: '21 octobre 2026',
     year: '2026',
     image: '/images/avis-recrutement-specialiste-humanitaire-ponah.jpg',
