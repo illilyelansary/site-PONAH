@@ -1,5 +1,6 @@
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import { applyPlugin } from 'jspdf-autotable';
+applyPlugin(jsPDF); // jspdf-autotable v5 : active doc.autoTable()
 
 export function getProtectedMemberPdfBlob(members) {
   const doc = new jsPDF();

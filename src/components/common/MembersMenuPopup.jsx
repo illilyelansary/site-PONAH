@@ -1,6 +1,7 @@
 import React from 'react';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import { applyPlugin } from 'jspdf-autotable';
+applyPlugin(jsPDF); // jspdf-autotable v5 : active doc.autoTable()
 
 export default function MembersMenuPopup({ member, onEdit, onDelete }) {
   const exportToPDF = () => {

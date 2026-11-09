@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import * as XLSX from 'xlsx';
 import { Users, X, FileText, CheckCircle, FileCheck2, UserCheck, Search } from 'lucide-react';
 import defaultMembers from '../../data/membersData_detailed_full';
-import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import { applyPlugin } from 'jspdf-autotable';
+applyPlugin(jsPDF); // jspdf-autotable v5 : active doc.autoTable()
 import InscriptionForm from '../../components/InscriptionForm';
 
 const teamData = [
@@ -31,32 +30,16 @@ const faqData = [
 ];
 
 const Members = () => {
-  const [membersData, setMembersData] = useState(defaultMembers);
+  const [membersData] = useState(defaultMembers);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedZone, setSelectedZone] = useState('');
   const [selectedDomaine, setSelectedDomaine] = useState('');
   const [selectedMember, setSelectedMember] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const { user } = useAuth();
-  const isAdmin = user && user.role === 'admin';
   const itemsPerPage = 12;
 
   const normalize = (str) => str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
 
-  // Upload Excel
-  const handleExcelUpload = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      const binaryStr = evt.target.result;
-      const workbook = XLSX.read(binaryStr, { type: 'binary' });
-      const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-      const data = XLSX.utils.sheet_to_json(worksheet);
-      setMembersData(data);
-      setCurrentPage(1);
-    };
-    reader.readAsBinaryString(file);
-  };
 
   // Export PDF
   const exportAllToPDF = () => {
@@ -142,10 +125,6 @@ const Members = () => {
 
       {/* Filtres */}
       <div className="max-w-6xl mx-auto px-4 mt-8 mb-4 grid grid-cols-1 md:grid-cols-4 gap-4">
-        
-        {isAdmin && (
-          <input type="file" accept=".xlsx,.xls" onChange={handleExcelUpload} className="text-sm border rounded px-2 py-1" />
-        )}
 
         {/* Search */}
         <div className="relative w-full md:col-span-1 col-span-1">
